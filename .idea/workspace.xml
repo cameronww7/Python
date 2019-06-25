@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="013d0351-7762-4be4-8aa2-12a2d055db68" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Python-Tutorials/Python-OOP-2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cracking-The-Coding-Interview/Chapter-1/1.1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,7 +46,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Python-Tutorials/Pyhton-OOP-1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-357">
+            <state relative-caret-position="-337">
               <caret selection-end-line="4" selection-end-column="21" />
             </state>
           </provider>
@@ -65,13 +65,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Python-Tutorials/Python-OOP-2.py">
+        <entry file="file://$PROJECT_DIR$/Cracking-The-Coding-Interview/Chapter-1/1.1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="24" column="39" lean-forward="true" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="140">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -111,21 +108,24 @@
         <option value="$PROJECT_DIR$/Python-Tutorials/Python-Object-Inheritance.py" />
         <option value="$PROJECT_DIR$/Python-Tutorials/Pyhton-OOP-1.py" />
         <option value="$PROJECT_DIR$/Python-Tutorials/Python-OOP-2.py" />
+        <option value="$PROJECT_DIR$/Cracking-The-Coding-Interview/Chapter-1/1.1.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="3833" />
     <option name="y" value="40" />
     <option name="width" value="1294" />
     <option name="height" value="1407" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -136,12 +136,24 @@
             <path>
               <item name="Python-Workspace" type="b2602c69:ProjectViewProjectNode" />
               <item name="Python-Workspace" type="462c0819:PsiDirectoryNode" />
+              <item name="Cracking-The-Coding-Interview" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Python-Workspace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python-Workspace" type="462c0819:PsiDirectoryNode" />
+              <item name="Cracking-The-Coding-Interview" type="462c0819:PsiDirectoryNode" />
+              <item name="Chapter-1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Python-Workspace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python-Workspace" type="462c0819:PsiDirectoryNode" />
               <item name="Python-Tutorials" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -308,10 +320,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="3833" y="40" width="1294" height="1407" extended-state="0" />
+    <frame x="3832" y="32" width="2576" height="1416" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21656051" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.107171" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -413,12 +425,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Python-Tutorials/Python-Error-Handleing.py">
+    <entry file="file://$PROJECT_DIR$/Python-Tutorials/PythonFunctionSupport.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="3" selection-end-column="30" />
+        <state relative-caret-position="20">
+          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python-Tutorials/Pyhton-OOP-1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-337">
+          <caret selection-end-line="4" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python-Tutorials/Python-OOP-2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cracking-The-Coding-Interview/Chapter-1">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Python-Tutorials/Python-Object-Inheritance.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -430,27 +462,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Python-Tutorials/PythonFunctionSupport.py">
+    <entry file="file://$PROJECT_DIR$/Python-Tutorials/Python-Error-Handleing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
+        <state>
+          <caret selection-end-line="3" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Python-Tutorials/Pyhton-OOP-1.py">
+    <entry file="file://$PROJECT_DIR$/Cracking-The-Coding-Interview/Chapter-1/1.1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-357">
-          <caret selection-end-line="4" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Python-Tutorials/Python-OOP-2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="24" column="39" lean-forward="true" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="140">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
