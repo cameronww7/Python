@@ -5,3 +5,11 @@ from __future__ import print_function
 #       What if you cannot use additional data structures.
 print("1.1")
 
+uniqueString = "qwertyuiq"
+
+for x in range(len(uniqueString)):
+    for i in range(len(uniqueString)):
+        if(uniqueString[x] == uniqueString[i] and x != i):
+            print("FOUND DUPP | x = " + x.__str__() + " | i = " + i.__str__() + " |")
+
+print(" I DID IT!")
