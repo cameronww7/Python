@@ -13,3 +13,6 @@ for x in range(len(uniqueString)):
             print("FOUND DUPP | x = " + x.__str__() + " | i = " + i.__str__() + " |")
 
 print(" I DID IT!")
+
+
+print(" The Big O of this Solution is O(n^2)")
