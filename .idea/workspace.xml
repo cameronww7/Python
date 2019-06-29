@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="013d0351-7762-4be4-8aa2-12a2d055db68" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Cracking-The-Coding-Interview/Chapter-1/1.4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cracking-The-Coding-Interview/Chapter-1/1.5.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,7 +15,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.45675197">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -46,10 +46,10 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Cracking-The-Coding-Interview/Chapter-1/1.4.py">
+            <entry file="file://$PROJECT_DIR$/Cracking-The-Coding-Interview/Chapter-1/1.5.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="438">
-                  <caret line="39" column="52" lean-forward="true" selection-start-line="39" selection-start-column="52" selection-end-line="39" selection-end-column="52" />
+                <state relative-caret-position="246">
+                  <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
                   <folding>
                     <element signature="e#0#37#0" expanded="true" />
                   </folding>
@@ -61,11 +61,23 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/Cracking-The-Coding-Interview/Chapter-1/1.4.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-400">
+                  <caret line="16" column="13" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="13" />
+                  <folding>
+                    <element signature="e#0#37#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Python-Tutorials/Python-List.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="240">
-                  <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+                  <caret line="12" selection-start-line="12" selection-end-line="12" />
                 </state>
               </provider>
             </entry>
@@ -79,7 +91,7 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Python-Tutorials/Python-If-Then-Else.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state>
@@ -129,6 +141,7 @@
         <option value="$PROJECT_DIR$/Cracking-The-Coding-Interview/Chapter-1/1.1.py" />
         <option value="$PROJECT_DIR$/Cracking-The-Coding-Interview/Chapter-1/1.3.py" />
         <option value="$PROJECT_DIR$/Cracking-The-Coding-Interview/Chapter-1/1.4.py" />
+        <option value="$PROJECT_DIR$/Cracking-The-Coding-Interview/Chapter-1/1.5.py" />
       </list>
     </option>
   </component>
@@ -193,7 +206,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.1.4">
+  <component name="RunManager" selected="Python tests.Unittests in 1.5.py">
     <configuration name="1.1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Python-Workspace" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -278,34 +291,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python-Error-Handleing" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Unittests in 1.5.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="Python-Workspace" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python-Tutorials" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Cracking-The-Coding-Interview/Chapter-1" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python-Tutorials/Python-Error-Handleing.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/Cracking-The-Coding-Interview/Chapter-1/1.5.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Unittests in 1.5.py" />
         <item itemvalue="Python.1.4" />
         <item itemvalue="Python.1.3" />
         <item itemvalue="Python.1.2" />
         <item itemvalue="Python.1.1" />
-        <item itemvalue="Python.Python-Error-Handleing" />
       </list>
     </recent_temporary>
   </component>
@@ -329,6 +335,38 @@
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Unittests_in_1_5_py - 2019.06.28 at 21h 49m 02s.xml">
+      <configuration name="Unittests in 1.5.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_1_5_py - 2019.06.28 at 21h 49m 37s.xml">
+      <configuration name="Unittests in 1.5.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_1_5_py - 2019.06.28 at 21h 50m 00s.xml">
+      <configuration name="Unittests in 1.5.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_1_5_py - 2019.06.28 at 21h 50m 29s.xml">
+      <configuration name="Unittests in 1.5.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_1_5_py - 2019.06.28 at 21h 52m 48s.xml">
+      <configuration name="Unittests in 1.5.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_1_5_py - 2019.06.28 at 21h 53m 02s.xml">
+      <configuration name="Unittests in 1.5.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_1_5_py - 2019.06.28 at 21h 53m 06s.xml">
+      <configuration name="Unittests in 1.5.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_1_5_py - 2019.06.28 at 21h 53m 49s.xml">
+      <configuration name="Unittests in 1.5.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_1_5_py - 2019.06.28 at 21h 53m 51s.xml">
+      <configuration name="Unittests in 1.5.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_1_5_py - 2019.06.28 at 21h 54m 21s.xml">
+      <configuration name="Unittests in 1.5.py" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -482,24 +520,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Python-Tutorials/Python-Loops.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="21" column="21" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Python-Tutorials/Python-List.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Cracking-The-Coding-Interview/Chapter-1/1.3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="21" selection-start-line="21" selection-end-line="22" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python-Tutorials/Python-Loops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="21" column="21" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -510,10 +541,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Python-Tutorials/Python-List.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/unittest/loader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Cracking-The-Coding-Interview/Chapter-1/1.4.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="39" column="52" lean-forward="true" selection-start-line="39" selection-start-column="52" selection-end-line="39" selection-end-column="52" />
+        <state relative-caret-position="-400">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cracking-The-Coding-Interview/Chapter-1/1.5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
