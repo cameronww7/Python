@@ -1,4 +1,5 @@
 from __future__ import print_function
+from collections import OrderedDict
 import unittest
 
 # Prompt 1.5 : There are three types of edits that can be performed on strings:
@@ -12,28 +13,49 @@ import unittest
 
 print("1.5")
 
+def isOneAway(xString1, xString2):
+    print("  Start : String1-", xString1.__str__(), "|", "String2-", xString2.__str__())
 
-def isOneAway(xstring1: object) -> object:
-    xstring2 = "222"
-    xstring1 = xstring1.lower().replace(" ", "")
-    xstring2 = xstring2.lower().replace(" ", "")
+    xString1 = xString1.lower().replace(" ", "")
+    xString2 = xString2.lower().replace(" ", "")
 
-    print("String1 ", xstring1, "|", "String2", xstring2)
+    print("Cleaned : String1-", xString1.__str__(), "|", "String2-", xString2.__str__())
 
-    return True
+    offByOne = 0
+
+    for x in range(len(xString2)):
+        if (xString1.find(xString2[x]) == -1):
+            print(":xString1.find(xString2[x]) -", xString1.find(xString2[x]))
+            offByOne = offByOne + 1
+            print("OffByOne -", offByOne)
+
+    if (offByOne < 2):
+        print("\nIt is Off By One - TRUE\n")
+        return False
+    else:
+        print("\nIt is Off By More Than One - FALSE\n")
+        return True
 
 
-class Tests(unittest.TestCase):
-    def test_case_01(self):
-        self.assertTrue(isOneAway("Pale"))
+isOneAway("Pale", "Ple")
+isOneAway("Pales", "pale")
+isOneAway("Pale", "bale")
+isOneAway("Pale", "bake")
 
-    def test_case_02(self):
-        self.assertTrue(isOneAway("Pales"))
 
-    def test_case_03(self):
-        self.assertTrue(isOneAway("Pale"))
+#
+#class Tests1_5(unittest.TestCase):
+#    def test_case_06(self):
+#        self.assertTrue(isOneAway("Pale"))
 
-    def test_case_04(self):
-        self.assertTrue(isOneAway("Pale"))
+#    def test_case_07(self):
+#        self.assertTrue(isOneAway("Pales"))
 
-unittest.main()
+#    def test_case_08(self):
+#        self.assertTrue(isOneAway("Pale"))
+
+ #   def test_case_09(self):
+ #       self.assertTrue(isOneAway("Pale"))
+#
+
+#unittest.main()

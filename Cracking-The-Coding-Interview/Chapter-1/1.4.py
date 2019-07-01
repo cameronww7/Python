@@ -68,6 +68,7 @@ def isPermPal(inputString):
         print(inputString, "is Not a Palindrome Permutation")
         return False
 
+
 class Tests(unittest.TestCase):
     def test_case_01(self):
         self.assertFalse(isPermPal("cisco"))
@@ -83,5 +84,6 @@ class Tests(unittest.TestCase):
 
     def test_case_05(self):
         self.assertTrue(isPermPal("Eva can I see bees in a cave"))
+
 
 unittest.main()
