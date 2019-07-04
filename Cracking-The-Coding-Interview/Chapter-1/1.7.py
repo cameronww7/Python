@@ -21,14 +21,16 @@ martrixSolution = [[7, 4, 1],
                    [8, 5, 2],
                    [9, 6, 3]]
 
-#print(len(matrix))
-#print("Goal Solution:\n", martrixSolution)
+# print(len(matrix))
+# print("Goal Solution:\n", martrixSolution)
 
 def rotateMatrix90Deg(xMatrix):
     #print("", xMatrix)
 
-    dimension = len(matrix) - 1 # 0, 1, 2 so 3 dimensional
-    newMatrix = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+    dimension = len(matrix)  # Messed up had - 1 here, that would make newMatrix too small
+    newMatrix = [[0 for row in range(dimension)] for col in range(dimension)]
+
+    dimension = len(matrix) - 1  # 0, 1, 2 so 3 dimensional
 
     for row in range(len(xMatrix)):
         for col in range(len(xMatrix[row])):
