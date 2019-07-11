@@ -53,11 +53,19 @@ def zeroOutIfZeroFound(xMatrix):
     return newMatrix
 
 
+def printMatrix(xMatrix):
+    print("Printing Matrix")
+    print("---------------")
+    for row in range(len(xMatrix)):
+        if row != 0: print("")
+        for col in range(len(xMatrix[row])):
+            print(xMatrix[row][col]," ", end="")
+    print("\n---------------")
 
 print("Starting Program")
-print("Start:", matrix2)
+printMatrix(matrix)
 
-matrix2 = zeroOutIfZeroFound(matrix2)
-
-print("  End:", matrix2)
-print("End of Program")
+matrix3 = zeroOutIfZeroFound(matrix)
+printMatrix(matrix)
+printMatrix(matrix3)
+print("\nEnd of Program")
