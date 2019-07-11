@@ -16,7 +16,7 @@ matrix2 = [[1, 2, 3],
            [4, 5, 6],
            [7, 8, 9]]
 
-martrixSolution = [[7, 0, 0],
+martrixSolution = [[1, 0, 0],
                    [0, 0, 0],
                    [0, 0, 0]]
 
@@ -49,18 +49,22 @@ def zeroOutIfZeroFound(xMatrix):
         dimension = dimension - 1
         ifZeroFound = 0
 
-
     return newMatrix
 
 
 def printMatrix(xMatrix):
     print("Printing Matrix")
     print("---------------")
+
     for row in range(len(xMatrix)):
-        if row != 0: print("")
+        if row != 0:
+            print("")
+
         for col in range(len(xMatrix[row])):
-            print(xMatrix[row][col]," ", end="")
+            print(xMatrix[row][col], " ", end="")
+
     print("\n---------------")
+
 
 print("Starting Program")
 printMatrix(matrix)
