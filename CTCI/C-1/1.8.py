@@ -32,7 +32,7 @@ def zeroOutIfZeroFound(xMatrix):
 
     newMatrix = FindZeros(xMatrix, newMatrix)
 
-
+    newMatrix = SetZeros(xMatrix, newMatrix)
 #    print("1")
 #    for row in range(len(xMatrix)):
 #        for col in range(len(xMatrix[row])):
@@ -63,6 +63,26 @@ def FindZeros(xMatrix1, xMatrix2):
                 xMatrix2[col][row] = 0
     return xMatrix2
 
+def SetZeros(xMatrix1, xMatrix2):
+    ifZeroFound = 0
+    for row in range(len(xMatrix1)):
+        for col in range(len(xMatrix1[row])):
+            if xMatrix1[col][row] == 0:
+                ifZeroFound = 1
+        if ifZeroFound == 1:
+            for col in range(len(xMatrix1[row])):
+                xMatrix2[col][row] = 0
+
+    ifZeroFound = 0
+    for col in range(len(xMatrix1)):
+        for row in range(len(xMatrix1[col])):
+            if xMatrix1[col][row] == 0:
+                ifZeroFound = 1
+        if ifZeroFound == 1:
+            for row in range(len(xMatrix1[col])):
+                xMatrix2[col][row] = 0
+
+    return xMatrix2
 
 def printMatrix(xMatrix):
     print("Printing Matrix")
