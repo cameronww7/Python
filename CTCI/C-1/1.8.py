@@ -25,31 +25,43 @@ def zeroOutIfZeroFound(xMatrix):
     #print("", xMatrix)
 
     dimension = len(matrix)  # Messed up had - 1 here, that would make newMatrix too small
-    newMatrix = [[0 for row in range(dimension)] for col in range(dimension)]
+    newMatrix = [["N" for row in range(dimension)] for col in range(dimension)]
 
     dimension = len(matrix) - 1  # 0, 1, 2 so 3 dimensional
     ifZeroFound = 0 #if a zero is found this be assigned where
 
-    print("1")
-    for row in range(len(xMatrix)):
-        for col in range(len(xMatrix[row])):
-            print("2 -", xMatrix[col][dimension])
-            if xMatrix[col][dimension] == 0:
-                print("3 -", xMatrix[col][dimension])
-                ifZeroFound = dimension
-                newMatrix[col][dimension] = 0
-            else:
-                print("4 -", ifZeroFound)
-                if ifZeroFound != 0:
-                    print("5")
-                    newMatrix[col][dimension] = 0
-                else:
-                    print("6")
-                    newMatrix[row][col] = xMatrix[row][col]
-        dimension = dimension - 1
-        ifZeroFound = 0
+    newMatrix = FindZeros(xMatrix, newMatrix)
+
+
+#    print("1")
+#    for row in range(len(xMatrix)):
+#        for col in range(len(xMatrix[row])):
+#            print("2 -", xMatrix[col][row])
+#            if xMatrix[col][dimension] == 0:
+#                print("3 -", xMatrix[col][dimension])
+#                ifZeroFound = dimension
+#                newMatrix[col][dimension] = 0
+#            else:
+#                print("4 -", ifZeroFound)
+#                if ifZeroFound != 0:
+#                    print("5")
+#                    newMatrix[col][dimension] = 0
+#                else:
+#                    print("6")
+#                    newMatrix[row][col] = xMatrix[row][col]
+#        dimension = dimension - 1
+#        ifZeroFound = 0
+
+
 
     return newMatrix
+
+def FindZeros(xMatrix1, xMatrix2):
+    for row in range(len(xMatrix1)):
+        for col in range(len(xMatrix1[row])):
+            if xMatrix1[col][row] == 0:
+                xMatrix2[col][row] = 0
+    return xMatrix2
 
 
 def printMatrix(xMatrix):
