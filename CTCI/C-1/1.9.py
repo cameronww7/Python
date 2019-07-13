@@ -8,23 +8,36 @@ from __future__ import print_function
 print("1.9")
 
 string1 = "watterbottle"
-string2 = "erbottlewat"
-solutionString = ""
+string2 = "terbottlewat"
 
 
-def IsSubstring(xString):
-    newString = ""
+def IsSubstring(xOrginalStr, xCheckIfSubStr):
+    if CheckSameSize(xOrginalStr, xCheckIfSubStr):
+        newString = ""
+
+        for index1 in range(len(xOrginalStr)):
+            for index2 in range(len(xCheckIfSubStr)):
+                if xOrginalStr[index1] == xCheckIfSubStr[index2]:
+                    newString = newString + xOrginalStr[index1]
+        return newString
+    else:
+        return False
 
 
-    return newString
+def CheckSameSize(xOrginalStr, xCheckIfSubStr):
+    if len(xOrginalStr) != len(xCheckIfSubStr):
+        return False
+    else:
+        return True
 
 
-print("Starting Program")
+print("Starting Program\n")
 
 print("string1:", string1)
+print("string1:", string2)
 
-solutionString = IsSubstring(string1)
+solutionString = IsSubstring(string1, string2)
 
-print("solutionString:", solutionString)
+print("\nsolutionString:", solutionString)
 
-print("End of Program")
+print("\nEnd of Program")
