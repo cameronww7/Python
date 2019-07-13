@@ -21,10 +21,9 @@ martrixSolution = [[7, 4, 1],
                    [8, 5, 2],
                    [9, 6, 3]]
 
-# print(len(matrix))
-# print("Goal Solution:\n", martrixSolution)
-
-def rotateMatrix90Deg(xMatrix):
+# RotateMatrix90Deg
+# Takes in a Matrix, creates a new same size matrix and then rotates said matrix 90 degrees.
+def RotateMatrix90Deg(xMatrix):
     #print("", xMatrix)
 
     dimension = len(matrix)  # Messed up had - 1 here, that would make newMatrix too small
@@ -39,19 +38,34 @@ def rotateMatrix90Deg(xMatrix):
 
     return newMatrix
 
+# PrintMatrix
+# Takes in a Matrix and then outputs the matrix nice and neat.
+def PrintMatrix(xName, xMatrix):
+    print("Printing", xName)
+    print("---------------")
+
+    for row in range(len(xMatrix)):
+        if row != 0:
+            print("")
+
+        for col in range(len(xMatrix[row])):
+            print(xMatrix[row][col], " ", end="")
+
+    print("\n---------------")
+
 print("Starting Program")
-print("0 rotate", matrix)
+PrintMatrix("0 Rotation", matrix)
 
-matrix = rotateMatrix90Deg(matrix)
-print("1 rotate", matrix)
+matrix = RotateMatrix90Deg(matrix)
+PrintMatrix("1 Rotation", matrix)
 
-matrix = rotateMatrix90Deg(matrix)
-print("2 rotate", matrix)
+matrix = RotateMatrix90Deg(matrix)
+PrintMatrix("2 Rotation", matrix)
 
-matrix = rotateMatrix90Deg(matrix)
-print("3 rotate", matrix)
+matrix = RotateMatrix90Deg(matrix)
+PrintMatrix("3 Rotation", matrix)
 
-matrix = rotateMatrix90Deg(matrix)
-print("4 rotate", matrix)
+matrix = RotateMatrix90Deg(matrix)
+PrintMatrix("4 Rotation", matrix)
 
 print("End of Program")
