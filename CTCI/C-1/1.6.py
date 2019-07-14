@@ -1,6 +1,5 @@
 from __future__ import print_function
 
-
 # Prompt 1.6 : Implement a method to perform basic string compression using the counts
 #               of repeated characters.
 #               EX: the string aabcccccaaa would become a2b1c5a3. if the compressed

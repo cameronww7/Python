@@ -13,7 +13,12 @@ import unittest
 
 print("1.5")
 
-def isOneAway(xString1, xString2):
+# IsOneAway
+#   IsOneAway takes in two strings and compares the first string to the
+#   second string check to is if one letter was to be added or subtracted
+#   that the two strings would then become the same exact string and
+#   once processed will return a true or false depending on the result.
+def IsOneAway(xString1, xString2):
     print("  Start : String1-", xString1.__str__(), "|", "String2-", xString2.__str__())
 
     xString1 = xString1.lower().replace(" ", "")
@@ -24,38 +29,38 @@ def isOneAway(xString1, xString2):
     offByOne = 0
 
     for x in range(len(xString2)):
-        if (xString1.find(xString2[x]) == -1):
-            print(":xString1.find(xString2[x]) -", xString1.find(xString2[x]))
+        if xString1.find(xString2[x]) == -1:
             offByOne = offByOne + 1
-            print("OffByOne -", offByOne)
 
-    if (offByOne < 2):
-        print("\nIt is Off By One - TRUE\n")
+    if offByOne < 2:
         return False
     else:
-        print("\nIt is Off By More Than One - FALSE\n")
         return True
 
 
-isOneAway("Pale", "Ple")
-isOneAway("Pales", "pale")
-isOneAway("Pale", "bale")
-isOneAway("Pale", "bake")
+# PrintIsOneAwayReturn
+#   Function is to print out the true or false statement provided by IsOneAway
+def PrintIsOneAwayReturn(xResult):
+    if xResult:
+        print(">> Off By More Than One = FALSE\n")
+    else:
+        print(">> Off By One = TRUE\n")
 
 
-#
-#class Tests1_5(unittest.TestCase):
-#    def test_case_06(self):
-#        self.assertTrue(isOneAway("Pale"))
+print("\nStarting Program\n")
 
-#    def test_case_07(self):
-#        self.assertTrue(isOneAway("Pales"))
+result = IsOneAway("Pale", "Ple")
+PrintIsOneAwayReturn(result)
 
-#    def test_case_08(self):
-#        self.assertTrue(isOneAway("Pale"))
+result = IsOneAway("Pales", "pale")
+PrintIsOneAwayReturn(result)
 
- #   def test_case_09(self):
- #       self.assertTrue(isOneAway("Pale"))
-#
 
-#unittest.main()
+result = IsOneAway("Pale", "bale")
+PrintIsOneAwayReturn(result)
+
+
+result = IsOneAway("Pale", "bake")
+PrintIsOneAwayReturn(result)
+
+print("End of Program")
