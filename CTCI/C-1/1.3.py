@@ -30,10 +30,9 @@ string1 = "Mr John Smith"
 
 string1 = string1.replace(" ","%20")
 
-print("Round 1: ", string1)
-
 string2 = "Mr John Smith"
 
 result = ReplaceWhiteSpace(string2)
 
+print("Round 1: ", string1)
 print("Round 2: ", result)
