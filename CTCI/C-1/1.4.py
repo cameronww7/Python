@@ -1,6 +1,4 @@
 from __future__ import print_function
-from collections import OrderedDict
-import unittest
 
 # Prompt 1.4 : Palindrome Permutation
 #
@@ -11,81 +9,62 @@ import unittest
 
 print("1.4")
 
-def IsPermPal(xInputString):
-    dic = {}  # Setup dictionary
 
-    xInputString = xInputString.lower()
-    xInputString = xInputString.replace(" ", "")
+# IsPermPal
+#   This function will take in a string, then will make the string all
+#   lower case and then will remove all whitespace from the string.
+#   Once if has done that it will move through the string comparing
+#   the start and end for the same characters in the string, if they
+#   do match it will return false otherwise will return true as it
+#   will move to the center of the string.
+def IsPermPal(xString):
+    print("\nPassed In String :", xString)
 
-    for c in xInputString:  # Init Dic
-        dic[c] = 0
+    xString = xString.lower()
+    xString = xString.replace(" ", "")
 
-    for c in xInputString:  # count Frequency
-        dic[c] += 1
+    print("Passed In String Sanitized:", xString)
 
-    num_even = 0
-    for c, count in dic.items():
-        if count % 2 == 0:
-            num_even += 1
+    sizeHalfed = len(xString) / 2
+    sizeHalfed = sizeHalfed.__round__()
 
-    if (num_even in (len(dic), len(dic) - 1)):
-        size = len(xInputString) / 2
-        size = size.__round__()
+    size = len(xString)
+    size = size - 1
 
-        x = []
-        y = []
+    for x in range(sizeHalfed):
+        if xString[x] != xString[size]:
+            return False
+        else:
+            size = size - 1
 
-# Problem with Characters that repeat for display
+    return True
 
-        for i in range(len(xInputString)):
 
-            if xInputString.count(xInputString[i]) == 2:
-
-                if xInputString[i] not in x:
-                    x.append(xInputString[i])
-
-            elif xInputString.count(xInputString[i]) >= 2:
-                x.append(xInputString[i])
-
-            elif xInputString.count(xInputString[i]) == 1:
-                y.append(xInputString[i])
-
-        print("x: ", x)
-        print("y: ", y)
-
-        newString = ""
-
-        for i in range(len(x)):
-            newString = newString + x[i]
-
-        for i in range(len(y)):
-            newString = newString + y[i]
-
-        for i in range(len(x)-1, -1, -1):
-            newString = newString + x[i]
-
-        print(xInputString, "is a Palindrome Permutation = ", newString)
-        return True
+# PrintResult
+#   This function will output the result from IsPermPal that has been
+#   passed in and will output the string being tested.
+def PrintResult(xPrompt, xResult):
+    if xResult:
+        print(" > \"", xPrompt, "\"", "is a Palindrome Permutation = ", xResult)
     else:
-        print(xInputString, "is Not a Palindrome Permutation")
-        return False
+        print(" > \"", xPrompt, "\"", "is Not a Palindrome Permutation =", xResult)
 
 
-class Tests(unittest.TestCase):
-    def test_case_01(self):
-        self.assertFalse(IsPermPal("cisco"))
+print("Starting Program")
 
-    def test_case_02(self):
-        self.assertTrue(IsPermPal("Rotator"))
+result = IsPermPal("cisco")
+PrintResult("cisco", result)
 
-    def test_case_03(self):
-        self.assertTrue(IsPermPal("Step on no pets"))
+result = IsPermPal("Rotator")
+PrintResult("Rotator", result)
 
-    def test_case_04(self):
-        self.assertTrue(IsPermPal("No lemon no melon"))
+result = IsPermPal("Step on no pets")
+PrintResult("Step on no pets", result)
 
-    def test_case_05(self):
-        self.assertTrue(IsPermPal("Eva can I see bees in a cave"))
+result = IsPermPal("No lemon no melon")
+PrintResult("No lemon no melon", result)
 
+result = IsPermPal("Eva can I see bees in a cave")
+PrintResult("Eva can I see bees in a cave", result)
 
-unittest.main()
+print("\nEnd of Program")
