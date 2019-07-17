@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="013d0351-7762-4be4-8aa2-12a2d055db68" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CTCI/C-2/2.1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CTCI/C-1/1.1.py" beforeDir="false" afterPath="$PROJECT_DIR$/CTCI/C-1/1.1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CTCI/C-1/1.2.py" beforeDir="false" afterPath="$PROJECT_DIR$/CTCI/C-1/1.2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CTCI/C-1/1.4.py" beforeDir="false" afterPath="$PROJECT_DIR$/CTCI/C-1/1.4.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,8 +28,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/CTCI/C-2/2.1.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="100">
-                  <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+                <state relative-caret-position="380">
+                  <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
                 </state>
               </provider>
             </entry>
@@ -38,6 +39,24 @@
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/CTCI/C-1/1.1.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="410">
+                  <caret line="22" selection-start-line="22" selection-end-line="22" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/CTCI/C-1/1.2.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="140">
+                  <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/CTCI/C-1/1.7.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="1360">
@@ -46,11 +65,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/CTCI/C-1/1.4.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="660">
-                  <caret line="69" selection-start-line="69" selection-end-line="69" selection-end-column="25" />
+                <state relative-caret-position="920">
+                  <caret line="46" column="3" selection-start-line="46" selection-start-column="3" selection-end-line="46" selection-end-column="3" />
                 </state>
               </provider>
             </entry>
@@ -117,11 +136,11 @@
         <option value="$PROJECT_DIR$/CTCI/C-1/1.6.py" />
         <option value="$PROJECT_DIR$/CTCI/C-1/1.5.py" />
         <option value="$PROJECT_DIR$/CTCI/C-1/1.3.py" />
-        <option value="$PROJECT_DIR$/CTCI/C-1/1.2.py" />
-        <option value="$PROJECT_DIR$/CTCI/C-1/1.1.py" />
-        <option value="$PROJECT_DIR$/CTCI/C-1/1.4.py" />
         <option value="$PROJECT_DIR$/CTCI/C-1/1.9.py" />
         <option value="$PROJECT_DIR$/CTCI/C-2/2.1.py" />
+        <option value="$PROJECT_DIR$/CTCI/C-1/1.4.py" />
+        <option value="$PROJECT_DIR$/CTCI/C-1/1.1.py" />
+        <option value="$PROJECT_DIR$/CTCI/C-1/1.2.py" />
       </list>
     </option>
   </component>
@@ -586,20 +605,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CTCI/C-1/1.1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CTCI/C-1/1.2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="18" column="8" lean-forward="true" selection-start-line="18" selection-start-column="8" selection-end-line="19" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CTCI/C-1/1.7.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1360">
@@ -623,15 +628,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CTCI/C-1/1.4.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="69" selection-start-line="69" selection-end-line="69" selection-end-column="25" />
+        <state relative-caret-position="920">
+          <caret line="46" column="3" selection-start-line="46" selection-start-column="3" selection-end-line="46" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CTCI/C-2/2.1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        <state relative-caret-position="380">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CTCI/C-1/1.1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CTCI/C-1/1.2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
         </state>
       </provider>
     </entry>

@@ -1,17 +1,20 @@
 from __future__ import print_function
-
+"""
 # Prompt
 # 1.2 :  Given two strings, write a method to decide if one is a permutation of other.
 # Example:
 #   "sumit" and "tiums" are permutations of each other.
 #   "abcd" and bdea" are not permutations of each other.
+"""
 
 
+"""
 # IsStringPermutation
 #   This function takes in two strings then moves through each slot
 #   in string 2 comparing if they have the same letters and if they
 #   are the same size with the same variables they are the
 #   permutation of each other.
+"""
 def IsStringPermutation(xString1, xString2):
     sameLetterCount = 0
 
@@ -28,9 +31,11 @@ def IsStringPermutation(xString1, xString2):
         return False
 
 
-# IsSameSize
-#   This function takes two strings in and returns if they are the
-#   same size or not with a true or false return
+"""
+ IsSameSize
+   This function takes two strings in and returns if they are the
+   same size or not with a true or false return
+"""
 def IsSameSize(xString1, xString2):
     if len(xString1) == len(xString2):
         return True
@@ -38,9 +43,11 @@ def IsSameSize(xString1, xString2):
         return False
 
 
-# PrintResult
-#   This function takes in a true or false and returns the
-#   correct output message depending on what was passed in.
+"""
+ PrintResult
+   This function takes in a true or false and returns the
+   correct output message depending on what was passed in.
+"""
 def PrintResult(xResult):
     if xResult:
         print("\nTwo Strings are permutations")

@@ -1,13 +1,14 @@
 from __future__ import print_function
-
-# Prompt
-# 1.1 : Implement an algorithm to determine if a string has all unique characters.
-#       What if you cannot use additional data structures.
-
-
-# FindDupChars
-#   This function will take in a string and check if the string contains all
-#   unique characters and will return a true for false depending on the string.
+"""
+ Prompt
+ 1.1 : Implement an algorithm to determine if a string has all unique characters.
+      What if you cannot use additional data structures.
+"""
+"""
+ FindDupChars
+   This function will take in a string and check if the string contains all
+   unique characters and will return a true for false depending on the string.
+"""
 def FindDupChars(xString):
     print("\nTest String:", xString)
 
@@ -19,9 +20,12 @@ def FindDupChars(xString):
 
     return True
 
-# PrintOutput
-#   This Function will take in a result and display the correct output
-#   message depending on the result.
+
+"""
+ PrintOutput
+   This Function will take in a result and display the correct output
+   message depending on the result.
+"""
 def PrintOutput(xResult):
     if xResult:
         print("The String is Unique")
