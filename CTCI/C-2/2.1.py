@@ -11,69 +11,84 @@ from __future__ import print_function
 print("2.1")
 
 
-
-def RemoveDuplicates():
-
-
-    return False
-
-
 class Node:
-    def __init__(self, data_Value, next_Node = None):
-        self.data = data_Value
-        self.next_Node = next_Node
+    def __init__(self, data_value, next_node=None):
+        self.data = data_value
+        self.next_node = next_node
 
     def get_next(self):
-        return self.next_Node
+        return self.next_node
 
-    def set_next_Node(self, new_Node):
-        self.next_Node = new_Node
+    def set_next_node(self, new_node):
+        self.next_node = new_node
 
     def get_data(self):
         return self.data
 
-    def set_data(self, new_Date):
-        self.data = new_Date
+    def set_data(self, new_data):
+        self.data = new_data
 
-class LinkedList:
-    def __init__(self):
-        self.headval = None
 
-    def list_print(self):
-        printval = self.headval
-        while printval is not None:
-            print(printval.dataval)
-            printval = printval.nextval
+class LinkedList (object):
+    def __init__(self, root_node=None):
+        self.root = root_node
+        self.size = 0
 
     def get_size(self):
-        print("Still Building")
+        return self.size
 
-    def find_node(self):
-        print("Still Building")
+    def add_new_node(self, new_data):
+        new_node = Node(new_data, self.root)
+        self.root = new_node
+        self.size += 1
 
-    def add_node(self):
-        print("Still Building")
+    def remove_node(self, node_to_remove):
+        current_node = self.root
+        previous_node = None
+        while current_node:
+            if current_node.get_data() == node_to_remove:
+                if previous_node:
+                    previous_node.set_next_node(current_node.get_next())
+                else:
+                    self.root = current_node
+                self.size -= 1
+                return True  # data is removed
+            else:
+                previous_node = current_node
+                current_node = current_node.get_next()
 
-    def remove_node(self):
-        print("Still Building")
+        return False  # data was not found/removed
 
+    def find_node(self, data_to_find):
+        current_node = self.root
 
-list = LinkedList()
-list.headval = Node("Mon")
-e2 = Node("Tue")
-e3 = Node("Wed")
+        while current_node:
+            if current_node.get_data() == data_to_find:
+                return data_to_find
+            else:
+                current_node = current_node.get_next()
+        return None
 
-# Link first Node to second node
-list.headval.nextval = e2
+    def print_list(self):
+        print("Need to Build")
 
-# Link second Node to third node
-e2.nextval = e3
-
-list.list_print()
-
+    def remove_duplicates(self):
+        print("Need to Build")
 
 
 print("Starting Program")
+
+myList = LinkedList()
+
+myList.add_new_node(5)
+myList.add_new_node(8)
+myList.add_new_node(12)
+
+myList.remove_node(8)
+
+print(myList.remove_node(12))
+
+print(myList.find_node(5))
 
 
 print("\nEnd of Program")
