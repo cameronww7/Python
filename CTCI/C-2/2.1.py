@@ -11,37 +11,56 @@ from __future__ import print_function
 print("2.1")
 
 
+"""
+class Node
+    This class is used for LinkedList, its the the core to the list.
+    As this is the structure needed to create the list of nodes (self).
+"""
 class Node:
+    # Class Constructor
     def __init__(self, data_value, next_node=None):
         self.data = data_value
         self.next_node = next_node
 
+    # Getter - Sends the pointer to the next node
     def get_next(self):
         return self.next_node
 
+    # Setter - Sets the node current node to point at the next node passed in
     def set_next_node(self, new_node):
         self.next_node = new_node
 
+    # Getter - Sends the data of the current Node
     def get_data(self):
         return self.data
 
+    # Setter - Sets the passed in data to the current Node
     def set_data(self, new_data):
         self.data = new_data
 
 
+"""
+class LinkedList
+    This class is a data structure to create a list of Node class which is called a LinkedList.
+    Because all the nodes connect to one another. 
+"""
 class LinkedList (object):
+    # Class Constructor
     def __init__(self, root_node=None):
         self.root = root_node
         self.size = 0
 
+    # Getter - Returns the Current Size of the LinkedList
     def get_size(self):
         return self.size
 
+    # Add - Adds a new node to the LinkedList, adds to the End
     def add_new_node(self, new_data):
         new_node = Node(new_data, self.root)
         self.root = new_node
         self.size += 1
 
+    # Remove - Removes the passed in node number from the LinkedList
     def remove_node(self, node_to_remove):
         current_node = self.root
         previous_node = None
@@ -59,6 +78,7 @@ class LinkedList (object):
 
         return False  # data was not found/removed
 
+    # Find - Finds the passed in node and returns its Data
     def find_node(self, data_to_find):
         current_node = self.root
 
@@ -69,14 +89,16 @@ class LinkedList (object):
                 current_node = current_node.get_next()
         return None
 
+    # Print - Prints all the Nodes in the list, Start to End
     def print_list(self):
         print("Need to Build")
 
+    # Core Function to this Project, Removes Duplicates
     def remove_duplicates(self):
         print("Need to Build")
 
 
-print("Starting Program")
+print("\nStarting Program\n")
 
 myList = LinkedList()
 
