@@ -56,14 +56,26 @@ class LinkedList (object):
 
     # Add - Adds a new node to the LinkedList, adds to the End
     def add_new_node(self, new_data):
+        print("Adding :", new_data)
+
         new_node = Node(new_data, self.root)
         self.root = new_node
         self.size += 1
 
     # Remove - Removes the passed in node number from the LinkedList
     def remove_node(self, node_to_remove):
+        print("Removing :", node_to_remove)
+
         current_node = self.root
         previous_node = None
+
+        if current_node is not None:
+            if current_node.get_data() == node_to_remove:
+                self.root = current_node.get_next()
+                current_node = None
+                print(node_to_remove, "Was Found & Removed")
+                return True
+
         while current_node:
             if current_node.get_data() == node_to_remove:
                 if previous_node:
@@ -71,15 +83,19 @@ class LinkedList (object):
                 else:
                     self.root = current_node
                 self.size -= 1
+                print(node_to_remove, "Was Found & Removed")
                 return True  # data is removed
             else:
                 previous_node = current_node
                 current_node = current_node.get_next()
 
+        print(node_to_remove, "Was Not Found & Removed")
         return False  # data was not found/removed
 
     # Find - Finds the passed in node and returns its Data
     def find_node(self, data_to_find):
+        print("Finding: ", data_to_find)
+
         current_node = self.root
 
         while current_node:
@@ -87,24 +103,59 @@ class LinkedList (object):
                 return data_to_find
             else:
                 current_node = current_node.get_next()
+
         return None
 
     # Print - Prints all the Nodes in the list, Start to End
     def print_list(self):
-        print("Need to Build")
+        print("\nPrinting LinkedList Nodes")
+        print("--------------------------")
+
+        current_node = self.root
+        node_count = 0
+
+        while current_node:
+            print("   Node Count", node_count, ":", current_node.get_data())
+            current_node = current_node.get_next()
+            node_count += 1
+
+        print("--------------------------\n")
 
     # Core Function to this Project, Removes Duplicates
     def remove_duplicates(self):
-        print("Need to Build")
+        print("Removing all Duplicates")
+        current_node = self.root
+        listOfRemoval = []
 
+        while current_node:
+            #print("1 - ", current_node.get_data())
+            dup_search = current_node.get_next()
+            while dup_search:
+                #print("2 - ", dup_search.get_data())
+                if current_node.get_data() == dup_search.get_data():
+                    listOfRemoval.append(current_node.get_data())
+                dup_search = dup_search.get_next()
+            current_node = current_node.get_next()
+        #print("3")
+        print("List of Removal", listOfRemoval)
+
+        while listOfRemoval:
+            self.remove_node(listOfRemoval.pop())
 
 print("\nStarting Program\n")
 
 myList = LinkedList()
 
+myList.add_new_node(1)
+myList.add_new_node(2)
+myList.add_new_node(4)
+myList.add_new_node(3)
+myList.add_new_node(4)
+myList.add_new_node(6)
 myList.add_new_node(5)
-myList.add_new_node(8)
-myList.add_new_node(12)
+myList.add_new_node(4)
+
+myList.print_list()
 
 myList.remove_node(8)
 
@@ -112,5 +163,14 @@ print(myList.remove_node(12))
 
 print(myList.find_node(5))
 
+myList.remove_duplicates()
+
+myList.print_list()
+
+myList.remove_node(5)
+myList.remove_node(4)
+myList.remove_node(4)
+
+myList.print_list()
 
 print("\nEnd of Program")
