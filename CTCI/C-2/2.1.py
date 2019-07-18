@@ -125,7 +125,6 @@ class LinkedList (object):
     def remove_duplicates(self):
         print("Removing all Duplicates")
         current_node = self.root
-        listOfRemoval = []
 
         while current_node:
             #print("1 - ", current_node.get_data())
@@ -133,14 +132,10 @@ class LinkedList (object):
             while dup_search:
                 #print("2 - ", dup_search.get_data())
                 if current_node.get_data() == dup_search.get_data():
-                    listOfRemoval.append(current_node.get_data())
+                    self.remove_node(current_node.get_data())
                 dup_search = dup_search.get_next()
             current_node = current_node.get_next()
         #print("3")
-        print("List of Removal", listOfRemoval)
-
-        while listOfRemoval:
-            self.remove_node(listOfRemoval.pop())
 
 print("\nStarting Program\n")
 
