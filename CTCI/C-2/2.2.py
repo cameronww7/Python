@@ -2,7 +2,12 @@ from __future__ import print_function
 """
  Prompt 2.2 : Python - Return Kth to Last
                 Implement an algorithm to find the Kth to last element of a singly linked list.
-               
+
+EX:       
+    Node:   0->01->02->03->04->05      
+    Input:  1->10->30->14->3->37,  index = 2 = 30
+    Output: 30  
+        The node at index 2 is 30
 
         Video Watched - https://www.youtube.com/watch?v=Ast5sKQXxEU
         Site Using - https://www.tutorialspoint.com/python/python_linked_lists For Linked Listed in Python
@@ -143,8 +148,8 @@ class LinkedList (object):
                 dup_search = dup_search.get_next()  # increments dup_search to 1 node ahead
             current_node = current_node.get_next()  # increments current_node to 1 node ahead
 
-    # Removes Duplicates
-    #   Searches LinkedList and Removes all Duplicate Nodes
+    # return_k_th_to_last
+    #
     def return_k_th_to_last(self):
         print("Start Building")
 
