@@ -10,7 +10,6 @@ from __future__ import print_function
 
 print("2.1")
 
-
 """
 class Node
     This class is used for LinkedList, its the the core to the list.
