@@ -1,6 +1,5 @@
 from __future__ import print_function
-
-
+"""
 # Prompt 1.7 : Given an image represented by an NxN matrix,
 #               where each pixel in the image is 4 bytes, write a method
 #               to rotate the image by 90 degrees can you do this in place?
@@ -10,19 +9,14 @@ from __future__ import print_function
 #            7 8 9         9 6 3
 #
 #
+"""
 
 print("1.7")
 
-matrix = [[1, 2, 3],
-          [4, 5, 6],
-          [7, 8, 9]]
-
-martrixSolution = [[7, 4, 1],
-                   [8, 5, 2],
-                   [9, 6, 3]]
-
+"""
 # RotateMatrix90Deg
-# Takes in a Matrix, creates a new same size matrix and then rotates said matrix 90 degrees.
+#   Takes in a Matrix, creates a new same size matrix and then rotates said matrix 90 degrees.
+"""
 def RotateMatrix90Deg(xMatrix):
     #print("", xMatrix)
 
@@ -38,8 +32,11 @@ def RotateMatrix90Deg(xMatrix):
 
     return newMatrix
 
+
+"""
 # PrintMatrix
-# Takes in a Matrix and then outputs the matrix nice and neat.
+#   Takes in a Matrix and then outputs the matrix nice and neat.
+"""
 def PrintMatrix(xName, xMatrix):
     print("Printing", xName)
     print("---------------")
@@ -52,6 +49,17 @@ def PrintMatrix(xName, xMatrix):
             print(xMatrix[row][col], " ", end="")
 
     print("\n---------------")
+
+
+matrix = [[1, 2, 3],
+          [4, 5, 6],
+          [7, 8, 9]]
+
+"""
+martrixSolution = [[7, 4, 1],
+                   [8, 5, 2],
+                   [9, 6, 3]]
+"""
 
 print("Starting Program")
 PrintMatrix("0 Rotation", matrix)

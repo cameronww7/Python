@@ -1,7 +1,5 @@
 from __future__ import print_function
-from collections import OrderedDict
-import unittest
-
+"""
 # Prompt 1.5 : There are three types of edits that can be performed on strings:
 #               Incert a character, remove a character, or replace a character.
 #               Given two strings, write a function to check if they are one
@@ -10,14 +8,17 @@ import unittest
 #        Pales, pale -> True
 #        Pale, bale -> true
 #        Pale, bake -> False
+"""
 
 print("1.5")
 
+"""
 # IsOneAway
 #   IsOneAway takes in two strings and compares the first string to the
 #   second string check to is if one letter was to be added or subtracted
 #   that the two strings would then become the same exact string and
 #   once processed will return a true or false depending on the result.
+"""
 def IsOneAway(xString1, xString2):
     print("  Start : String1-", xString1.__str__(), "|", "String2-", xString2.__str__())
 
@@ -38,8 +39,10 @@ def IsOneAway(xString1, xString2):
         return True
 
 
+"""
 # PrintIsOneAwayReturn
 #   Function is to print out the true or false statement provided by IsOneAway
+"""
 def PrintIsOneAwayReturn(xResult):
     if xResult:
         print(">> Off By More Than One = FALSE\n")
@@ -55,10 +58,8 @@ PrintIsOneAwayReturn(result)
 result = IsOneAway("Pales", "pale")
 PrintIsOneAwayReturn(result)
 
-
 result = IsOneAway("Pale", "bale")
 PrintIsOneAwayReturn(result)
-
 
 result = IsOneAway("Pale", "bake")
 PrintIsOneAwayReturn(result)

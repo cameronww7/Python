@@ -4,6 +4,9 @@ from __future__ import print_function
  1.1 : Implement an algorithm to determine if a string has all unique characters.
       What if you cannot use additional data structures.
 """
+
+print("1.1")
+
 """
  FindDupChars
    This function will take in a string and check if the string contains all
@@ -32,8 +35,6 @@ def PrintOutput(xResult):
     else:
         print("ERROR: A Duplicate letter was found")
 
-
-print("1.1")
 
 print("\nStarting Program")
 

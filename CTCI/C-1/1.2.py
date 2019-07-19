@@ -7,6 +7,7 @@ from __future__ import print_function
 #   "abcd" and bdea" are not permutations of each other.
 """
 
+print("1.2")
 
 """
 # IsStringPermutation
@@ -54,7 +55,6 @@ def PrintResult(xResult):
     else:
         print("\nStrings are not permutations")
 
-print("1.2")
 
 print("\nStarting Program\n")
 

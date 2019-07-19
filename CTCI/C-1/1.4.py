@@ -7,6 +7,7 @@ from __future__ import print_function
 # Ex: input "Tact coa"
 #       True  Tacocat or atcocta
 """
+
 print("1.4")
 
 """
@@ -39,6 +40,7 @@ def IsPermPal(xString):
             size = size - 1
 
     return True
+
 
 """
 # PrintResult

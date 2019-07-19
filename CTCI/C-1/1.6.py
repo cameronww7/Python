@@ -1,18 +1,21 @@
 from __future__ import print_function
-
+"""
 # Prompt 1.6 : Implement a method to perform basic string compression using the counts
 #               of repeated characters.
 #               EX: the string aabcccccaaa would become a2b1c5a3. if the compressed
 #               string would not become smaller than the original string your method
 #               should return the original string . you can assume the string has only
 #               uppercase and lower case letters (a-z)
+"""
 
 print("1.6")
 
+"""
 # StrCompression
 #   This function takes in a string, then parses through the string counting the number
 #   consecutive letters and building a string out with the letter and the number
 #   associated with the number of consecutive letters and returns the new build string.
+"""
 def StrCompression(xInString):
     xInString   = xInString.lower().replace(" ", "")
     newString   = ""
