@@ -9,6 +9,7 @@ EX:
     Output: 30  
         The node at index 2 is 30
 
+        Example - https://www.geeksforgeeks.org/write-a-function-to-get-nth-node-in-a-linked-list/
         Video Watched - https://www.youtube.com/watch?v=Ast5sKQXxEU
         Site Using - https://www.tutorialspoint.com/python/python_linked_lists For Linked Listed in Python
 """
@@ -149,9 +150,19 @@ class LinkedList (object):
             current_node = current_node.get_next()  # increments current_node to 1 node ahead
 
     # return_k_th_to_last
-    #
-    def return_k_th_to_last(self):
-        print("Start Building")
+    #   Takes in a index to move to and returns the said data at that location
+    def return_k_th_to_last(self, index_to_move):
+        if index_to_move <= self.size:  # If index is out of the size return generic out of range msg
+            current_node = self.root
+
+            for x in range(0, index_to_move):  # Loops through list
+                current_node = current_node.get_next()
+
+                print("The node at index", index_to_move, "is", current_node.get_data())
+                return True
+        else:
+            print("The index", index_to_move, "does not exist in the Linked List")
+            return False
 
 
 print("\nStarting Program\n")
@@ -169,7 +180,8 @@ myList.add_new_node(4)
 
 myList.print_list()
 
-myList.return_k_th_to_last()
+myList.return_k_th_to_last(2)
+myList.return_k_th_to_last(99)
 
 myList.print_list()
 
