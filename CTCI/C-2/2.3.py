@@ -1,23 +1,19 @@
 from __future__ import print_function
 """
- Prompt 2.2 : Python - Delete Middle Node
-                Implement an algorithm to delet a nod ein the middle (ie any node but the first 
+ Prompt 2.3 : Python - Delete Middle Node
+                Implement an algorithm to delete a nod ein the middle (ie any node but the first 
                 and last node, no necessarily the exact middle) of a singly linked list, given 
                 only access to that node.
                 
-
 EX:       
-    Node:   0->01->02->03->04->05      
     Input:  the node mc from the linked list a->c->d->e->f
     Output: nothing is retutned, but the new linked list looks like a->b->d->e->f
-        The node at index 2 is 30
 
-        Example - https://www.geeksforgeeks.org/write-a-function-to-get-nth-node-in-a-linked-list/
         Video Watched - https://www.youtube.com/watch?v=Ast5sKQXxEU
         Site Using - https://www.tutorialspoint.com/python/python_linked_lists For Linked Listed in Python
 """
 
-print("2.2")
+print("2.3")
 
 """
 class Node
