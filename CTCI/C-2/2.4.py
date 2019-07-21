@@ -107,6 +107,16 @@ class LinkedList(object):
         print(node_to_remove, "Does not Exist")
         return False  # data was not found/removed
 
+    def delete_link_list(self):
+        while self.root:  # Loop Though list
+            current_node = self.root  # Grabs Root Node
+            print("Removing :", current_node.get_data(), "Current Size:", self.size)
+            self.size -= 1
+            self.root = current_node.get_next()  # set root node to next node
+            current_node = None  # clears old root node
+
+        return True  # data is removed
+
     # find_node
     #   Finds the passed in node and returns its Data
     def find_node(self, data_to_find):
@@ -125,18 +135,21 @@ class LinkedList(object):
     # print_list
     #   Prints all the Nodes in the list, Start to End
     def print_list(self):
-        print("\nPrinting LinkedList Nodes")
-        print("--------------------------")
+        if self.root:
+            print("\nPrinting LinkedList Nodes")
+            print("--------------------------")
 
-        current_node = self.root
-        node_count = 0
+            current_node = self.root
+            node_count = 0
 
-        while current_node:
-            print("   Node Count", node_count, ":", current_node.get_data())
-            current_node = current_node.get_next()
-            node_count += 1
+            while current_node:
+                print("   Node Count", node_count, ":", current_node.get_data())
+                current_node = current_node.get_next()
+                node_count += 1
 
-        print("--------------------------\n")
+            print("--------------------------\n")
+        else:
+            print("\n > List Is EMPTY <\n")
 
     # Removes Duplicates
     #   Searches LinkedList and Removes all Duplicate Nodes
@@ -200,7 +213,9 @@ myList.add_new_node(1)
 
 myList.print_list()
 
-myList.partition(5)
+myList.delete_link_list()
+
+#myList.partition(5)
 
 myList.print_list()
 
