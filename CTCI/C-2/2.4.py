@@ -11,7 +11,7 @@ from __future__ import print_function
 
 EX:       
     Input:  3 -> 5 -> 8 -> 5 -> 1 -> 2 -> 1 [Partition = 5]
-    Output: 3 -> 1 -> 2 -> 10 -> 5 -> 5 -> 8
+    Output: 3 -> 1 -> 2 -> 1 -> 5 -> 5 -> 8
 
         Video Watched - https://www.youtube.com/watch?v=Ast5sKQXxEU
         Site Using - https://www.tutorialspoint.com/python/python_linked_lists For Linked Listed in Python
@@ -24,8 +24,6 @@ class Node
     This class is used for LinkedList, its the the core to the list.
     As this is the structure needed to create the list of nodes (self).
 """
-
-
 class Node:
     # Class Constructor
     def __init__(self, data_value, next_node=None):
@@ -58,8 +56,6 @@ class LinkedList
     This class is a data structure to create a list of Node class which is called a LinkedList.
     Because all the nodes connect to one another. 
 """
-
-
 class LinkedList(object):
     # Class Constructor
     def __init__(self, root_node=None):
@@ -173,25 +169,38 @@ class LinkedList(object):
 
     # partition
     #   Takes in a index to partition and partitions the linked list around it
-    def partition(selfs, input_partition):
-        print("Build Here!")
+    def partition(self, input_partition):
+        if self.find_node(input_partition):
+            current_node = self.root
+
+            lower_partition = None
+            upper_partition = None
+
+            while current_node:  # Loops through list
+                if current_node.get_data() <= input_partition:
+                    print("Something")
+                else:
+                    print("something")
+        else:
+            return False
+
+# combine halfs
 
 print("\nStarting Program\n")
 
 myList = LinkedList()
 
+myList.add_new_node(3)
+myList.add_new_node(5)
+myList.add_new_node(8)
+myList.add_new_node(5)
 myList.add_new_node(1)
 myList.add_new_node(2)
-myList.add_new_node(4)
-myList.add_new_node(3)
-myList.add_new_node(4)
-myList.add_new_node(6)
-myList.add_new_node(5)
-myList.add_new_node(4)
+myList.add_new_node(1)
 
 myList.print_list()
 
-
+myList.partition(5)
 
 myList.print_list()
 
