@@ -67,6 +67,12 @@ class LinkedList(object):
     def get_size(self):
         return self.size
 
+    def is_empty(self):
+        if self.size < 0:
+            return False
+        else:
+            return True
+
     # add_new_node - Add
     #   Adds a new node to the LinkedList, adds to the End
     def add_new_node(self, new_data):
@@ -107,6 +113,8 @@ class LinkedList(object):
         print(node_to_remove, "Does not Exist")
         return False  # data was not found/removed
 
+    # delete_link_list
+    #   Deletes the entire linked list
     def delete_link_list(self):
         while self.root:  # Loop Though list
             current_node = self.root  # Grabs Root Node
@@ -183,17 +191,20 @@ class LinkedList(object):
     # partition
     #   Takes in a index to partition and partitions the linked list around it
     def partition(self, input_partition):
-        if self.find_node(input_partition):
-            current_node = self.root
+        if self.is_empty():
+            if self.find_node(input_partition):
+                current_node = self.root
 
-            lower_partition = None
-            upper_partition = None
+                lower_partition = None
+                upper_partition = None
 
-            while current_node:  # Loops through list
-                if current_node.get_data() <= input_partition:
-                    print("Something")
-                else:
-                    print("something")
+                while current_node:  # Loops through list
+                    if current_node.get_data() <= input_partition:
+                        print("Something")
+                    else:
+                        print("something")
+            else:
+                return False
         else:
             return False
 
@@ -215,7 +226,7 @@ myList.print_list()
 
 myList.delete_link_list()
 
-#myList.partition(5)
+myList.partition(5)
 
 myList.print_list()
 
