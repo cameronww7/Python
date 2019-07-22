@@ -69,6 +69,7 @@ class LinkedList(object):
 
     def is_empty(self):
         if self.size < 0:
+            print("> Linked List Is EMPTY <")
             return False
         else:
             return True
@@ -85,113 +86,122 @@ class LinkedList(object):
     # remove_node - Remove
     #   Removes the passed in node number from the LinkedList
     def remove_node(self, node_to_remove):
-        print("Removing :", node_to_remove)
+        if self.is_empty():
+            print("Removing :", node_to_remove)
 
-        current_node = self.root  # Grabs Root Node
-        previous_node = None  # Previous Node is Created set to null
+            current_node = self.root  # Grabs Root Node
+            previous_node = None  # Previous Node is Created set to null
 
-        if current_node is not None:  # checks root node is not null
-            if current_node.get_data() == node_to_remove:  # checks if root node is node to remove
-                self.root = current_node.get_next()  # set root node to next node
-                current_node = None  # clears old root node
-                print(node_to_remove, "Was Found & Removed")
-                return True
+            if current_node is not None:  # checks root node is not null
+                if current_node.get_data() == node_to_remove:  # checks if root node is node to remove
+                    self.root = current_node.get_next()  # set root node to next node
+                    current_node = None  # clears old root node
+                    print(node_to_remove, "Was Found & Removed")
+                    return True
 
-        while current_node:  # Loop Though list
-            if current_node.get_data() == node_to_remove:  # checks if current node is node to remove
-                if previous_node:
-                    previous_node.set_next_node(current_node.get_next())  # sets previous node to next node
+            while current_node:  # Loop Though list
+                if current_node.get_data() == node_to_remove:  # checks if current node is node to remove
+                    if previous_node:
+                        previous_node.set_next_node(current_node.get_next())  # sets previous node to next node
+                    else:
+                        self.root = current_node  # sets root node to current node
+                    self.size -= 1
+                    print(node_to_remove, "Was Found & Removed")
+                    return True  # data is removed
                 else:
-                    self.root = current_node  # sets root node to current node
-                self.size -= 1
-                print(node_to_remove, "Was Found & Removed")
-                return True  # data is removed
-            else:
-                previous_node = current_node  # Increments previous node
-                current_node = current_node.get_next()  # Increments current node
+                    previous_node = current_node  # Increments previous node
+                    current_node = current_node.get_next()  # Increments current node
 
-        print(node_to_remove, "Does not Exist")
+            print(node_to_remove, "Does not Exist")
+            return False  # data was not found/removed
         return False  # data was not found/removed
 
     # delete_link_list
     #   Deletes the entire linked list
     def delete_link_list(self):
-        while self.root:  # Loop Though list
-            current_node = self.root  # Grabs Root Node
-            print("Removing :", current_node.get_data(), "Current Size:", self.size)
-            self.size -= 1
-            self.root = current_node.get_next()  # set root node to next node
-            current_node = None  # clears old root node
+        if self.is_empty():
+            while self.root:  # Loop Though list
+                current_node = self.root  # Grabs Root Node
+                print("Removing :", current_node.get_data(), "Current Size:", self.size)
+                self.size -= 1
+                self.root = current_node.get_next()  # set root node to next node
+                current_node = None  # clears old root node
 
         return True  # data is removed
 
     # find_node
     #   Finds the passed in node and returns its Data
     def find_node(self, data_to_find):
-        print("Finding: ", data_to_find)
+        if self.is_empty():
+            print("Finding: ", data_to_find)
 
-        current_node = self.root
+            current_node = self.root
 
-        while current_node:
-            if current_node.get_data() == data_to_find:
-                return data_to_find
-            else:
-                current_node = current_node.get_next()
-
+            while current_node:
+                if current_node.get_data() == data_to_find:
+                    return data_to_find
+                else:
+                    current_node = current_node.get_next()
+            return None
         return None
 
     # print_list
     #   Prints all the Nodes in the list, Start to End
     def print_list(self):
-        if self.root:
-            print("\nPrinting LinkedList Nodes")
-            print("--------------------------")
+        if self.is_empty():
+            if self.root:
+                print("\nPrinting LinkedList Nodes")
+                print("--------------------------")
 
-            current_node = self.root
-            node_count = 0
+                current_node = self.root
+                node_count = 0
 
-            while current_node:
-                print("   Node Count", node_count, ":", current_node.get_data())
-                current_node = current_node.get_next()
-                node_count += 1
+                while current_node:
+                    print("   Node Count", node_count, ":", current_node.get_data())
+                    current_node = current_node.get_next()
+                    node_count += 1
 
-            print("--------------------------\n")
-        else:
-            print("\n > List Is EMPTY <\n")
+                print("--------------------------\n")
 
     # Removes Duplicates
     #   Searches LinkedList and Removes all Duplicate Nodes
     def remove_duplicates(self):
-        print("Removing all Duplicates")
-        current_node = self.root
+        if self.is_empty():
+            print("Removing all Duplicates")
+            current_node = self.root
 
-        while current_node:  # Loops through list
-            dup_search = current_node.get_next()  # increments dup_search to 1 node ahead
-            while dup_search:  # Loops though dup_search
-                if current_node.get_data() == dup_search.get_data():
-                    self.remove_node(current_node.get_data())  # Removes dup Node
-                dup_search = dup_search.get_next()  # increments dup_search to 1 node ahead
-            current_node = current_node.get_next()  # increments current_node to 1 node ahead
+            while current_node:  # Loops through list
+                dup_search = current_node.get_next()  # increments dup_search to 1 node ahead
+                while dup_search:  # Loops though dup_search
+                    if current_node.get_data() == dup_search.get_data():
+                        self.remove_node(current_node.get_data())  # Removes dup Node
+                    dup_search = dup_search.get_next()  # increments dup_search to 1 node ahead
+                current_node = current_node.get_next()  # increments current_node to 1 node ahead
+        else:
+            return False
 
     # return_k_th_to_last
     #   Takes in a index to move to and returns the said data at that location
     def return_k_th_to_last(self, index_to_move):
-        if index_to_move <= self.size:  # If index is out of the size return generic out of range msg
-            current_node = self.root
+        if self.is_empty():
+            if index_to_move <= self.size:  # If index is out of the size return generic out of range msg
+                current_node = self.root
 
-            for x in range(0, index_to_move):  # Loops through list
-                current_node = current_node.get_next()
+                for x in range(0, index_to_move):  # Loops through list
+                    current_node = current_node.get_next()
 
-                print("The node at index", index_to_move, "is", current_node.get_data())
-                return True
-        else:
-            print("The index", index_to_move, "does not exist in the Linked List")
+                    print("The node at index", index_to_move, "is", current_node.get_data())
+                    return True
+            else:
+                print("The index", index_to_move, "does not exist in the Linked List")
+                return False
             return False
 
     # partition
     #   Takes in a index to partition and partitions the linked list around it
     def partition(self, input_partition):
         if self.is_empty():
+            print("\nStarting Partitioning of Linked List")
             if self.find_node(input_partition):
                 current_node = self.root
 
