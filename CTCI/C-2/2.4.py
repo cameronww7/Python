@@ -133,15 +133,17 @@ class LinkedList(object):
     #   Finds the passed in node and returns its Data
     def find_node(self, data_to_find):
         if self.is_empty():
-            print("Finding: ", data_to_find)
+            print("Finding:", data_to_find)
 
             current_node = self.root
 
             while current_node:
                 if current_node.get_data() == data_to_find:
+                    print("Found:", data_to_find)
                     return data_to_find
                 else:
                     current_node = current_node.get_next()
+            print("Did Not Find:", data_to_find)
             return None
         return None
 
@@ -190,33 +192,76 @@ class LinkedList(object):
                 for x in range(0, index_to_move):  # Loops through list
                     current_node = current_node.get_next()
 
-                    print("The node at index", index_to_move, "is", current_node.get_data())
-                    return True
+                print("The node at index", index_to_move, "is", current_node.get_data())
+                return True
             else:
                 print("The index", index_to_move, "does not exist in the Linked List")
                 return False
             return False
+
+    # return_k_th_to_last
+    #   Takes in a index to move to and returns the said data at that location
+    def return_node_at_index(self, index_to_move):
+        if self.is_empty():
+            if index_to_move <= self.size:  # If index is out of the size return generic out of range msg
+                current_node = self.root
+
+                for x in range(0, index_to_move):  # Loops through list
+                    current_node = current_node.get_next()
+
+                print("The node at index", index_to_move, "is", current_node.get_data())
+                return current_node.get_data()
 
     # partition
     #   Takes in a index to partition and partitions the linked list around it
     def partition(self, input_partition):
         if self.is_empty():
             print("\nStarting Partitioning of Linked List")
-            if self.find_node(input_partition):
+            if self.find_node(input_partition) == input_partition:
                 current_node = self.root
 
-                lower_partition = None
-                upper_partition = None
+                lower_partition = LinkedList()
+                upper_partition = LinkedList()
+                middle_partition = LinkedList()
 
                 while current_node:  # Loops through list
-                    if current_node.get_data() <= input_partition:
-                        print("Something")
+                    if current_node.get_data() == input_partition:
+                        middle_partition.add_new_node(current_node.get_data())
+                    elif current_node.get_data() < input_partition:
+                        lower_partition.add_new_node(current_node.get_data())
                     else:
-                        print("something")
+                        upper_partition.add_new_node(current_node.get_data())
+                    current_node = current_node.get_next()
+
+                self.delete_link_list()
+
+                lower_partition.print_list()
+                upper_partition.print_list()
+
+                upper_size = upper_partition.get_size()
+                for x in range(0, upper_size):
+                    print("Adding--", x, "|", upper_partition.return_node_at_index(x))
+                    self.add_new_node(upper_partition.return_node_at_index(x))
+
+                middle_size = middle_partition.get_size()
+                print("\nMiddle--", middle_size)
+                for x in range(0, middle_size):
+                    print("Adding--", x, "|", middle_partition.return_node_at_index(x))
+                    self.add_new_node(middle_partition.return_node_at_index(x))
+
+                lower_size = lower_partition.get_size()
+                print("\nlower--", lower_size)
+                for x in range(0, lower_size):
+                    print("Adding--", x, "|", lower_partition.return_node_at_index(x))
+                    self.add_new_node(lower_partition.return_node_at_index(x))
+
             else:
+                print("Leaving 1")
                 return False
         else:
+            print("Leaving 2")
             return False
+        print("Leaving 3")
 
 # combine halfs
 
@@ -233,8 +278,6 @@ myList.add_new_node(2)
 myList.add_new_node(1)
 
 myList.print_list()
-
-myList.delete_link_list()
 
 myList.partition(5)
 
