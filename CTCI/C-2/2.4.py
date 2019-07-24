@@ -220,50 +220,40 @@ class LinkedList(object):
             if self.find_node(input_partition) == input_partition:
                 current_node = self.root
 
-                lower_partition = LinkedList()
-                upper_partition = LinkedList()
-                middle_partition = LinkedList()
+                lower_partition = LinkedList()   # Holds Values Lower than input_partition
+                upper_partition = LinkedList()   # Holds Values Equal than input_partition
+                middle_partition = LinkedList()  # Holds Values Greater than input_partition
 
                 while current_node:  # Loops through list
-                    if current_node.get_data() == input_partition:
+                    if current_node.get_data() == input_partition:  # Grabs Values = to input_partition
                         middle_partition.add_new_node(current_node.get_data())
-                    elif current_node.get_data() < input_partition:
+                    elif current_node.get_data() < input_partition:  # Grabs Values < to input_partition
                         lower_partition.add_new_node(current_node.get_data())
-                    else:
+                    else:  # Grabs Values > to input_partition
                         upper_partition.add_new_node(current_node.get_data())
-                    current_node = current_node.get_next()
+                    current_node = current_node.get_next()  # Moves TO next variable
 
-                self.delete_link_list()
+                self.delete_link_list()  # Cleans Linked List
 
-                lower_partition.print_list()
-                upper_partition.print_list()
-
+                # Adds values back to self list in upper partition
                 upper_size = upper_partition.get_size()
                 for x in range(0, upper_size):
-                    print("Adding--", x, "|", upper_partition.return_node_at_index(x))
                     self.add_new_node(upper_partition.return_node_at_index(x))
 
+                # Adds values back to self list in middle partition
                 middle_size = middle_partition.get_size()
-                print("\nMiddle--", middle_size)
                 for x in range(0, middle_size):
-                    print("Adding--", x, "|", middle_partition.return_node_at_index(x))
                     self.add_new_node(middle_partition.return_node_at_index(x))
 
+                # Adds values back to self list in lower partition
                 lower_size = lower_partition.get_size()
-                print("\nlower--", lower_size)
                 for x in range(0, lower_size):
-                    print("Adding--", x, "|", lower_partition.return_node_at_index(x))
                     self.add_new_node(lower_partition.return_node_at_index(x))
-
             else:
-                print("Leaving 1")
                 return False
         else:
-            print("Leaving 2")
             return False
-        print("Leaving 3")
 
-# combine halfs
 
 print("\nStarting Program\n")
 
