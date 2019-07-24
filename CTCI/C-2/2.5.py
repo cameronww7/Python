@@ -11,7 +11,7 @@ EX:
         Input: (7 -> 1 -> 6) + (5 -> 9 -> 2). that is, 617 + 295
         Output: 2 -> 1 -> 9. that is 912.
         
-        Follow Up SUppose the digits are stored in forward order. repeat the above problem
+        Follow Up Suppose the digits are stored in forward order. repeat the above problem
         
         Input: (6 -> 1 -> 7) + (2 -> 9 -> 5). that is, 617 + 295
         Output: 9 -> 1 -> 2. that is 912.
@@ -257,24 +257,31 @@ class LinkedList(object):
         else:
             return False
 
+    def sum_lists_backwards(self, x_link_list_1, x_link_list_2):
+        print("Build Here")
+
+    def sum_lists_forwards(self, x_link_list_1, x_link_list_2):
+        print("Build Here")
+
 
 print("\nStarting Program\n")
 
-myList = LinkedList()
+my_List_1 = LinkedList()
+my_List_2 = LinkedList()
 
-myList.add_new_node(3)
-myList.add_new_node(5)
-myList.add_new_node(8)
-myList.add_new_node(5)
-myList.add_new_node(1)
-myList.add_new_node(2)
-myList.add_new_node(1)
+my_List_Solution = LinkedList()
 
-myList.print_list()
+my_List_Solution.print_list()
 
-myList.partition(5)
+my_List_Solution.sum_lists_backwards(my_List_1, my_List_2)
 
-myList.print_list()
+my_List_Solution.print_list()
+
+my_List_Solution.delete_link_list()
+
+my_List_Solution.sum_lists_forwards(my_List_1, my_List_2)
+
+my_List_Solution.print_list()
 
 print("\nEnd of Program")
 
