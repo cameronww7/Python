@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/CTCI/C-2/2.5.py" line="4" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="013d0351-7762-4be4-8aa2-12a2d055db68" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CTCI/C-2/2.4.py" beforeDir="false" afterPath="$PROJECT_DIR$/CTCI/C-2/2.4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CTCI/C-2/2.5.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,11 +53,20 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/CTCI/C-2/2.4.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="282">
-                  <caret line="256" lean-forward="true" selection-start-line="256" selection-end-line="256" />
+                <state relative-caret-position="202">
+                  <caret line="252" column="28" lean-forward="true" selection-end-line="277" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/CTCI/C-2/2.5.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="320">
+                  <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
                 </state>
               </provider>
             </entry>
@@ -198,6 +209,7 @@
         <option value="$PROJECT_DIR$/CTCI/C-2/2.2.py" />
         <option value="$PROJECT_DIR$/CTCI/C-2/2.3.py" />
         <option value="$PROJECT_DIR$/CTCI/C-2/2.4.py" />
+        <option value="$PROJECT_DIR$/CTCI/C-2/2.5.py" />
       </list>
     </option>
   </component>
@@ -731,8 +743,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CTCI/C-2/2.4.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="256" lean-forward="true" selection-start-line="256" selection-end-line="256" />
+        <state relative-caret-position="202">
+          <caret line="252" column="28" lean-forward="true" selection-end-line="277" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CTCI/C-2/2.5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
         </state>
       </provider>
     </entry>
