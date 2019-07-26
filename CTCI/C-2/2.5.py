@@ -280,27 +280,51 @@ class LinkedList(object):
         else:
             return False
 
-    def sum_lists_forwards(self, x_link_list_1, x_link_list_2):
-        if self.is_empty():
-            print("\nsum_lists_backwards")
 
-            list_1_number = ""
-            size = x_link_list_1.get_size() - 1
+# sum_lists_forwards
+#   This function takes in two linked lists and then will count each node in each list
+#   and then add them into one total.
+def sum_lists_forwards(x_link_list_1, x_link_list_2):
+        print("\nsum_lists_backwards")
 
-            for x in range(size, -1, -1):  # Loops through list
-                list_1_number = list_1_number + str(x_link_list_1.return_node_at_index(x))
+        list_1_number = ""
+        size = x_link_list_1.get_size() - 1
 
-            list_2_number = ""
-            size = x_link_list_2.get_size() - 1
+        for x in range(size, -1, -1):  # Loops through list
+            list_1_number = list_1_number + str(x_link_list_1.return_node_at_index(x))
 
-            for x in range(size, -1, -1):  # Loops through list
-                list_2_number = list_2_number + str(x_link_list_2.return_node_at_index(x))
+        list_2_number = ""
+        size = x_link_list_2.get_size() - 1
 
-            total = int(list_1_number) + int(list_2_number)
+        for x in range(size, -1, -1):  # Loops through list
+            list_2_number = list_2_number + str(x_link_list_2.return_node_at_index(x))
 
-            print("\n", list_1_number, "+", list_2_number, "=", total)
-        else:
-            return False
+        total = int(list_1_number) + int(list_2_number)
+
+        print("\n", list_1_number, "+", list_2_number, "=", total)
+
+
+# sum_lists_backwards
+#   This function takes in two linked lists and then will count each node in each list
+#   and then add them into one total.
+def sum_lists_backwards(x_link_list_1, x_link_list_2):
+        print("\nsum_lists_backwards")
+
+        list_1_number = ""
+        size = x_link_list_1.get_size() - 1
+
+        for x in range(size, -1, -1):  # Loops through list
+            list_1_number = list_1_number + str(x_link_list_1.return_node_at_index(x))
+
+        list_2_number = ""
+        size = x_link_list_2.get_size() - 1
+
+        for x in range(size, -1, -1):  # Loops through list
+            list_2_number = list_2_number + str(x_link_list_2.return_node_at_index(x))
+
+        total = int(list_1_number) + int(list_2_number)
+
+        print("\n", list_1_number, "+", list_2_number, "=", total)
 
 
 print("\nStarting Program\n")
@@ -321,7 +345,7 @@ my_List_Solution = LinkedList()
 
 my_List_Solution.print_list()
 
-my_List_Solution.sum_lists_backwards(my_List_1, my_List_2)
+sum_lists_backwards(my_List_1, my_List_2)
 
 my_List_1.delete_link_list()
 my_List_2.delete_link_list()
@@ -336,7 +360,7 @@ my_List_2.add_new_node(2)
 my_List_2.add_new_node(9)
 my_List_2.add_new_node(5)
 
-my_List_Solution.sum_lists_forwards(my_List_1, my_List_2)
+sum_lists_forwards(my_List_1, my_List_2)
 
 my_List_Solution.print_list()
 
