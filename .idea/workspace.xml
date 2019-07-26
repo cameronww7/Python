@@ -66,8 +66,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/CTCI/C-2/2.5.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="338">
-                  <caret line="298" column="35" selection-start-line="298" selection-start-column="35" selection-end-line="298" selection-end-column="35" />
+                <state relative-caret-position="394">
+                  <caret line="132" column="15" selection-start-line="132" selection-start-column="15" selection-end-line="132" selection-end-column="15" />
                 </state>
               </provider>
             </entry>
@@ -200,7 +200,6 @@
         <option value="$PROJECT_DIR$/CTCI/C-1/1.3.py" />
         <option value="$PROJECT_DIR$/CTCI/C-1/1.2.py" />
         <option value="$PROJECT_DIR$/CTCI/C-1/1.1.py" />
-        <option value="$PROJECT_DIR$/CTCI/C-1/1.4.py" />
         <option value="$PROJECT_DIR$/CTCI/C-1/1.6.py" />
         <option value="$PROJECT_DIR$/CTCI/C-1/1.8.py" />
         <option value="$PROJECT_DIR$/CTCI/C-1/1.9.py" />
@@ -210,6 +209,7 @@
         <option value="$PROJECT_DIR$/CTCI/C-2/2.2.py" />
         <option value="$PROJECT_DIR$/CTCI/C-2/2.3.py" />
         <option value="$PROJECT_DIR$/CTCI/C-2/2.4.py" />
+        <option value="$PROJECT_DIR$/CTCI/C-1/1.4.py" />
         <option value="$PROJECT_DIR$/CTCI/C-2/2.5.py" />
       </list>
     </option>
@@ -228,6 +228,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -266,7 +267,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -751,8 +751,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CTCI/C-2/2.5.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="298" column="35" selection-start-line="298" selection-start-column="35" selection-end-line="298" selection-end-column="35" />
+        <state relative-caret-position="394">
+          <caret line="132" column="15" selection-start-line="132" selection-start-column="15" selection-end-line="132" selection-end-column="15" />
         </state>
       </provider>
     </entry>

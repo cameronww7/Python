@@ -123,13 +123,14 @@ class LinkedList(object):
     #   Deletes the entire linked list
     def delete_link_list(self):
         if self.is_empty():
+            print("\nDeleting Entire List")
             while self.root:  # Loop Though list
                 current_node = self.root  # Grabs Root Node
                 print("Removing :", current_node.get_data(), "Current Size:", self.size)
                 self.size -= 1
                 self.root = current_node.get_next()  # set root node to next node
                 current_node = None  # clears old root node
-
+        print("\n")
         return True  # data is removed
 
     # find_node
@@ -172,7 +173,7 @@ class LinkedList(object):
     #   Searches LinkedList and Removes all Duplicate Nodes
     def remove_duplicates(self):
         if self.is_empty():
-            print("Removing all Duplicates")
+            print("\nRemoving all Duplicates")
             current_node = self.root
 
             while current_node:  # Loops through list
@@ -259,63 +260,45 @@ class LinkedList(object):
 
     def sum_lists_backwards(self, x_link_list_1, x_link_list_2):
         if self.is_empty():
-            print("sum_lists_backwards")
+            print("\nsum_lists_backwards")
 
             list_1_number = ""
-
             size = x_link_list_1.get_size()
 
             for x in range(0, size):  # Loops through list
                 list_1_number = list_1_number + str(x_link_list_1.return_node_at_index(x))
 
-            int(list_1_number)
-            print(list_1_number)
-
             list_2_number = ""
 
             size = x_link_list_2.get_size()
-
             for x in range(0, size):  # Loops through list
                 list_2_number = list_2_number + str(x_link_list_2.return_node_at_index(x))
 
-            int(list_2_number)
-            print(list_2_number)
-
             total = int(list_1_number) + int(list_2_number)
 
-            print(total)
-
+            print("\n", list_1_number, "+", list_2_number, "=", total)
         else:
             return False
 
     def sum_lists_forwards(self, x_link_list_1, x_link_list_2):
         if self.is_empty():
-            print("sum_lists_backwards")
+            print("\nsum_lists_backwards")
 
             list_1_number = ""
-
             size = x_link_list_1.get_size() - 1
 
             for x in range(size, -1, -1):  # Loops through list
                 list_1_number = list_1_number + str(x_link_list_1.return_node_at_index(x))
 
-            int(list_1_number)
-            print(list_1_number)
-
             list_2_number = ""
-
             size = x_link_list_2.get_size() - 1
 
             for x in range(size, -1, -1):  # Loops through list
                 list_2_number = list_2_number + str(x_link_list_2.return_node_at_index(x))
 
-            int(list_2_number)
-            print(list_2_number)
+            total = int(list_1_number) + int(list_2_number)
 
-            total2 = int(list_1_number) + int(list_2_number)
-
-            print("Total:", total2)
-
+            print("\n", list_1_number, "+", list_2_number, "=", total)
         else:
             return False
 
@@ -339,10 +322,6 @@ my_List_Solution = LinkedList()
 my_List_Solution.print_list()
 
 my_List_Solution.sum_lists_backwards(my_List_1, my_List_2)
-
-my_List_Solution.print_list()
-
-my_List_Solution.delete_link_list()
 
 my_List_1.delete_link_list()
 my_List_2.delete_link_list()
