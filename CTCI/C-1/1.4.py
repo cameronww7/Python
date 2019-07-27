@@ -5,7 +5,7 @@ from __future__ import print_function
 # Given a string, write a function to check if it is a permutation of a palindrome.
 #
 # Ex: input "Tact coa"
-#       True  Tacocat or atcocta
+#       True  Tacocat or atcocta`
 """
 
 print("1.4")
