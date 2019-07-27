@@ -277,8 +277,32 @@ class LinkedList(object):
             return False
 
     def is_palindrome(self):
-        print("Is it?")
+        if self.is_empty():
+            print("\nChecking if Palindrome")
+            current_node = self.root
 
+            my_string = ""
+
+            while current_node:  # Loops through list
+                my_string = my_string + str(current_node.get_data())
+                current_node = current_node.get_next()
+
+            half_the_size = len(my_string) / 2
+            half_the_size = half_the_size.__round__()
+
+            size = len(my_string)
+            size = size - 1
+
+            for x in range(half_the_size):
+                if my_string[x] != my_string[size]:
+                    print("No,", my_string, "Is Not a Palindrome")
+                    return False
+                else:
+                    size = size - 1
+
+            print("Yes,", my_string, "Is a Palindrome")
+            return True
+        return False
 
 # sum_lists_forwards
 #   This function takes in two linked lists and then will count each node in each list
