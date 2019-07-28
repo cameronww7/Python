@@ -86,7 +86,7 @@ class LinkedList(object):
     #   Removes the passed in node number from the LinkedList
     def remove_node(self, node_to_remove):
         if self.is_empty():
-            print("Removing :", node_to_remove)
+            print("\nRemoving :", node_to_remove)
 
             current_node = self.root  # Grabs Root Node
             previous_node = None  # Previous Node is Created set to null
@@ -357,6 +357,11 @@ my_List = LinkedList()
 my_List.add_new_node("A")
 my_List.add_new_node("B")
 my_List.add_new_node("A")
+my_List.add_new_node("C")
+
+my_List.is_palindrome()
+
+my_List.remove_node("C")
 
 my_List.is_palindrome()
 
