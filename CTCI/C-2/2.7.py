@@ -357,10 +357,77 @@ def sum_lists_backwards(x_link_list_1, x_link_list_2):
     print("\n", list_1_number, "+", list_2_number, "=", total)
 
 
+def print_two_list(x_link_list_1, x_link_list_2):
+    if x_link_list_1.is_empty() or x_link_list_2.is_empty():
+        list_1_size = x_link_list_1.get_size() - 1
+        list_2_size = x_link_list_2.get_size() - 1
+
+        print("\nPrinting LinkedList Nodes")
+        print("--------------------------")
+
+        for x in range(0, list_1_size, 1):  # Loops through list
+            list_1_int = int(x_link_list_1.return_node_at_index(x))
+            list_2_int = int(x_link_list_2.return_node_at_index(x))
+            print("   Node Count", x, ":",  list_1_int, "==",  list_2_int)
+
+        print("--------------------------\n")
+
+
+#
+#
+def intersecting_node(x_link_list_1, x_link_list_2):
+    list_1_size = x_link_list_1.get_size()
+    list_2_size = x_link_list_2.get_size()
+
+    intersecting_node = -1
+
+    print("Before the Loop")
+    for x in range(0, list_1_size, 1):  # Loops through list
+        print("Inside the Loop")
+        list_1_int = int(x_link_list_1.return_node_at_index(x))
+        list_2_int = int(x_link_list_2.return_node_at_index(x))
+        print(list_1_int, "==", list_2_int)
+        if list_1_int == list_2_int:
+            intersecting_node = x
+            break
+
+    if intersecting_node != -1:
+        for x in range(list_1_size, intersecting_node, 1):
+            if x_link_list_1.return_node_at_index(x) != x_link_list_2.return_node_at_index(x):
+                return False
+    else:
+        return False
+
+    return intersecting_node
+
+
 print("\nStarting Program\n")
 
-my_list = LinkedList()
+my_list_1 = LinkedList()
 
+my_list_1.add_new_node(1)
+my_list_1.add_new_node(2)
+my_list_1.add_new_node(3)
+my_list_1.add_new_node(5)
+my_list_1.add_new_node(6)
+
+my_list_1.print_list()
+
+my_list_2 = LinkedList()
+
+my_list_2.add_new_node(1)
+my_list_2.add_new_node(2)
+my_list_2.add_new_node(3)
+my_list_2.add_new_node(7)
+my_list_2.add_new_node(8)
+
+my_list_2.print_list()
+
+print_two_list(my_list_1, my_list_2)
+
+result = intersecting_node(my_list_1, my_list_2)
+
+print("The Nodes Interecet at", result)
 
 print("\nEnd of Program")
 
