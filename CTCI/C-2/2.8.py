@@ -103,6 +103,10 @@ class LinkedList(object):
                 current = current.next_node
                 print(current.data)
 
+    def return_root_node(self):
+        print("root node is", self.root.data)
+        return self.root.data
+
 
 print("\nStarting Program\n")
 
@@ -115,6 +119,8 @@ my_list_1.add_new_node(3)
 my_list_1.add_new_node(4)
 
 my_list_1.print_list()
+
+my_list_1.return_root_node()
 
 print("\nEnd of Program")
 
