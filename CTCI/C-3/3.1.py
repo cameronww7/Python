@@ -6,6 +6,7 @@ from __future__ import print_function
                         
     
     - https://stackoverflow.com/questions/4770627/how-to-implement-3-stacks-with-one-array
+    - https://www.geeksforgeeks.org/efficiently-implement-k-stacks-single-array/
 EX:       
         Input:  
         Output: 
@@ -21,6 +22,14 @@ class Stack:
     # Constructor
     def __int__(self):
         self.stack = []
+
+    # is_empty
+    #   Checks to see if the stack is empty
+    def is_empty(self):
+        if len(self.stack) <= 0:
+            return False
+        else:
+            return True
 
     # add_node
     #   Adds a node on top of the stack
@@ -49,7 +58,6 @@ class Stack:
 print("\nStarting Program\n")
 
 my_stack = Stack()
-
 
 print("\nEnd of Program")
 
