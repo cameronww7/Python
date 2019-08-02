@@ -57,7 +57,8 @@ class Stack:
 
 print("\nStarting Program\n")
 
-my_stack = Stack()
+if __name__ == "__main__":
+    my_stack = Stack()
 
 print("\nEnd of Program")
 
