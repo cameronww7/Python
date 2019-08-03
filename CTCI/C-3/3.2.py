@@ -40,6 +40,9 @@ class Stack:
     def size(self):
         return len(self.items)
 
+    def min(self):
+        print("Build here")
+
 
 print("\nStarting Program\n")
 
