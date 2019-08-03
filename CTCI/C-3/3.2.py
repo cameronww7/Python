@@ -17,65 +17,48 @@ EX:
 
 print("3.2")
 
-"""
-# Stack
-#   Class stack simulates a stack
+
 class Stack:
-    # Constructor
-    def __int__(self, data_value):
-        self.minimum_value = data_value
-        self.stack = [0]
+    def __init__(self):
+        self.items = []
 
-    def get_min(self):
-        return self.minimum_value
-
-    def set_min(self, new_min):
-        self.minimum_value = new_min
-
-    # is_empty
-    #   Checks to see if the stack is empty
     def is_empty(self):
-        if len(self.stack) <= 0:
-            return False
-        else:
+        if not self.items:
             return True
-
-    # add_node
-    #   Adds a node on top of the stack
-    def push_node(self, data_to_add):
-        if data_to_add >= self.get_min():
-            self.set_min(data_to_add)
-
-        self.stack.append(data_to_add)
-
-
-    # pop_node
-    #   Removes the first node on the stack, and returns it
-    def pop_node(self):
-        if len(self.stack) <= 0:
-            print("Stack is Empty")
-            return False
         else:
-            return self.stack.pop()
+            return False
 
-    # peek
-    #   Shows the first node
+    def push(self, item):
+        self.items.append(item)
+
+    def pop(self):
+        return self.items.pop()
+
     def peek(self):
-        return self.stack[-1]
+        return self.items[len(self.items) - 1]
 
-    def min(self):
-        print("cats")
-"""
+    def size(self):
+        return len(self.items)
+
+
 print("\nStarting Program\n")
 
-"""
 my_stack = Stack()
 
-my_stack.push_node(1)
-my_stack.push_node(2)
-my_stack.push_node(3)
+my_stack.push(5)
+my_stack.push(4)
+my_stack.push(3)
+my_stack.push(2)
+my_stack.push(1)
+my_stack.push(599)
 
-my_stack.min()
-"""
+print(my_stack.peek())
+print(my_stack.size())
+print(my_stack.pop())
+print(my_stack.peek())
+print(my_stack.size())
+
+#my_stack.min()
+
 print("\nEnd of Program")
 
