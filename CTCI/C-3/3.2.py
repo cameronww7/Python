@@ -21,6 +21,7 @@ print("3.2")
 class Stack:
     def __init__(self):
         self.items = []
+        self.minimum = 9999999
 
     def is_empty(self):
         if not self.items:
@@ -31,6 +32,12 @@ class Stack:
     def push(self, item):
         self.items.append(item)
 
+        if self.is_empty():
+            self.set_minimum(item)
+        else:
+            if self.minimum > item:
+                self.set_minimum(item)
+
     def pop(self):
         return self.items.pop()
 
@@ -40,8 +47,14 @@ class Stack:
     def size(self):
         return len(self.items)
 
+    def get_minimum(self):
+        return self.minimum
+
+    def set_minimum(self, new_min):
+        self.minimum = new_min
+
     def min(self):
-        print("Build here")
+        return self.get_minimum()
 
 
 print("\nStarting Program\n")
@@ -61,7 +74,7 @@ print(my_stack.pop())
 print(my_stack.peek())
 print(my_stack.size())
 
-#my_stack.min()
+print(my_stack.min())
 
 print("\nEnd of Program")
 
