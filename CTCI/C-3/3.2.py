@@ -21,7 +21,7 @@ print("3.2")
 class Stack:
     def __init__(self):
         self.items = []
-        self.minimum = 9999999
+        self.minimum = 0
 
     def is_empty(self):
         if not self.items:
@@ -30,13 +30,14 @@ class Stack:
             return False
 
     def push(self, item):
-        self.items.append(item)
-
         if self.is_empty():
+            print("Here")
             self.set_minimum(item)
         else:
             if self.minimum > item:
                 self.set_minimum(item)
+
+        self.items.append(item)
 
     def pop(self):
         return self.items.pop()
