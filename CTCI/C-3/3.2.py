@@ -23,15 +23,18 @@ class Stack:
         self.items = []
         self.minimum = 0
 
+    # is_empty
+    #   Checks and returns true or false is the stack is empty
     def is_empty(self):
         if not self.items:
             return True
         else:
             return False
 
+    # push
+    #   Puts a new node on top of the stack
     def push(self, item):
         if self.is_empty():
-            print("Here")
             self.set_minimum(item)
         else:
             if self.minimum > item:
@@ -39,21 +42,33 @@ class Stack:
 
         self.items.append(item)
 
+    # pop
+    #   Returns the last element in the stack
     def pop(self):
         return self.items.pop()
 
+    # peek
+    #   returns what the top element is in the stack
     def peek(self):
         return self.items[len(self.items) - 1]
 
+    # size
+    #   returns the size of the stack
     def size(self):
         return len(self.items)
 
+    # get_minimum
+    #   returns minimum element in the stack
     def get_minimum(self):
         return self.minimum
 
+    # set_minimum
+    #   sets the minimum as the passed in value
     def set_minimum(self, new_min):
         self.minimum = new_min
 
+    # min
+    #   returns the minimum element in the stack
     def min(self):
         return self.get_minimum()
 
