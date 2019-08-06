@@ -77,6 +77,21 @@ class Stack:
         return self.get_minimum()
 
 
+class StackOfStacks:
+    def __init__(self):
+        self.SetOfStacks = Stack(Stack())
+
+    # push
+    #   Puts a new node on top of the stack
+    def push(self, item):
+        self.stacksOfStacks.push(item)
+
+    # pop
+    #   Returns the last element in the stack
+    def pop(self):
+        return self.stacksOfStacks.pop()
+
+
 print("\nStarting Program\n")
 
 
