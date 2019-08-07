@@ -79,21 +79,88 @@ class Stack:
 
 class StackOfStacks:
     def __init__(self):
-        self.SetOfStacks = Stack(Stack())
+        self.set_of_stacks = [[]]
+        self.stack_limit = 5
+
+    # is_empty
+    #
+    def is_empty(self):
+        if not self.set_of_stacks:
+            return True
+        else:
+            return False
+
+    def is_empty_1(self):
+        if not self.set_of_stacks[-1]:
+            return True
+        else:
+            return False
 
     # push
     #   Puts a new node on top of the stack
-    def push(self, item):
-        self.stacksOfStacks.push(item)
+    def push(self, data):
+        if len(self.set_of_stacks[-1]) == self.stack_limit:
+            self.set_of_stacks.append([])
+
+        self.set_of_stacks[-1].append(data)
 
     # pop
     #   Returns the last element in the stack
     def pop(self):
-        return self.stacksOfStacks.pop()
+        if not self.is_empty_1():
+            node = self.set_of_stacks[-1].pop()
+
+            if self.is_empty():
+                self.set_of_stacks.pop()
+
+                if self.is_empty():
+                    self.set_of_stacks = [[]]
+            return node
+        else:
+            return None
+
+    def __str__(self):
+        for s in self.set_of_stacks:
+            print(s)
+        return ""
+
+    def pop_at_index_(self, x_index):
+        node = self.set_of_stacks[x_index].pop()
+
+        for index in range(x_index, len(self.set_of_stacks)-1):
+            self.set_of_stacks[index].append(self.set_of_stacks[index + 1].pop(0))
+
+        if self.is_empty_1():
+            self.set_of_stacks.pop()
+
+            if self.is_empty():
+                self.set_of_stacks = [[]]
+
+        return node
 
 
 print("\nStarting Program\n")
 
+set_of_stacks = StackOfStacks()
+
+list_of_var = [1, 2, 3, 4, 5, 6, 7, 8]
+
+for index in list_of_var:
+    set_of_stacks.push(index)
+
+print(set_of_stacks)
+
+set_of_stacks.pop_at_index_(0)
+print(set_of_stacks)
+
+set_of_stacks.pop_at_index_(1)
+print(set_of_stacks)
+
+set_of_stacks.pop()
+print(set_of_stacks)
+
+set_of_stacks.pop()
+print(set_of_stacks)
 
 print("\nEnd of Program")
 
