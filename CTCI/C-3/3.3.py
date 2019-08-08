@@ -83,14 +83,16 @@ class StackOfStacks:
         self.stack_limit = 5
 
     # is_empty
-    #
+    #   Checks if the set of stacks is empty
     def is_empty(self):
         if not self.set_of_stacks:
             return True
         else:
             return False
 
-    def is_empty_1(self):
+    # is_last_node_empty
+    #   Checks to see if the very last node or stack is empty
+    def is_last_node_empty(self):
         if not self.set_of_stacks[-1]:
             return True
         else:
@@ -99,38 +101,49 @@ class StackOfStacks:
     # push
     #   Puts a new node on top of the stack
     def push(self, data):
+        # Checks to see if current stack is at limit
         if len(self.set_of_stacks[-1]) == self.stack_limit:
+            # If stack is at limit appends a new stack
             self.set_of_stacks.append([])
 
+        # adds node to the latest stack
         self.set_of_stacks[-1].append(data)
 
     # pop
     #   Returns the last element in the stack
     def pop(self):
-        if not self.is_empty_1():
+        # Checks to see if the stack is empty
+        if not self.is_last_node_empty():
+            # Moves to the last stack on the set of stacks and pops node from that stack
             node = self.set_of_stacks[-1].pop()
 
+            # current stack is empty
             if self.is_empty():
                 self.set_of_stacks.pop()
 
+                # entire stack is empty so resets it to an empty stack of stacks
                 if self.is_empty():
                     self.set_of_stacks = [[]]
             return node
         else:
             return None
 
+    # __str__
+    #   Used to Print the Entire Stack of Stacks
     def __str__(self):
         for s in self.set_of_stacks:
             print(s)
         return ""
 
+    # pop_at_index_
+    #   Pops a node a specified section
     def pop_at_index_(self, x_index):
         node = self.set_of_stacks[x_index].pop()
 
         for index in range(x_index, len(self.set_of_stacks)-1):
             self.set_of_stacks[index].append(self.set_of_stacks[index + 1].pop(0))
 
-        if self.is_empty_1():
+        if self.is_last_node_empty():
             self.set_of_stacks.pop()
 
             if self.is_empty():
@@ -143,7 +156,7 @@ print("\nStarting Program\n")
 
 set_of_stacks = StackOfStacks()
 
-list_of_var = [1, 2, 3, 4, 5, 6, 7, 8]
+list_of_var = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 
 for index in list_of_var:
     set_of_stacks.push(index)
