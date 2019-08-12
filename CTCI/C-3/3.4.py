@@ -22,8 +22,10 @@ class MyQueue:
 
     # add_to_queue
     #   Pushes on a new node
-    def add_to_queue(self, new_node):
+    def add_to_queue(self, new_node, print_io):
         # Insert method to add element
+        if print_io is not None:
+            print("Adding:", new_node)
         if new_node not in self.queue:
             self.queue.insert(0, new_node)
             return True
@@ -43,10 +45,29 @@ class MyQueue:
         print("No elements in Queue!")
         return False
 
+    # print_queue
+    #   Prints the entire queue
+    def print_queue(self):
+        print("\nPRINTING QUEUE")
+        for x in range(0, len(self.queue), 1):
+            temp = self.queue.pop()
+            print(temp)
+            self.add_to_queue(temp, None)
+
 
 print("\nStarting Program\n")
 
 my_queue = MyQueue()
+
+my_queue.add_to_queue(5, 1)
+my_queue.add_to_queue(4, 1)
+my_queue.add_to_queue(3, 1)
+my_queue.add_to_queue(2, 1)
+my_queue.add_to_queue(1, 1)
+
+my_queue.print_queue()
+my_queue.print_queue()
+my_queue.print_queue()
 
 print("\nEnd of Program")
 
