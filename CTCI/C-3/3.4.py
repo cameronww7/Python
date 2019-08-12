@@ -32,9 +32,16 @@ class MyQueue:
     # remove_from_queue
     #    Pop method to remove element
     def remove_from_queue(self):
-        if len(self.queue) > 0:
+        if self.is_empty():
             return self.queue.pop()
-        return ("No elements in Queue!")
+
+    # is_empty
+    #   Checks to see if the queue is empty
+    def is_empty(self):
+        if len(self.queue) > 0:
+            return True
+        print("No elements in Queue!")
+        return False
 
 
 print("\nStarting Program\n")
