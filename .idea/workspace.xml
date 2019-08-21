@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="013d0351-7762-4be4-8aa2-12a2d055db68" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CTCI/C-3/3.4.py" beforeDir="false" afterPath="$PROJECT_DIR$/CTCI/C-3/3.4.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,8 +42,13 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="C:/Program Files/Git/cmd/git.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Camer\Documents\Github\Python-Workspace\Python-Bootcomp-Zero_To_Hero" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
