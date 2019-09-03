@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="013d0351-7762-4be4-8aa2-12a2d055db68" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/LICENSE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Py-Object-and-Data-Basics/11-Py-Numbers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,8 +61,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.3.4">
-    <configuration name="3.1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.11-Py-Numbers">
+    <configuration name="11-Py-Numbers" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Python-Workspace" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -71,11 +70,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CTCI/C-3" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Py-Object-and-Data-Basics" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CTCI/C-3/3.1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Py-Object-and-Data-Basics/11-Py-Numbers.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -170,11 +169,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.11-Py-Numbers" />
         <item itemvalue="Python.3.4" />
         <item itemvalue="Python.3.3" />
         <item itemvalue="Python.3.2" />
         <item itemvalue="Python.Understanding__Name__" />
-        <item itemvalue="Python.3.1" />
       </list>
     </recent_temporary>
   </component>
