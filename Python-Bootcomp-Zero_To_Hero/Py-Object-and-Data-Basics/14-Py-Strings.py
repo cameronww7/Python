@@ -74,5 +74,16 @@ my_str.lower()
 my_str.split()
 
 
+# String interpolation
+# String interpolation
+print("this is a string {}".format("INSERTED"))
 
+
+print("The {} {} {}".format("Fox", "Brown", "Quick"))
+
+
+print("The {2} {1} {0}".format("Fox", "Brown", "Quick"))
+
+
+print("The {q} {b} {f}".format(f="Fox", b="Brown", q="Quick"))
 
