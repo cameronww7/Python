@@ -87,3 +87,22 @@ print("The {2} {1} {0}".format("Fox", "Brown", "Quick"))
 
 print("The {q} {b} {f}".format(f="Fox", b="Brown", q="Quick"))
 
+
+# Formatting with precision
+result = 100/77
+
+print("The Result was {r}".format(r=result))
+
+
+print("The Result was {r:1.3f}".format(r=result))
+
+result = 104.223124
+
+print("The Result was {r:1.2f}".format(r=result))
+
+
+# F - Strings
+name = "Jose"
+name2 = "SAM"
+
+print(f"hello, his name is {name2} {name}")
