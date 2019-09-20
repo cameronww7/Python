@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="013d0351-7762-4be4-8aa2-12a2d055db68" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Py-Object-and-Data-Basics/20-Py-Lists.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Py-Object-and-Data-Basics/20-Py-Lists.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Py-Object-and-Data-Basics/20-Py-Lists.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +61,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.14-Py-Strings">
+  <component name="RunManager" selected="Python.20-Py-Lists">
     <configuration name="11-Py-Numbers" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Python-Workspace" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -124,7 +125,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="3.3" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="20-Py-Lists" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Python-Workspace" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -132,11 +133,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CTCI/C-3" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Py-Object-and-Data-Basics" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CTCI/C-3/3.3.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Py-Object-and-Data-Basics/20-Py-Lists.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -168,11 +169,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.20-Py-Lists" />
         <item itemvalue="Python.14-Py-Strings" />
         <item itemvalue="Python.13-Py-Variables" />
         <item itemvalue="Python.11-Py-Numbers" />
         <item itemvalue="Python.3.4" />
-        <item itemvalue="Python.3.3" />
       </list>
     </recent_temporary>
   </component>
