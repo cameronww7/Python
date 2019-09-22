@@ -22,6 +22,8 @@ In this section, we will get a brief overview of the following:
 You'll have an intuition of how to use tuples based on what you've 
 learned about lists. We can treat them very similarly with the major 
 distinction being that tuples are immutable.
+
+Tuples are useful when passing objects that we do not want to change.
 """
 
 # Create a tuple
