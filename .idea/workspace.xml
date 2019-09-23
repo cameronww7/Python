@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="013d0351-7762-4be4-8aa2-12a2d055db68" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Py-Object-and-Data-Basics/25-Py-Sets.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Py-Object-and-Data-Basics/26-Py-Boolean.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Py-Object-and-Data-Basics/24-Py-Tuples.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Py-Object-and-Data-Basics/24-Py-Tuples.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,11 +41,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Py-Object-and-Data-Basics" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Camer\Documents\Github\Python-Workspace\Python-Bootcomp-Zero_To_Hero\Py-Object-and-Data-Basics" />
       <recent name="C:\Users\Camer\Documents\Github\Python-Workspace\Python-Bootcomp-Zero_To_Hero" />
     </key>
   </component>
