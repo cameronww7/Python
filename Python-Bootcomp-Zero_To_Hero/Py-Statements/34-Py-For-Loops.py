@@ -65,23 +65,23 @@ for letter in 'This is a string.':
     print(letter)
 
 # --------------------------------------------------
-tup = (1,2,3,4,5)
+tup = (1, 2, 3, 4, 5)
 
 for t in tup:
     print(t)
 
 # --------------------------------------------------
-list2 = [(2,4),(6,8),(10,12)]
+list2 = [(2,4), (6,8), (10,12)]
 
 for tup in list2:
     print(tup)
 
 # Now with unpacking!
-for (t1,t2) in list2:
+for (t1, t2) in list2:
     print(t1)
 
 # --------------------------------------------------
-d = {'k1':1,'k2':2,'k3':3}
+d = {'k1': 1, 'k2':2, 'k3':3}
 for item in d:
     print(item)
 
