@@ -21,4 +21,11 @@ def hello_world():
 hello_world()
 
 
+#Define a function that names a name in and prints hello, name
+def respond(xName, xMethod):
+    if xMethod == 1:
+        print("Hello " + xName)
+    else:
+        print("Hello {}".format(xName))
 
+respond("FOO BAR", 0)
