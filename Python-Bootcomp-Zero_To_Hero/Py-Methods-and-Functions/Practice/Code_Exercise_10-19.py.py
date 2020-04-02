@@ -14,7 +14,8 @@ The purpose of this file is to go through the coding exercise and knock them out
 So, here we go!
 """
 
-#Write a function that will output hello world
+
+# Write a function that will output hello world
 def ex1():
     print("Hello World!!")
 
@@ -22,7 +23,7 @@ def ex1():
 ex1()
 
 
-#Define a function that names a name in and prints hello, name
+# Define a function that names a name in and prints hello, name
 def ex2(xName, xMethod):
     if xMethod == 1:
         print("Hello " + xName)
@@ -34,7 +35,7 @@ ex2("FOO BAR", 0)
 ex2("FOO BAR", 1)
 
 
-#define a function that takes in a boolean value. If true return hello, and if false return goodbye
+# define a function that takes in a boolean value. If true return hello, and if false return goodbye
 def ex3(xBoolean):
     if xBoolean == True:
         print("Hello")
@@ -45,11 +46,34 @@ def ex3(xBoolean):
 ex3(False)
 
 
-#Define a function that takes in three arguemnts and if z is true return x, if z is false return y
+# Define a function that takes in three arguemnts and if z is true return x, if z is false return y
 def ex4(xVarX, xVarY, xVarZ):
     if xVarZ == True:
         return xVarX
     elif xVarZ == False:
         return xVarY
 
+
 print(ex4(True, True, False))
+
+
+# Define a function that takes in two arguments and returns their sum
+def ex5(xVar1, xVar2):
+    return xVar1 + xVar2
+
+
+print(ex5(5,5))
+
+
+#Define a function that takes in on variable and returns true if the value is even and false if odd
+def ex6(xVar):
+    if (xVar%2) == 0:
+        return True
+    else:
+        return False
+
+
+print(ex6(5))
+
+
+# 
