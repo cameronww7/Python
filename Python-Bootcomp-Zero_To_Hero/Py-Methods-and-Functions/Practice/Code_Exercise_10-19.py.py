@@ -15,17 +15,28 @@ So, here we go!
 """
 
 #Write a function that will output hello world
-def hello_world():
+def ex1():
     print("Hello World!!")
 
-hello_world()
+ex1()
 
 
 #Define a function that names a name in and prints hello, name
-def respond(xName, xMethod):
+def ex2(xName, xMethod):
     if xMethod == 1:
         print("Hello " + xName)
     else:
         print("Hello {}".format(xName))
 
-respond("FOO BAR", 0)
+ex2("FOO BAR", 0)
+ex2("FOO BAR", 1)
+
+
+#define a function that takes in a boolean value. If true return hello, and if false return goodbye
+def ex3(xBoolean):
+    if xBoolean == True:
+        print("Hello")
+    elif xBoolean == False:
+        print("Goodbye")
+
+ex3(False)
