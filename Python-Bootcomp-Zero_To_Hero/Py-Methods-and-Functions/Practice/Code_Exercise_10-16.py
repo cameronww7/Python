@@ -1,10 +1,10 @@
 from __future__ import print_function
 
 """
- Prompt Code_Exercise_10-19.py
+ Prompt Code_Exercise_10-16.py
 """
 
-print("Code_Exercise_10-19.py")
+print("Code_Exercise_10-16.py")
 
 """
 Purpose:
@@ -62,12 +62,12 @@ def ex5(xVar1, xVar2):
     return xVar1 + xVar2
 
 
-print(ex5(5,5))
+print(ex5(5, 5))
 
 
-#Define a function that takes in on variable and returns true if the value is even and false if odd
+# Define a function that takes in on variable and returns true if the value is even and false if odd
 def ex6(xVar):
-    if (xVar%2) == 0:
+    if (xVar % 2) == 0:
         return True
     else:
         return False
@@ -75,5 +75,11 @@ def ex6(xVar):
 
 print(ex6(5))
 
+# Define a function that takes in two variables and returns true if the first is greater than the second
+def ex7(xVar1, xVar2):
+    if xVar1 > xVar2:
+        return True
+    else:
+        return False
 
-# 
+print(ex7(5,3))
