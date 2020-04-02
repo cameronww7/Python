@@ -20,3 +20,17 @@ def ex17(*args):
     return sum(args)
 
 print(ex17(5,32,34,235,2345,234,23,423))
+
+
+def ex18(*args):
+    #Define a function that takes in an arbitrary number of arguments
+    # and returns a list containing only even arguments
+    myList = []
+
+    for index in args:
+        if (index%2) == 0:
+            myList.append(index)
+
+    return myList
+
+print(ex18(2,4,6,7,8,9))
