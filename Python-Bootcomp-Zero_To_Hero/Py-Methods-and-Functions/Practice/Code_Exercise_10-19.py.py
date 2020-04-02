@@ -14,4 +14,11 @@ The purpose of this file is to go through the coding exercise and knock them out
 So, here we go!
 """
 
+#Write a function that will output hello world
+def hello_world():
+    print("Hello World!!")
+
+hello_world()
+
+
 
