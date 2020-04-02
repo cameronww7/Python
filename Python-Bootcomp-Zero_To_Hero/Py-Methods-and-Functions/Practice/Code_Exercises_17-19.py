@@ -34,3 +34,20 @@ def ex18(*args):
     return myList
 
 print(ex18(2,4,6,7,8,9))
+
+
+def ex19(xVar):
+    # define a function that takes in a string, and returns a matching string
+    # where every even letter is uppercase and every odd letter is lowercase.
+    # Assume string is letters only
+    tempStr = ""
+    lenth = len(xVar)
+    for index in range(lenth):
+        if (index%2) == 0:
+            tempStr = tempStr + xVar[index].upper()
+        else:
+            tempStr = tempStr + xVar[index].lower()
+
+    return tempStr
+
+print(ex19("AAAAAAAAAAAAAAAAAAAAA"))
