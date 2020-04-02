@@ -18,6 +18,7 @@ So, here we go!
 def ex1():
     print("Hello World!!")
 
+
 ex1()
 
 
@@ -27,6 +28,7 @@ def ex2(xName, xMethod):
         print("Hello " + xName)
     else:
         print("Hello {}".format(xName))
+
 
 ex2("FOO BAR", 0)
 ex2("FOO BAR", 1)
@@ -39,4 +41,15 @@ def ex3(xBoolean):
     elif xBoolean == False:
         print("Goodbye")
 
+
 ex3(False)
+
+
+#Define a function that takes in three arguemnts and if z is true return x, if z is false return y
+def ex4(xVarX, xVarY, xVarZ):
+    if xVarZ == True:
+        return xVarX
+    elif xVarZ == False:
+        return xVarY
+
+print(ex4(True, True, False))
