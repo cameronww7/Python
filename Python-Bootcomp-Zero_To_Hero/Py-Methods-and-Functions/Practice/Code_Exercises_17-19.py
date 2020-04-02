@@ -13,3 +13,10 @@ The purpose of this file is to go through the coding exercise and knock them out
 
 So, here we go!
 """
+
+
+def ex17(*args):
+    #Define a function that will take in an arbitrary number of arguments and retuns the sum
+    return sum(args)
+
+print(ex17(5,32,34,235,2345,234,23,423))
