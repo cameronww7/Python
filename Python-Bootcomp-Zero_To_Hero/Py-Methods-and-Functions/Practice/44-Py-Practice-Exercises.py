@@ -60,3 +60,22 @@ def pr2(xVar = "Cats Dogs"):
 
 print(pr2("Dog Dock"))
 
+
+
+def pr3(xVar1, xVar2):
+    #    "#### MAKES TWENTY: Given two integers, return True if the sum of the
+    #    integers is 20 *or* if one of the integers is 20. If not, return False.
+    #"    makes_twenty(20,10) --> True\n",
+    #"    makes_twenty(12,8) --> True\n",
+    #"    makes_twenty(2,3) --> False"
+     if xVar1 == 20 or xVar2 == 20:
+         return True
+     elif (xVar1 + xVar2) == 20:
+         return True
+     else:
+         return False
+
+
+print("{} - 8, 12".format(pr3(8, 12)))
+print("{} - 8, 20".format(pr3(8, 20)))
+print("{} - 8, 1".format(pr3(8, 1)))
