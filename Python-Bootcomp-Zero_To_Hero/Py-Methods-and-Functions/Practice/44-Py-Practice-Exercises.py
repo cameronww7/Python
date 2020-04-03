@@ -41,3 +41,22 @@ print(pr1(2, 4))
 print(pr1(2, 5))
 
 
+
+def pr2(xVar = "Cats Dogs"):
+    #    "#### ANIMAL CRACKERS: Write a function takes a two-word string and
+    #    returns True if both words begin with same letter\n",
+    #"    animal_crackers('Levelheaded Llama') --> True\n",
+    #"    animal_crackers('Crazy Kangaroo') --> False"
+    var = xVar.split()
+    var1 = var[1].upper()
+    var = var[0].upper()
+    print(var[:1] + var1[:1])
+
+    if var[:1] == var1[:1]:
+        return True
+    else:
+        return False
+
+
+print(pr2("Dog Dock"))
+
