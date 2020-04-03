@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="013d0351-7762-4be4-8aa2-12a2d055db68" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Py-Methods-and-Functions/Practice/Code_Exercises_17-19.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Py-Methods-and-Functions/Practice/Code_Exercises_17-19.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Py-Methods-and-Functions/Practice/44-Py-Practice-Exercises.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,6 +32,11 @@
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Py-Object-and-Data-Basics" />
@@ -43,40 +48,7 @@
       <recent name="C:\Users\Camer\Documents\Github\Python-Workspace\Python-Bootcomp-Zero_To_Hero" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Python.Code_Exercises_17-19">
-    <configuration name="40-Py-Methods" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Python-Workspace" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Py-Methods-and-Functions" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Py-Methods-and-Functions/40-Py-Methods.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.44-Py-Practice-Exercises">
     <configuration name="41-Py-Functions" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Python-Workspace" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -111,6 +83,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Py-Methods-and-Functions/43-Py-args-and-kwards.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="44-Py-Practice-Exercises" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Python-Workspace" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Py-Methods-and-Functions/Practice" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Py-Methods-and-Functions/Practice/44-Py-Practice-Exercises.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -163,11 +156,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.44-Py-Practice-Exercises" />
         <item itemvalue="Python.Code_Exercises_17-19" />
         <item itemvalue="Python.43-Py-args-and-kwards" />
         <item itemvalue="Python.Code_Exercise_10-19.py" />
         <item itemvalue="Python.41-Py-Functions" />
-        <item itemvalue="Python.40-Py-Methods" />
       </list>
     </recent_temporary>
   </component>
@@ -249,6 +242,52 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Hello World 101" />
     <option name="LAST_COMMIT_MESSAGE" value="Hello World 101" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="874" y="400" key="#Updates" timestamp="1585799611370">
+      <screen x="0" y="40" width="2560" height="1400" />
+    </state>
+    <state x="874" y="400" key="#Updates/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1585799611370" />
+    <state x="961" y="469" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1585799550953">
+      <screen x="0" y="40" width="2560" height="1400" />
+    </state>
+    <state x="961" y="469" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1585799550953" />
+    <state width="2539" height="391" key="GridCell.Tab.0.bottom" timestamp="1585884849460">
+      <screen x="0" y="40" width="2560" height="1400" />
+    </state>
+    <state width="2539" height="391" key="GridCell.Tab.0.bottom/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1585884849460" />
+    <state width="2539" height="391" key="GridCell.Tab.0.center" timestamp="1585884849459">
+      <screen x="0" y="40" width="2560" height="1400" />
+    </state>
+    <state width="2539" height="391" key="GridCell.Tab.0.center/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1585884849459" />
+    <state width="2539" height="391" key="GridCell.Tab.0.left" timestamp="1585884849459">
+      <screen x="0" y="40" width="2560" height="1400" />
+    </state>
+    <state width="2539" height="391" key="GridCell.Tab.0.left/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1585884849459" />
+    <state width="2539" height="391" key="GridCell.Tab.0.right" timestamp="1585884849460">
+      <screen x="0" y="40" width="2560" height="1400" />
+    </state>
+    <state width="2539" height="391" key="GridCell.Tab.0.right/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1585884849460" />
+    <state width="2539" height="483" key="GridCell.Tab.1.bottom" timestamp="1585884829784">
+      <screen x="0" y="40" width="2560" height="1400" />
+    </state>
+    <state width="2539" height="483" key="GridCell.Tab.1.bottom/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1585884829784" />
+    <state width="2539" height="483" key="GridCell.Tab.1.center" timestamp="1585884829784">
+      <screen x="0" y="40" width="2560" height="1400" />
+    </state>
+    <state width="2539" height="483" key="GridCell.Tab.1.center/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1585884829784" />
+    <state width="2539" height="483" key="GridCell.Tab.1.left" timestamp="1585884829784">
+      <screen x="0" y="40" width="2560" height="1400" />
+    </state>
+    <state width="2539" height="483" key="GridCell.Tab.1.left/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1585884829784" />
+    <state width="2539" height="483" key="GridCell.Tab.1.right" timestamp="1585884829784">
+      <screen x="0" y="40" width="2560" height="1400" />
+    </state>
+    <state width="2539" height="483" key="GridCell.Tab.1.right/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1585884829784" />
+    <state x="976" y="564" key="com.intellij.ide.util.TipDialog" timestamp="1585884192484">
+      <screen x="0" y="40" width="2560" height="1400" />
+    </state>
+    <state x="976" y="564" key="com.intellij.ide.util.TipDialog/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1585884192484" />
   </component>
   <component name="masterDetails">
     <states>
