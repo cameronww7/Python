@@ -79,3 +79,17 @@ def pr3(xVar1, xVar2):
 print("{} - 8, 12".format(pr3(8, 12)))
 print("{} - 8, 20".format(pr3(8, 20)))
 print("{} - 8, 1".format(pr3(8, 1)))
+
+
+
+def pr4(xVar = "macdonald"):
+    #"#### OLD MACDONALD: Write a function that capitalizes the first and fourth letters of a name\n",
+    #"     \n",
+    #"    old_macdonald('macdonald') --> MacDonald\n",
+    #"    \n",
+    #"Note: `'macdonald'.capitalize()` returns `'Macdonald'`"
+    var = ""
+    var = xVar[0].upper() + xVar[1:3] + xVar[3].upper() + xVar[4:]
+    print("var = {}".format(var))
+
+pr4()
