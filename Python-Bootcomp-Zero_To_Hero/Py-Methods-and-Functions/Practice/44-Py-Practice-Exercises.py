@@ -21,6 +21,7 @@ def pr1(xVar1, xVar2):
     #    *if* both numbers are even, but returns the greater if one or both numbers are odd\n",
     #"    lesser_of_two_evens(2,4) --> 2\n",
     #"    lesser_of_two_evens(2,5) --> 5"
+    print("Problem # 1\n")
     varToReturn = ""
 
     if (xVar1%2 == 0) and (xVar2%2 ==0):
@@ -47,6 +48,7 @@ def pr2(xVar = "Cats Dogs"):
     #    returns True if both words begin with same letter\n",
     #"    animal_crackers('Levelheaded Llama') --> True\n",
     #"    animal_crackers('Crazy Kangaroo') --> False"
+    print("Problem # 2\n")
     var = xVar.split()
     var1 = var[1].upper()
     var = var[0].upper()
@@ -68,11 +70,12 @@ def pr3(xVar1, xVar2):
     #"    makes_twenty(20,10) --> True\n",
     #"    makes_twenty(12,8) --> True\n",
     #"    makes_twenty(2,3) --> False"
-     if xVar1 == 20 or xVar2 == 20:
+    print("Problem # 3\n")
+    if xVar1 == 20 or xVar2 == 20:
          return True
-     elif (xVar1 + xVar2) == 20:
+    elif (xVar1 + xVar2) == 20:
          return True
-     else:
+    else:
          return False
 
 
@@ -88,8 +91,32 @@ def pr4(xVar = "macdonald"):
     #"    old_macdonald('macdonald') --> MacDonald\n",
     #"    \n",
     #"Note: `'macdonald'.capitalize()` returns `'Macdonald'`"
+    print("Problem # 4\n")
     var = ""
     var = xVar[0].upper() + xVar[1:3] + xVar[3].upper() + xVar[4:]
     print("var = {}".format(var))
 
+
 pr4()
+
+
+def pr5():
+    # "#### MASTER YODA: Given a sentence, return a sentence with the words reversed\n",
+    #"\n",
+    #"    master_yoda('I am home') --> 'home am I'\n",
+    #"    master_yoda('We are ready') --> 'ready are We'\n",
+    #"    \n",
+    #"Note: The .join() method may be useful here. The .join() method allows you to join together strings in a list with some connector string. For example, some uses of the .join() method:\n",
+    #"\n",
+    #"    >>> \"--\".join(['a','b','c'])\n",
+    #"    >>> 'a--b--c'\n",
+    #"\n",
+    #"This means if you had a list of words you wanted to turn back into a sentence, you could just join them with a single space string:\n",
+    #"\n",
+    #"    >>> \" \".join(['Hello','world'])\n",
+    #"    >>> \"Hello world\""
+    print("Problem # 5\n")
+
+
+
+pr5()
