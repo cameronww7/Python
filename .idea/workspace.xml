@@ -17,13 +17,6 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>raw_input</find>
-      <find>isOneAway</find>
-      <find>set_next_node</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -185,38 +178,6 @@
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="Unittests_in_1_4_py - 2019.07.15 at 19h 27m 53s.xml">
-      <configuration name="Unittests in 1.4.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_1_4_py - 2019.07.15 at 19h 27m 57s.xml">
-      <configuration name="Unittests in 1.4.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_1_4_py - 2019.07.15 at 19h 28m 01s.xml">
-      <configuration name="Unittests in 1.4.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_1_4_py - 2019.07.15 at 19h 28m 03s.xml">
-      <configuration name="Unittests in 1.4.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_1_4_py - 2019.07.15 at 19h 28m 17s.xml">
-      <configuration name="Unittests in 1.4.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_1_4_py - 2019.07.15 at 19h 29m 03s.xml">
-      <configuration name="Unittests in 1.4.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_1_4_py - 2019.07.15 at 19h 29m 24s.xml">
-      <configuration name="Unittests in 1.4.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_1_4_py - 2019.07.15 at 19h 30m 23s.xml">
-      <configuration name="Unittests in 1.4.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_1_4_py - 2019.07.15 at 19h 30m 37s.xml">
-      <configuration name="Unittests in 1.4.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_1_4_py - 2019.07.15 at 19h 38m 10s.xml">
-      <configuration name="Unittests in 1.4.py" configurationId="tests" />
-    </history-entry>
-  </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
@@ -252,22 +213,22 @@
       <screen x="0" y="40" width="2560" height="1400" />
     </state>
     <state x="961" y="469" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1585799550953" />
-    <state width="2539" height="391" key="GridCell.Tab.0.bottom" timestamp="1586051433862">
+    <state width="2539" height="391" key="GridCell.Tab.0.bottom" timestamp="1586055193730">
       <screen x="0" y="40" width="2560" height="1400" />
     </state>
-    <state width="2539" height="391" key="GridCell.Tab.0.bottom/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1586051433862" />
-    <state width="2539" height="391" key="GridCell.Tab.0.center" timestamp="1586051433862">
+    <state width="2539" height="391" key="GridCell.Tab.0.bottom/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1586055193730" />
+    <state width="2539" height="391" key="GridCell.Tab.0.center" timestamp="1586055193730">
       <screen x="0" y="40" width="2560" height="1400" />
     </state>
-    <state width="2539" height="391" key="GridCell.Tab.0.center/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1586051433862" />
-    <state width="2539" height="391" key="GridCell.Tab.0.left" timestamp="1586051433861">
+    <state width="2539" height="391" key="GridCell.Tab.0.center/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1586055193730" />
+    <state width="2539" height="391" key="GridCell.Tab.0.left" timestamp="1586055193730">
       <screen x="0" y="40" width="2560" height="1400" />
     </state>
-    <state width="2539" height="391" key="GridCell.Tab.0.left/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1586051433861" />
-    <state width="2539" height="391" key="GridCell.Tab.0.right" timestamp="1586051433862">
+    <state width="2539" height="391" key="GridCell.Tab.0.left/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1586055193730" />
+    <state width="2539" height="391" key="GridCell.Tab.0.right" timestamp="1586055193730">
       <screen x="0" y="40" width="2560" height="1400" />
     </state>
-    <state width="2539" height="391" key="GridCell.Tab.0.right/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1586051433862" />
+    <state width="2539" height="391" key="GridCell.Tab.0.right/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1586055193730" />
     <state width="2539" height="483" key="GridCell.Tab.1.bottom" timestamp="1585886012021">
       <screen x="0" y="40" width="2560" height="1400" />
     </state>
@@ -288,6 +249,18 @@
       <screen x="0" y="40" width="2560" height="1400" />
     </state>
     <state x="976" y="564" key="com.intellij.ide.util.TipDialog/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1586051296355" />
+    <state x="974" y="338" width="612" height="804" key="find.popup" timestamp="1586054588665">
+      <screen x="0" y="40" width="2560" height="1400" />
+    </state>
+    <state x="974" y="338" width="612" height="804" key="find.popup/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1586054588665" />
+    <state x="1023" y="384" key="refactoring.ChangeSignatureDialog" timestamp="1586054408822">
+      <screen x="0" y="40" width="2560" height="1400" />
+    </state>
+    <state x="1023" y="384" key="refactoring.ChangeSignatureDialog/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1586054408822" />
+    <state x="943" y="355" width="672" height="678" key="search.everywhere.popup" timestamp="1586054488289">
+      <screen x="0" y="40" width="2560" height="1400" />
+    </state>
+    <state x="943" y="355" width="672" height="678" key="search.everywhere.popup/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1586054488289" />
   </component>
   <component name="masterDetails">
     <states>
