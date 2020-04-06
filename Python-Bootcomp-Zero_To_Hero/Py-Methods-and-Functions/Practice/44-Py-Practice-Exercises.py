@@ -134,7 +134,7 @@ pr5("We Are Ready")
 
 
 
-def pr6():
+def pr6(xVar=101):
     # "source": [
     #     "#### ALMOST THERE: Given an integer n, return True if n is within 10 of either 100 or 200\n",
     #     "\n",
@@ -145,6 +145,13 @@ def pr6():
     #     "    \n",
     #     "NOTE: `abs(num)` returns the absolute value of a number"
     print("\nProblem # 6")
+    varReturn = False
 
+    if xVar >= 90 and xVar <= 110:
+        varReturn = True
+    elif xVar >= 190 and xVar <= 210:
+        varReturn = True
 
-pr6()
+    return varReturn
+
+print(pr6(211))
