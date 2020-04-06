@@ -155,3 +155,20 @@ def pr6(xVar=101):
     return varReturn
 
 print(pr6(211))
+
+
+def pr7():
+    #    "#### FIND 33: \n",
+    #    "\n",
+    #    "Given a list of ints, return True if the array contains a 3 next to a 3 somewhere.\n",
+    #    "\n",
+    #    "    has_33([1, 3, 3]) → True\n",
+    #    "    has_33([1, 3, 1, 3]) → False\n",
+    #    "    has_33([3, 1, 3]) → False"
+    print("\nProblem # 7")
+    varReturn = False
+
+
+    return varReturn
+
+print(pr7())
