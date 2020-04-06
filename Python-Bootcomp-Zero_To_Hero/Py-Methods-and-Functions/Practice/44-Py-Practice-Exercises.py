@@ -157,7 +157,7 @@ def pr6(xVar=101):
 print(pr6(211))
 
 
-def pr7():
+def pr7(xVar):
     #    "#### FIND 33: \n",
     #    "\n",
     #    "Given a list of ints, return True if the array contains a 3 next to a 3 somewhere.\n",
@@ -168,7 +168,12 @@ def pr7():
     print("\nProblem # 7")
     varReturn = False
 
+    size = len(xVar)
+
+    for index in range(0, size-1, 1):
+        if xVar[index] == 3 and xVar[index+1] == 3:
+            varReturn = True
 
     return varReturn
 
-print(pr7())
+print(pr7([3, 1, 3, 1, 4, 9, 9, 1, 3, 3]))
