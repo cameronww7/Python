@@ -191,4 +191,19 @@ def pr8(xVar="Hello"):
 
     return varReturn
 
+
 print(pr8("Mississippi"))
+
+
+
+def pr9(xVar):
+    #    "#### BLACKJACK: Given three integers between 1 and 11, if their sum is less than or equal to 21, return their sum. If their sum exceeds 21 *and* there's an eleven, reduce the total sum by 10. Finally, if the sum (even after adjustment) exceeds 21, return 'BUST'\n",
+    #   "    blackjack(5,6,7) --> 18\n",
+    #   "    blackjack(9,9,9) --> 'BUST'\n",
+    #   "    blackjack(9,9,11) --> 19"
+    print("\nProblem 9")
+
+
+
+print(pr9())
+
