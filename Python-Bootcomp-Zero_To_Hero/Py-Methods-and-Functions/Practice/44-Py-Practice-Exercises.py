@@ -177,3 +177,15 @@ def pr7(xVar):
     return varReturn
 
 print(pr7([3, 1, 3, 1, 4, 9, 9, 1, 3, 3]))
+
+
+def pr8(xVar):
+    # "#### PAPER DOLL: Given a string, return a string where for every character in the
+    # original there are three characters\n",
+    # "    paper_doll('Hello') --> 'HHHeeellllllooo'\n",
+    # "    paper_doll('Mississippi') --> 'MMMiiissssssiiippppppiii'"
+    print("\nProblem 8")
+    varReturn = ""
+
+
+pr8()
