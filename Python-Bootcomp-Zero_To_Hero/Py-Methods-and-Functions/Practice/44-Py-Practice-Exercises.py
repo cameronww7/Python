@@ -196,14 +196,34 @@ print(pr8("Mississippi"))
 
 
 
-def pr9(xVar):
-    #    "#### BLACKJACK: Given three integers between 1 and 11, if their sum is less than or equal to 21, return their sum. If their sum exceeds 21 *and* there's an eleven, reduce the total sum by 10. Finally, if the sum (even after adjustment) exceeds 21, return 'BUST'\n",
+def pr9(xVar1=8, xVar2=6, xVar3=7):
+    #    "#### BLACKJACK: Given three integers between 1 and 11,
+    #    if their sum is less than or equal to 21, return their sum.
+    #    If their sum exceeds 21 *and* there's an eleven, reduce the
+    #    total sum by 10. Finally, if the sum (even after adjustment)
+    #    exceeds 21, return 'BUST'\n",
     #   "    blackjack(5,6,7) --> 18\n",
     #   "    blackjack(9,9,9) --> 'BUST'\n",
     #   "    blackjack(9,9,11) --> 19"
     print("\nProblem 9")
+    handTotal = xVar1 + xVar2 + xVar3
+    valReturn = "BUST"
+
+    # pre check to see if there is a 11 and they exceed 21
+    if handTotal > 21 and (xVar1 == 11 or xVar2 == 11 or xVar3 == 11):
+        handTotal = handTotal - 10
+
+    if handTotal > 21:
+        valReturn = "BUST"
+    elif handTotal < 21:
+        valReturn = handTotal
+    elif handTotal == 21:
+        valReturn = "BLACKJACK"
+
+    return valReturn
 
 
-
-print(pr9())
-
+print(pr9(5,5,5))
+print(pr9(5,5,11))
+print(pr9(5,7,10))
+print(pr9(10,11,0))
