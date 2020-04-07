@@ -179,13 +179,16 @@ def pr7(xVar):
 print(pr7([3, 1, 3, 1, 4, 9, 9, 1, 3, 3]))
 
 
-def pr8(xVar):
+def pr8(xVar="Hello"):
     # "#### PAPER DOLL: Given a string, return a string where for every character in the
     # original there are three characters\n",
     # "    paper_doll('Hello') --> 'HHHeeellllllooo'\n",
     # "    paper_doll('Mississippi') --> 'MMMiiissssssiiippppppiii'"
     print("\nProblem 8")
     varReturn = ""
+    for index in range(0, len(xVar), 1):
+        varReturn = varReturn + xVar[index] + xVar[index] + xVar[index]
 
+    return varReturn
 
-pr8()
+print(pr8("Mississippi"))
