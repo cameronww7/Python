@@ -176,6 +176,7 @@ def pr7(xVar):
 
     return varReturn
 
+
 print(pr7([3, 1, 3, 1, 4, 9, 9, 1, 3, 3]))
 
 
@@ -223,10 +224,10 @@ def pr9(xVar1=8, xVar2=6, xVar3=7):
     return valReturn
 
 
-print(pr9(5,5,5))
-print(pr9(5,5,11))
-print(pr9(5,7,10))
-print(pr9(10,11,0))
+print(pr9(5, 5, 5))
+print(pr9(5, 5, 11))
+print(pr9(5, 7, 10))
+print(pr9(10, 11, 0))
 
 
 
@@ -253,3 +254,13 @@ def pr10(xVar):
 print(pr10([1, 3, 5]))
 print(pr10([4, 5, 6, 7, 8, 9]))
 print(pr10([2, 1, 6, 9, 11]))
+
+
+def pr11(xVar):
+    #   SPY GAME: Write a function that takes in a list of integers
+    #   and returns True if it contains 007 in order\n",
+    print("\nProblem 11")
+
+    return "Cats"
+
+print(pr11("Cats"))
