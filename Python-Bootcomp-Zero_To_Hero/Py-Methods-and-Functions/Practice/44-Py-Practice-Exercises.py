@@ -261,6 +261,13 @@ def pr11(xVar):
     #   and returns True if it contains 007 in order\n",
     print("\nProblem 11")
 
-    return "Cats"
+    varReturn = False
 
-print(pr11("Cats"))
+    for index in range(0, len(xVar)-2, 1):
+        if xVar[index] == "0" and xVar[index+1] == "0" and xVar[index+2] == "7":
+            varReturn = True
+
+    return varReturn
+
+
+print(pr11("007asdasd"))
