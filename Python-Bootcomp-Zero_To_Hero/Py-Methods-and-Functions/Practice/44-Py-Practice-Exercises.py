@@ -271,3 +271,21 @@ def pr11(xVar):
 
 
 print(pr11("007asdasd"))
+
+
+def pr12(xVar="Test"):
+    # "#### COUNT PRIMES: Write a function that returns the *number* of
+    # prime numbers that exist up to and including a given number\n",
+    # "    count_primes(100) --> 25\n"
+    print("\nProblem 12")
+
+    varReturn = True
+
+    
+
+
+
+    return varReturn
+
+
+print(pr12("Tests"))
