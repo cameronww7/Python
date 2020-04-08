@@ -273,19 +273,33 @@ def pr11(xVar):
 print(pr11("007asdasd"))
 
 
-def pr12(xVar="Test"):
+def pr12(xVar):
     # "#### COUNT PRIMES: Write a function that returns the *number* of
     # prime numbers that exist up to and including a given number\n",
     # "    count_primes(100) --> 25\n"
     print("\nProblem 12")
 
-    varReturn = True
+    varReturn = []
 
-    
+    for index1 in range(2, xVar, 1):
+        counter = 0
+        #print("index1 = {}".format(index1))
+        for index2 in range(2, index1+1, 1):
+            #print("index1 {} % {} index2 = {}".format(index1, index2, (index1%index2)))
+            if (index1 % index2) == 0 and index1 != index2:
+                counter = counter + 1
+                #print("counter = {}".format(counter))
+
+        if counter == 0:
+            #print("adding - {}".format(index1))
+            varReturn.append(index1)
 
 
+    size = len(varReturn)
 
+
+    print("Size {} - {}".format(size, varReturn))
     return varReturn
 
 
-print(pr12("Tests"))
+print(pr12(100))
