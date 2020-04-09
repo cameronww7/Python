@@ -303,3 +303,26 @@ def pr12(xVar):
 
 
 print(pr12(100))
+
+
+def pr13(xVar):
+    # "#### PRINT BIG: Write a function that takes in a single letter,
+    # and returns a 5x5 representation of that letter\n",
+    # "    print_big('a')\n",
+    # "    \n",
+    # "    out:   *  \n",
+    # "          * *\n",
+    # "         *****\n",
+    # "         *   *\n",
+    # "         *   *\n",
+    # "HINT: Consider making a dictionary of possible patterns, and
+    # mapping the alphabet to specific 5-line combinations of patterns.
+    # <br>For purposes of this exercise, it's ok if your dictionary stops at \"E\"."
+    print("\nProblem 13")
+
+    xVar = xVar
+
+
+
+print(pr13("temp"))
+
