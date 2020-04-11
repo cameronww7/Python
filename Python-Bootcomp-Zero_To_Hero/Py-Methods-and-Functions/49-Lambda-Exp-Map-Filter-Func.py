@@ -47,4 +47,12 @@ name = ["joe", "amea", "noface"]
 print(list(map(splicer, name)))
 
 
+"""
+filter function
+The filter function returns an iterator yielding those items of iterable 
+for which function(item) is true. Meaning you need to filter by a function 
+that returns either True or False. Then passing that into filter (along 
+with your iterable) and you will get back only the results that would 
+return True when passed to the function.
+"""
 
