@@ -94,4 +94,25 @@ square = lambda num: num**2
 print(square(3))
 
 
+"""
+So why would use this? Many function calls need a function passed in, 
+such as map and filter. Often you only need to use the function you 
+are passing in once, so instead of formally defining it, you just use 
+the lambda expression. Let's repeat some of the examples from above 
+with a lambda expression
+"""
+print("\nBring it all Together\n")
 
+print("\nMap + Lambda")
+print(list(map(lambda num: num ** 2, my_nums)))
+
+checkEven = lambda num: num%2 == 0
+
+print("\nFilter + Lambda")
+print(list(filter(lambda n: n % 2 == 0, my_nums)))
+
+print("\nMap + Lambda")
+print(list(map(lambda name: name[0], names)))
+
+print("\nMap + Lambda")
+print(list(map(lambda xtx:xtx[::-1], names)))
