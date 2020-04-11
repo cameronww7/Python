@@ -20,31 +20,31 @@ The map function allows you to "map" a function to an iterable object.
 That is to say you can quickly call the same function to every item in 
 an iterable, such as a list. For example:
 """
+print("\nMap Function\n")
 
-
-def square(num):
+def square_func(num):
     return num**2
 
 
-my_nums = [1, 2, 3, 4, 5]
+my_nums = [1, 2, 3, 4, 5, 6]
 
-for item in map(square, my_nums):
+for item in map(square_func, my_nums):
     print(item)
 
 
-print(list(map(square,my_nums)))
+print(list(map(square_func,my_nums)))
 
 
-def splicer(myStr):
+def splicer_func(myStr):
     if len(myStr)%2 == 0:
         return 'EVEN'
     else:
         return myStr[0]
 
 
-name = ["joe", "amea", "noface"]
+names = ["joe", "amea", "noface", "Sally"]
 
-print(list(map(splicer, name)))
+print(list(map(splicer_func, names)))
 
 
 """
@@ -55,4 +55,12 @@ that returns either True or False. Then passing that into filter (along
 with your iterable) and you will get back only the results that would 
 return True when passed to the function.
 """
+print("\nFilter Function\n")
+
+def check_even(num):
+    return num%2 == 0
+
+
+print(list(filter(check_even, my_nums)))
+
 
