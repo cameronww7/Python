@@ -108,9 +108,11 @@ amply clear that the variable is defined in an outermost block.
 x = 50
 
 def func():
-    global x
+    global x #go to the namespace and use that variable x
     print('This function is now using the global x!')
     print('Because of global x is: ', x)
+
+    # the global x is now 2
     x = 2
     print('Ran func(), changed global x to', x)
 
