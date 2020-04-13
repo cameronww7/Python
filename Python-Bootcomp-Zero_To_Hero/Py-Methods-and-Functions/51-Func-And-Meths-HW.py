@@ -22,5 +22,6 @@ def pr1(xVal):
     # 4/3 * xVal ^3
     print("\nProblem 1")
 
+    return (4/3) * 3.14 * (xVal**3)
 
-print(pr1(2))
+print(pr1(3))
