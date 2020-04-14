@@ -37,8 +37,17 @@ def pr2(xHigh, xLow, xNum):
     print("Middle : {}".format(middle))
 
     if middle < xNum:
-        return "HIGH"
+        valReturn = "HIGH"
     else:
-        return "LOW"
+        valReturn = "LOW"
+
+    if xNum <= xHigh and xNum >= xLow:
+        valReturn = valReturn + " - Yes it is IN Range"
+    else:
+        valReturn = valReturn + " - No it is NOT Range"
+
+    return valReturn
+
+
 
 print(pr2(5, 1, 3))
