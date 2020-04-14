@@ -25,3 +25,12 @@ def pr1(xVal):
     return (4/3) * 3.14 * (xVal**3)
 
 print(pr1(3))
+
+
+
+def pr2(xVal):
+    # Write a function that checks whether a number is in a given range (inclusive of high and low)
+    print("\nProblem 2")
+
+
+print(pr2(3))
