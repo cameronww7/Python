@@ -16,7 +16,6 @@ the visibility of that variable name to other parts of your code.
 """
 
 
-
 def pr1(xVal):
     # Write a function that computes the volume of a sphere given its radius.
     # 4/3 * xVal ^3
@@ -25,7 +24,6 @@ def pr1(xVal):
     return (4/3) * 3.14 * (xVal**3)
 
 print(pr1(3))
-
 
 
 def pr2(xHigh, xLow, xNum):
@@ -49,5 +47,22 @@ def pr2(xHigh, xLow, xNum):
     return valReturn
 
 
-
 print(pr2(5, 1, 3))
+
+
+def pr3(xVal):
+    # Write a Python function that accepts a string and calculates the number of upper case
+    # letters and lower case letters.
+    #
+    # Sample String : 'Hello Mr. Rogers, how are you this fine Tuesday?'
+    # Expected Output :
+    # No. of Upper case characters : 4
+    # No. of Lower case Characters : 33
+    #
+    # HINT: Two string methods that might prove useful: .isupper() and .islower()
+    #
+    # If you feel ambitious, explore the Collections module to solve this problem!
+    print("\nProblem 3")
+
+
+print(pr3(5))
