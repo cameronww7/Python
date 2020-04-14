@@ -28,9 +28,17 @@ print(pr1(3))
 
 
 
-def pr2(xVal):
+def pr2(xHigh, xLow, xNum):
     # Write a function that checks whether a number is in a given range (inclusive of high and low)
     print("\nProblem 2")
+    print("Passed in {}, {}, {}".format(xHigh, xLow, xNum))
 
+    middle = (xHigh + xLow) / 2
+    print("Middle : {}".format(middle))
 
-print(pr2(3))
+    if middle < xNum:
+        return "HIGH"
+    else:
+        return "LOW"
+
+print(pr2(5, 1, 3))
