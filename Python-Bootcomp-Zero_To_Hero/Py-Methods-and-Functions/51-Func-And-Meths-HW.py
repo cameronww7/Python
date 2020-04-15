@@ -79,3 +79,14 @@ def pr3(xVal):
 
 
 pr3("OOoOoo")
+
+
+def pr4(xVal):
+    # Write a Python function that takes a list and returns a new list with unique elements of the first list.
+    #
+    # Sample List : [1,1,1,1,2,2,3,3,3,3,4,5]
+    # Unique List : [1, 2, 3, 4, 5]
+    print("\nProblem 4")
+
+
+print(pr4([1, 1, 1, 1, 2, 2, 3, 3, 3, 3, 4, 5]))
