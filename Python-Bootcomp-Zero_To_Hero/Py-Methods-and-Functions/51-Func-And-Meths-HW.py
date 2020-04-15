@@ -64,5 +64,18 @@ def pr3(xVal):
     # If you feel ambitious, explore the Collections module to solve this problem!
     print("\nProblem 3")
 
+    numUpper = 0
+    numLower = 0
+    strLen = len(xVal)
 
-print(pr3(5))
+    for index in range(0, strLen, 1):
+        if xVal[index].isupper():
+            numUpper += 1
+        elif xVal[index].islower():
+            numLower += 1
+
+    print("No. of Upper case characters : {}".format(numUpper))
+    print("No. of Lower case characters : {}".format(numLower))
+
+
+pr3("OOoOoo")
