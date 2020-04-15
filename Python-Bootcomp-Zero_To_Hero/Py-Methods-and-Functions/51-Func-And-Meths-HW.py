@@ -88,5 +88,9 @@ def pr4(xVal):
     # Unique List : [1, 2, 3, 4, 5]
     print("\nProblem 4")
 
+    xVal = set(xVal)
+
+    return xVal
+
 
 print(pr4([1, 1, 1, 1, 2, 2, 3, 3, 3, 3, 4, 5]))
