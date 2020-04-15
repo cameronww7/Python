@@ -104,6 +104,14 @@ def pr5(xVal):
     # Expected Output : -24
     print("\nProblem 5")
 
+    listSize = len(xVal)
 
+    result = 1
 
-print(pr5([1, 1, 1, 1, 2, 2, 3, 3, 3, 3, -4, 5]))
+    for index in xVal:
+        result = result * index
+
+    return result
+
+print(pr5([5, 5, 1, -1]))
+print(pr5([1, 2, 3, -4]))
