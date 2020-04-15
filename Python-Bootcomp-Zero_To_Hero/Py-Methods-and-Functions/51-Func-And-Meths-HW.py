@@ -94,3 +94,16 @@ def pr4(xVal):
 
 
 print(pr4([1, 1, 1, 1, 2, 2, 3, 3, 3, 3, 4, 5]))
+
+
+
+def pr5(xVal):
+    # Write a Python function to multiply all the numbers in a list.
+    #
+    # Sample List : [1, 2, 3, -4]
+    # Expected Output : -24
+    print("\nProblem 5")
+
+
+
+print(pr5([1, 1, 1, 1, 2, 2, 3, 3, 3, 3, -4, 5]))
