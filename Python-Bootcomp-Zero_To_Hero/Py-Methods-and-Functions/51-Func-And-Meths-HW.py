@@ -115,3 +115,17 @@ def pr5(xVal):
 
 print(pr5([5, 5, 1, -1]))
 print(pr5([1, 2, 3, -4]))
+
+
+def pr6(xVal):
+    # Write a Python function that checks whether a passed in string
+    # is palindrome or not.
+    #
+    # Note: A palindrome is word, phrase, or sequence that reads the
+    # same backward as forward, e.g., madam or nurses run.
+    print("\nProblem 6")
+
+
+
+
+print(pr6("Cats"))
