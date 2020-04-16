@@ -125,7 +125,30 @@ def pr6(xVal):
     # same backward as forward, e.g., madam or nurses run.
     print("\nProblem 6")
 
+    xVal = xVal.replace(" ", "")
+
+    #print("|{}|".format(xVal))
+
+    strSize = len(xVal)
+    end = strSize-1
+    retunVal = True
+
+    #print(round(strSize/2))
+    #print(end)
+
+    for index in range(0, round(strSize/2), 1):
+        #print("{}{} != {}{}".format(index,xVal[index], xVal[end], end))
+
+        if xVal[index] != xVal[end]:
+            retunVal = False
+            break
+
+        end = end - 1
+
+    return retunVal
 
 
-
-print(pr6("Cats"))
+print(pr6("nurses run"))
+print(pr6("madam"))
+print(pr6("1225221"))
+print(pr6("cats"))
