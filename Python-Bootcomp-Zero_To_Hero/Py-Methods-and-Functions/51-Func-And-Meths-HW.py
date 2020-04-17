@@ -162,6 +162,17 @@ def pr7(xVal):
     # For example : "The quick brown fox jumps over the lazy dog"
     print("\nProblem 7")
 
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+
+    xVal = xVal.lower()
+
+    returnVal = True
+
+    for index in range(0, 26, 1):
+        if xVal.find(alphabet[index]) == -1:
+            returnVal = False
+
+    return returnVal
 
 
-print(pr7("Cats"))
+print(pr7("The quick brOwn fox Jumps over the lazy dog"))
