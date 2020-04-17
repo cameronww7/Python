@@ -152,3 +152,16 @@ print(pr6("nurses run"))
 print(pr6("madam"))
 print(pr6("1225221"))
 print(pr6("cats"))
+
+
+
+def pr7(xVal):
+    # Write a Python function to check whether a string is pangram or not.
+    #
+    # Note : Pangrams are words or sentences containing every letter of the alphabet at least once.
+    # For example : "The quick brown fox jumps over the lazy dog"
+    print("\nProblem 7")
+
+
+
+print(pr7("Cats"))
