@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="013d0351-7762-4be4-8aa2-12a2d055db68" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Python-Playground/TicTacToe/TicTacToe.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Py-Methods-and-Functions/40-Py-Methods.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Sec-6-Py-Methods-and-Functions/40-Py-Methods.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Py-Methods-and-Functions/41-Py-Functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Sec-6-Py-Methods-and-Functions/41-Py-Functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Py-Methods-and-Functions/43-Py-args-and-kwards.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Sec-6-Py-Methods-and-Functions/43-Py-args-and-kwards.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Py-Methods-and-Functions/49-Lambda-Exp-Map-Filter-Func.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Sec-6-Py-Methods-and-Functions/49-Lambda-Exp-Map-Filter-Func.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Py-Methods-and-Functions/50-Nested-Statements-and-Scope.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Sec-6-Py-Methods-and-Functions/50-Nested-Statements-and-Scope.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Py-Methods-and-Functions/51-Func-And-Meths-HW.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Sec-6-Py-Methods-and-Functions/51-Func-And-Meths-HW.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Py-Methods-and-Functions/Practice/44-Py-Practice-Exercises.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Sec-6-Py-Methods-and-Functions/Practice/44-Py-Practice-Exercises.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Py-Methods-and-Functions/Practice/Code_Exercise_10-16.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Sec-6-Py-Methods-and-Functions/Practice/Code_Exercise_10-16.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Py-Methods-and-Functions/Practice/Code_Exercises_17-19.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Sec-6-Py-Methods-and-Functions/Practice/Code_Exercises_17-19.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python-Playground/TicTacToe/TicTacToe.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python-Playground/TicTacToe/TicTacToe.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,10 +245,10 @@
       <screen x="0" y="40" width="2560" height="1400" />
     </state>
     <state width="2539" height="483" key="GridCell.Tab.1.right/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1585886012020" />
-    <state x="976" y="564" key="com.intellij.ide.util.TipDialog" timestamp="1587184275741">
+    <state x="976" y="564" key="com.intellij.ide.util.TipDialog" timestamp="1587441985513">
       <screen x="0" y="40" width="2560" height="1400" />
     </state>
-    <state x="976" y="564" key="com.intellij.ide.util.TipDialog/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1587184275741" />
+    <state x="976" y="564" key="com.intellij.ide.util.TipDialog/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1587441985513" />
     <state x="974" y="338" width="612" height="804" key="find.popup" timestamp="1586054588665">
       <screen x="0" y="40" width="2560" height="1400" />
     </state>
