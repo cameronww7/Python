@@ -1,5 +1,4 @@
 from __future__ import print_function
-from IPython.display import clear_output
 import random
 
 """
@@ -43,7 +42,9 @@ def display_board(board):
     # Step 1: Write a function that can print out a board. Set up your board as a list,
     # where each index 1-9 corresponds with a number on a number pad, so you get a 3 by 3
     # board representation.
-    pass
+    print("| {} | {} | {} |".format(board[0], board[1], board[2]))
+    print("| {} | {} | {} |".format(board[4], board[5], board[6]))
+    print("| {} | {} | {} |".format(board[7], board[8], board[9]))
 
 
 def player_input():
@@ -101,6 +102,8 @@ print('Welcome to Tic Tac Toe!')
 
 test_board = ['#', 'X', 'O', 'X', 'O', 'X', 'O', 'X', 'O', 'X']
 display_board(test_board)
+
+
 
 # Step 10: Here comes the hard part! Use while loops and the functions you've made to run the game!
 

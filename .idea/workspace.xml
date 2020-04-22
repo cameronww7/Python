@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="013d0351-7762-4be4-8aa2-12a2d055db68" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Python-Playground/TicTacToe/TicTacToe.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python-Playground/TicTacToe/TicTacToe.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +41,7 @@
       <recent name="C:\Users\Camer\Documents\Github\Python-Workspace\Python-Bootcomp-Zero_To_Hero" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.51-Func-And-Meths-HW">
+  <component name="RunManager" selected="Python.TicTacToe">
     <configuration name="44-Py-Practice-Exercises" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python-Workspace" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -125,7 +126,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Code_Exercises_17-19" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="TicTacToe" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python-Workspace" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -133,11 +134,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Py-Methods-and-Functions/Practice" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python-Playground/TicTacToe" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Py-Methods-and-Functions/Practice/Code_Exercises_17-19.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python-Playground/TicTacToe/TicTacToe.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -148,11 +149,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.TicTacToe" />
         <item itemvalue="Python.51-Func-And-Meths-HW" />
         <item itemvalue="Python.50-Nested-Statements-and-Scope" />
         <item itemvalue="Python.49-Lambda-Exp-Map-Filter-Func" />
         <item itemvalue="Python.44-Py-Practice-Exercises" />
-        <item itemvalue="Python.Code_Exercises_17-19" />
       </list>
     </recent_temporary>
   </component>
@@ -212,22 +213,22 @@
       <screen x="0" y="40" width="2560" height="1400" />
     </state>
     <state x="961" y="469" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1585799550953" />
-    <state width="2539" height="391" key="GridCell.Tab.0.bottom" timestamp="1587098510235">
+    <state width="2539" height="391" key="GridCell.Tab.0.bottom" timestamp="1587529936969">
       <screen x="0" y="40" width="2560" height="1400" />
     </state>
-    <state width="2539" height="391" key="GridCell.Tab.0.bottom/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1587098510235" />
-    <state width="2539" height="391" key="GridCell.Tab.0.center" timestamp="1587098510235">
+    <state width="2539" height="391" key="GridCell.Tab.0.bottom/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1587529936969" />
+    <state width="2539" height="391" key="GridCell.Tab.0.center" timestamp="1587529936969">
       <screen x="0" y="40" width="2560" height="1400" />
     </state>
-    <state width="2539" height="391" key="GridCell.Tab.0.center/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1587098510235" />
-    <state width="2539" height="391" key="GridCell.Tab.0.left" timestamp="1587098510234">
+    <state width="2539" height="391" key="GridCell.Tab.0.center/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1587529936969" />
+    <state width="2539" height="391" key="GridCell.Tab.0.left" timestamp="1587529936968">
       <screen x="0" y="40" width="2560" height="1400" />
     </state>
-    <state width="2539" height="391" key="GridCell.Tab.0.left/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1587098510234" />
-    <state width="2539" height="391" key="GridCell.Tab.0.right" timestamp="1587098510235">
+    <state width="2539" height="391" key="GridCell.Tab.0.left/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1587529936968" />
+    <state width="2539" height="391" key="GridCell.Tab.0.right" timestamp="1587529936969">
       <screen x="0" y="40" width="2560" height="1400" />
     </state>
-    <state width="2539" height="391" key="GridCell.Tab.0.right/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1587098510235" />
+    <state width="2539" height="391" key="GridCell.Tab.0.right/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1587529936969" />
     <state width="2539" height="483" key="GridCell.Tab.1.bottom" timestamp="1585886012021">
       <screen x="0" y="40" width="2560" height="1400" />
     </state>
@@ -244,10 +245,10 @@
       <screen x="0" y="40" width="2560" height="1400" />
     </state>
     <state width="2539" height="483" key="GridCell.Tab.1.right/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1585886012020" />
-    <state x="976" y="564" key="com.intellij.ide.util.TipDialog" timestamp="1587441985513">
+    <state x="976" y="564" key="com.intellij.ide.util.TipDialog" timestamp="1587529779923">
       <screen x="0" y="40" width="2560" height="1400" />
     </state>
-    <state x="976" y="564" key="com.intellij.ide.util.TipDialog/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1587441985513" />
+    <state x="976" y="564" key="com.intellij.ide.util.TipDialog/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1587529779923" />
     <state x="974" y="338" width="612" height="804" key="find.popup" timestamp="1586054588665">
       <screen x="0" y="40" width="2560" height="1400" />
     </state>
