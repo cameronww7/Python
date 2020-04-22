@@ -38,6 +38,9 @@ research, and remember:
 """
 
 
+player1 = ""
+player2 = ""
+
 def display_board(board):
     # Step 1: Write a function that can print out a board. Set up your board as a list,
     # where each index 1-9 corresponds with a number on a number pad, so you get a 3 by 3
@@ -51,7 +54,24 @@ def player_input():
     # Step 2: Write a function that can take in a player input and assign their marker as
     # 'X' or 'O'. Think about using while loops to continually ask until you get a correct
     # answer.
-    pass
+    global player1
+    global player2
+
+    response = input("First player Enter if you want to be X or O : ")
+    response = response.upper()
+
+    while response != "X" and response != "O":
+        response = input("First player Enter if you want to be X or O : ")
+        response = response.upper()
+
+    player1 = response
+
+    if player1 == "X":
+        player2 = "O"
+    else:
+        player2 = "X"
+
+
 
 
 def place_marker(board, marker, position):
@@ -103,6 +123,9 @@ print('Welcome to Tic Tac Toe!')
 test_board = ['#', 'X', 'O', 'X', 'O', 'X', 'O', 'X', 'O', 'X']
 display_board(test_board)
 
+player_input()
+print(player1)
+print(player2)
 
 
 # Step 10: Here comes the hard part! Use while loops and the functions you've made to run the game!
