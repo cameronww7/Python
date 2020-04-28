@@ -100,7 +100,7 @@ def win_check(board, mark):
             varExit = False
 
         # Check Vertical Win
-        if varExit != False and board[index] == board[index+3] and board[index] == board[index+3]:
+        if varExit and board[index] == board[index+3] and board[index] == board[index+3]:
             winnerwinner = board[index]
             varExit = False
         else:
@@ -110,9 +110,15 @@ def win_check(board, mark):
         if index == 2:
             break
 
-    # Check if there is a diagonal win from left to right
+    # Check Left to Right Diagonal Win
+    if varExit and board[0] == board[4] and board[0] == board[8]:
+        winnerwinner = board[index]
+        varExit = False
 
-
+    # Check Right to Left Diagonal Win
+    if varExit and board[2] == board[4] and board[2] == board[6]:
+        winnerwinner = board[index]
+        varExit = False
 
 def choose_first():
     # Step 5: Write a function that uses the random module to randomly decide which player
