@@ -82,7 +82,7 @@ def place_marker(board, marker, position):
     return board
 
 
-def win_check(board, mark):
+def win_check(board):
     # Step 4: Write a function that takes in a board and a mark (X or O) and then checks to
     # see if that mark has won.
     #  0 | 1 | 2
@@ -119,6 +119,9 @@ def win_check(board, mark):
     if varExit and board[2] == board[4] and board[2] == board[6]:
         winnerwinner = board[index]
         varExit = False
+
+    # Return the mark that one or returns a C for Cats Game
+    return winnerwinner
 
 def choose_first():
     # Step 5: Write a function that uses the random module to randomly decide which player
