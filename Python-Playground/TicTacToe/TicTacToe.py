@@ -85,9 +85,9 @@ def place_marker(board, marker, position):
 def win_check(board, mark):
     # Step 4: Write a function that takes in a board and a mark (X or O) and then checks to
     # see if that mark has won.
-    #  1 | 2 | 3
-    #  4 | 5 | 6
-    #  7 | 8 | 9
+    #  0 | 1 | 2
+    #  3 | 4 | 5
+    #  6 | 7 | 8
     winnerwinner = "C"
     index = 0
     varExit = True
@@ -97,9 +97,22 @@ def win_check(board, mark):
         # Check Horizontal Win
         if board[index] == board[index+1] and board[index] == board[index+2]:
             winnerwinner = board[index]
+            varExit = False
 
+        # Check Vertical Win
+        if varExit != False and board[index] == board[index+3] and board[index] == board[index+3]:
+            winnerwinner = board[index]
+            varExit = False
+        else:
+            index = index + 1
+
+        # Break out to stop Out of bound error
+        if index == 2:
+            break
 
     # Check if there is a diagonal win from left to right
+
+
 
 def choose_first():
     # Step 5: Write a function that uses the random module to randomly decide which player
