@@ -189,6 +189,12 @@ def run_unit_tests():
     # ----------------------
     #print(choose_first())
 
+    # Unit Test space_check(board, position)
+    # ----------------------
+    test_board = [' ', 'X', 'X', 'O', 'O', 'X', 'O', 'X', 'O', 'O']
+    print(space_check(test_board, 0))
+    print(space_check(test_board, 1))
+
 
 print('Welcome to Tic Tac Toe!')
 
