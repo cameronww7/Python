@@ -178,12 +178,13 @@ def run_unit_tests():
 
     # Unit Test win_check(board)
     # ----------------------
-    test_board = ['X', 'X', 'X', 'O', 'O', 'X', 'O', 'X', 'O', 'O']
-    display_board(test_board)
-    print(win_check(test_board))
+    #test_board = ['X', 'X', 'X', 'O', 'O', 'X', 'O', 'X', 'O', 'O']
+    #display_board(test_board)
+    #print(win_check(test_board))
 
-
-    #print(choose_first())
+    # Unit Test choose_first()
+    # ----------------------
+    print(choose_first())
 
 
 print('Welcome to Tic Tac Toe!')
