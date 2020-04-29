@@ -127,8 +127,12 @@ def choose_first():
     # Step 5: Write a function that uses the random module to randomly decide which player
     # goes first. You may want to lookup random.randint() Return a string of which player
     # went first.
-    pass
+    ran = random.randint(0,1)
 
+    if ran == 0:
+        return "X"
+    else:
+        return "O"
 
 def space_check(board, position):
     # Step 6: Write a function that returns a boolean indicating whether a space on the
@@ -163,6 +167,7 @@ display_board(test_board)
 player_input()
 print(player1)
 print(player2)
+
 
 
 # Step 10: Here comes the hard part! Use while loops and the functions you've made to run the game!
