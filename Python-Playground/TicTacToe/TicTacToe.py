@@ -45,9 +45,12 @@ def display_board(board):
     # Step 1: Write a function that can print out a board. Set up your board as a list,
     # where each index 1-9 corresponds with a number on a number pad, so you get a 3 by 3
     # board representation.
-    print("| {} | {} | {} |".format(board[0], board[1], board[2]))
-    print("| {} | {} | {} |".format(board[4], board[5], board[6]))
-    print("| {} | {} | {} |".format(board[7], board[8], board[9]))
+    print(" {} | {} | {} ".format(board[0], board[1], board[2]))
+    print("-----------")
+    print(" {} | {} | {} ".format(board[4], board[5], board[6]))
+    print("-----------")
+    print(" {} | {} | {} ".format(board[7], board[8], board[9]))
+    print("")
 
 
 def player_input():
@@ -164,8 +167,10 @@ def replay():
 def run_unit_tests():
     # Unit Test display_board(board)
     # ----------------------
-    # test_board = ['#', 'X', 'O', 'X', 'O', 'X', 'O', 'X', 'O', 'X']
-    # display_board(test_board)
+    test_board = ['#', 'X', 'O', 'X', 'O', 'X', 'O', 'X', 'O', 'X']
+    display_board(test_board)
+    test_board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
+    display_board(test_board)
 
     # Unit Test player_input()
     # ----------------------
@@ -191,9 +196,9 @@ def run_unit_tests():
 
     # Unit Test space_check(board, position)
     # ----------------------
-    test_board = [' ', 'X', 'X', 'O', 'O', 'X', 'O', 'X', 'O', 'O']
-    print(space_check(test_board, 0))
-    print(space_check(test_board, 1))
+    #test_board = [' ', 'X', 'X', 'O', 'O', 'X', 'O', 'X', 'O', 'O']
+    #print(space_check(test_board, 0))
+    #print(space_check(test_board, 1))
 
 
 print('Welcome to Tic Tac Toe!')
