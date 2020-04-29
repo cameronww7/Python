@@ -158,17 +158,20 @@ def replay():
     # boolean True if they do want to play again.
     pass
 
+def run_unit_tests():
+    test_board = ['#', 'X', 'O', 'X', 'O', 'X', 'O', 'X', 'O', 'X']
+    display_board(test_board)
+
+    # player_input()
+    # print(player1)
+    # print(player2)
+
+    print(choose_first())
+
 
 print('Welcome to Tic Tac Toe!')
 
-test_board = ['#', 'X', 'O', 'X', 'O', 'X', 'O', 'X', 'O', 'X']
-display_board(test_board)
-
-player_input()
-print(player1)
-print(player2)
-
-
+run_unit_tests()
 
 # Step 10: Here comes the hard part! Use while loops and the functions you've made to run the game!
 
