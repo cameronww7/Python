@@ -160,24 +160,30 @@ def replay():
 
 def run_unit_tests():
     # Unit Test display_board(board)
-    #----------------------
+    # ----------------------
     #test_board = ['#', 'X', 'O', 'X', 'O', 'X', 'O', 'X', 'O', 'X']
     #display_board(test_board)
 
-
     # Unit Test player_input()
-    #----------------------
+    # ----------------------
     # player_input()
     # print(player1)
     # print(player2)
 
     # Unit Test place_marker(board, marker, position)
-    #----------------------
-    test_board = [' ', 'X', 'O', 'X', 'O', 'X', 'O', 'X', 'O', 'X']
-    test_board = place_marker(test_board, "X", 1)
-    print(test_board)
+    # ----------------------
+    #test_board = [' ', 'X', 'O', 'X', 'O', 'X', 'O', 'X', 'O', 'X']
+    #test_board = place_marker(test_board, "X", 1)
+    #print(test_board)
 
-    print(choose_first())
+    # Unit Test win_check(board)
+    # ----------------------
+    test_board = ['X', 'X', 'X', 'O', 'O', 'X', 'O', 'X', 'O', 'O']
+    display_board(test_board)
+    print(win_check(test_board))
+
+
+    #print(choose_first())
 
 
 print('Welcome to Tic Tac Toe!')
