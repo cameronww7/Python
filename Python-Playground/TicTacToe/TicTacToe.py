@@ -64,6 +64,7 @@ def player_input():
     response = response.upper()
 
     while response != "X" and response != "O":
+        print("< ERROR, Please Enter in either a X or O >")
         response = input("First player Enter if you want to be X or O : ")
         response = response.upper()
 
@@ -74,6 +75,8 @@ def player_input():
     else:
         player2 = "X"
 
+    print("\nPlayer 1 is {}".format(player1))
+    print("Player 2 is {}".format(player2))
 
 
 
@@ -167,16 +170,17 @@ def replay():
 def run_unit_tests():
     # Unit Test display_board(board)
     # ----------------------
-    test_board = ['#', 'X', 'O', 'X', 'O', 'X', 'O', 'X', 'O', 'X']
-    display_board(test_board)
-    test_board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-    display_board(test_board)
+    # test_board = ['#', 'X', 'O', 'X', 'O', 'X', 'O', 'X', 'O', 'X']
+    # display_board(test_board)
+    # test_board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
+    # display_board(test_board)
 
     # Unit Test player_input()
     # ----------------------
-    # player_input()
-    # print(player1)
-    # print(player2)
+    player_input()
+    print("\nTesting Global Variable Changes")
+    print("Player 1 is {}".format(player1))
+    print("Player 2 is {}".format(player2))
 
     # Unit Test place_marker(board, marker, position)
     # ----------------------
