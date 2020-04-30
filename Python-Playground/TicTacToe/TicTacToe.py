@@ -208,8 +208,10 @@ def run_unit_tests():
     #print(space_check(test_board, 0))
     #print(space_check(test_board, 1))
 
-
-
+    # Unit Test full_board_check(board)
+    # ----------------------
+    test_board = ['X', 'X', 'X', 'O', 'O', 'X', 'O', 'X', 'O', 'O']
+    print(full_board_check(test_board))
 
 print('Welcome to Tic Tac Toe!')
 
