@@ -152,7 +152,11 @@ def space_check(board, position):
 def full_board_check(board):
     # Step 7: Write a function that checks if the board is full and returns a boolean value.
     # True if full, False otherwise.
-    pass
+    for index in range(0, 9, 1):
+        if board[index] == " ":
+            return False
+
+    return True
 
 
 def player_choice(board):
@@ -177,10 +181,10 @@ def run_unit_tests():
 
     # Unit Test player_input()
     # ----------------------
-    player_input()
-    print("\nTesting Global Variable Changes")
-    print("Player 1 is {}".format(player1))
-    print("Player 2 is {}".format(player2))
+    # player_input()
+    # print("\nTesting Global Variable Changes")
+    # print("Player 1 is {}".format(player1))
+    # print("Player 2 is {}".format(player2))
 
     # Unit Test place_marker(board, marker, position)
     # ----------------------
@@ -203,6 +207,8 @@ def run_unit_tests():
     #test_board = [' ', 'X', 'X', 'O', 'O', 'X', 'O', 'X', 'O', 'O']
     #print(space_check(test_board, 0))
     #print(space_check(test_board, 1))
+
+
 
 
 print('Welcome to Tic Tac Toe!')
