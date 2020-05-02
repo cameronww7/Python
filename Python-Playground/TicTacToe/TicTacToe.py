@@ -163,8 +163,17 @@ def player_choice(board):
     # Step 8: Write a function that asks for a player's next position (as a number 1-9) and then
     # uses the function from step 6 to check if it's a free position. If it is, then return the
     # position for later use.
-    pass
+    response = input("Player Enter the spot you want (1-9): ")
 
+    while 9 <= response <= 0 and board[response] == " ":
+        if 9 <= response <= 0:
+            print("< ERROR, Please Enter a Spot 1 - 9 >")
+            response = input("Player Enter the spot you want (1-9): ")
+        elif board[response] == " ":
+            print("< ERROR, Please enter in a Spot that is Empty >")
+            response = input("Player Enter the spot you want (1-9): ")
+
+    return response
 
 def replay():
     # Step 9: Write a function that asks the player if they want to play again and returns a
