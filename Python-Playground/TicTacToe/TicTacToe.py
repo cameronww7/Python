@@ -143,7 +143,7 @@ def choose_first():
 def space_check(board, position):
     # Step 6: Write a function that returns a boolean indicating whether a space on the
     # board is freely available.
-    if board[position] == " ":
+    if board[int(position)-1] == " ":
         return True
     else:
         return False
@@ -165,13 +165,17 @@ def player_choice(board):
     # position for later use.
     response = input("Player Enter the spot you want (1-9): ")
 
-    while 9 <= response <= 0 and board[response] == " ":
-        if 9 <= response <= 0:
+    while 9 < int(response) or int(response) < 1:
+        print("< ERROR, Please Enter a Spot 1 - 9 >")
+        response = input("Player Enter the spot you want (1-9): ")
+
+    while 9 < int(response) or int(response) < 1 or not space_check(board, int(response)):
+        while 9 < int(response) or int(response) < 1:
             print("< ERROR, Please Enter a Spot 1 - 9 >")
             response = input("Player Enter the spot you want (1-9): ")
-        elif board[response] == " ":
-            print("< ERROR, Please enter in a Spot that is Empty >")
-            response = input("Player Enter the spot you want (1-9): ")
+
+        print("< ERROR, Please enter in a Spot that is Empty >")
+        response = input("Player Enter the spot you want (1-9): ")
 
     return response
 
@@ -219,8 +223,16 @@ def run_unit_tests():
 
     # Unit Test full_board_check(board)
     # ----------------------
-    test_board = ['X', 'X', 'X', 'O', 'O', 'X', 'O', 'X', 'O', 'O']
-    print(full_board_check(test_board))
+    #test_board = ['X', 'X', 'X', 'O', 'O', 'X', 'O', 'X', 'O', 'O']
+    #print(full_board_check(test_board))
+
+    # Unit Test player_choice(board)
+    # ----------------------
+    test_board = [' ', 'X', 'X', 'O', 'O', 'X', 'O', 'X', 'O', 'O']
+    display_board(test_board)
+    print(player_choice(test_board))
+
+
 
 print('Welcome to Tic Tac Toe!')
 
