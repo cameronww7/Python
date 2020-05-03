@@ -185,7 +185,7 @@ def replay():
     response = input("Please enter a Y to Play Again and N to Stop: ")
     response = response.upper()
 
-    while 9 < int(response) or int(response) < 1:
+    while response != "Y" and response != "N":
         print("< ERROR, Please Enter a Y or  N >")
         response = input("Please enter a Y to Play Again and N to Stop: ")
         response = response.upper()
@@ -243,6 +243,9 @@ def run_unit_tests():
     #display_board(test_board)
     #print(player_choice(test_board))
 
+    # Unit Test replay()
+    # ----------------------
+    print(replay())
 
 print('Welcome to Tic Tac Toe!')
 
