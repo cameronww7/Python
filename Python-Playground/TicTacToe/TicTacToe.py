@@ -265,6 +265,8 @@ while True:
 
     game_on = True
 
+    display_board(spotBoard)
+
     while game_on:
         display_board(board)
         print("Player 1 Turn")
