@@ -47,9 +47,9 @@ def display_board(board):
     # board representation.
     print(" {} | {} | {} ".format(board[0], board[1], board[2]))
     print("-----------")
-    print(" {} | {} | {} ".format(board[4], board[5], board[6]))
+    print(" {} | {} | {} ".format(board[3], board[4], board[5]))
     print("-----------")
-    print(" {} | {} | {} ".format(board[7], board[8], board[9]))
+    print(" {} | {} | {} ".format(board[6], board[7], board[8]))
     print("")
 
 
@@ -177,7 +177,7 @@ def player_choice(board):
         print("< ERROR, Please enter in a Spot that is Empty >")
         response = input("Player Enter the spot you want (1-9): ")
 
-    return response
+    return int(response)
 
 def replay():
     # Step 9: Write a function that asks the player if they want to play again and returns a
@@ -247,7 +247,7 @@ def run_unit_tests():
     # ----------------------
     #print(replay())
 
-    pass # end of unit Tests
+    pass  # end of unit Tests
 
 
 print('Welcome to Tic Tac Toe!')
@@ -259,16 +259,18 @@ print('Welcome to Tic Tac Toe!')
 
 
 while True:
-    board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
+    spotBoard = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+    board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
     player_choose_side()
 
+    game_on = True
 
-# while game_on:
+    while game_on:
+        display_board(board)
+        print("Player 1 Turn")
+        player1Spot = player_choice(board)
+        place_marker(board, player1, player1Spot)
+        display_board(board)
+        break
 
-
-# Player2's turn.
-
-# pass
-
-# if not replay():
-# break
+    break
