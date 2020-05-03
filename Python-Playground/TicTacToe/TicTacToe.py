@@ -182,7 +182,18 @@ def player_choice(board):
 def replay():
     # Step 9: Write a function that asks the player if they want to play again and returns a
     # boolean True if they do want to play again.
-    pass
+    response = input("Please enter a Y to Play Again and N to Stop: ")
+    response = response.upper()
+
+    while 9 < int(response) or int(response) < 1:
+        print("< ERROR, Please Enter a Y or  N >")
+        response = input("Please enter a Y to Play Again and N to Stop: ")
+        response = response.upper()
+
+    if response == "Y":
+        return True
+    else:
+        return False
 
 def run_unit_tests():
     # Unit Test display_board(board)
@@ -228,10 +239,9 @@ def run_unit_tests():
 
     # Unit Test player_choice(board)
     # ----------------------
-    test_board = [' ', 'X', 'X', 'O', 'O', 'X', 'O', 'X', 'O', 'O']
-    display_board(test_board)
-    print(player_choice(test_board))
-
+    #test_board = [' ', 'X', 'X', 'O', 'O', 'X', 'O', 'X', 'O', 'O']
+    #display_board(test_board)
+    #print(player_choice(test_board))
 
 
 print('Welcome to Tic Tac Toe!')
