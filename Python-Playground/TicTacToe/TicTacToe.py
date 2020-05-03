@@ -53,7 +53,7 @@ def display_board(board):
     print("")
 
 
-def player_input():
+def player_choose_side():
     # Step 2: Write a function that can take in a player input and assign their marker as
     # 'X' or 'O'. Think about using while loops to continually ask until you get a correct
     # answer.
@@ -203,9 +203,9 @@ def run_unit_tests():
     # test_board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
     # display_board(test_board)
 
-    # Unit Test player_input()
+    # Unit Test player_choose_side()
     # ----------------------
-    # player_input()
+    # player_choose_side()
     # print("\nTesting Global Variable Changes")
     # print("Player 1 is {}".format(player1))
     # print("Player 2 is {}".format(player2))
@@ -245,20 +245,25 @@ def run_unit_tests():
 
     # Unit Test replay()
     # ----------------------
-    print(replay())
+    #print(replay())
+
+    pass # end of unit Tests
+
 
 print('Welcome to Tic Tac Toe!')
 
-run_unit_tests()
+#run_unit_tests()
 
 # Step 10: Here comes the hard part! Use while loops and the functions you've made to run the game!
 
-# while True:
-# Set the game up here
-# pass
+
+
+while True:
+    board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
+    player_choose_side()
+
 
 # while game_on:
-# Player 1 Turn
 
 
 # Player2's turn.
