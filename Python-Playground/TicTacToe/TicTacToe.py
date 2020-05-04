@@ -103,11 +103,13 @@ def win_check(board):
         # Check Horizontal Win
         if board[index] == board[index+1] and board[index] == board[index+2]:
             winnerwinner = board[index]
+            print("index:{} | Horizontal Win".format(index))
             varExit = False
 
         # Check Vertical Win
         if varExit and board[index] == board[index+3] and board[index] == board[index+3]:
             winnerwinner = board[index]
+            print("index:{} | Vertical Win".format(index))
             varExit = False
         else:
             index = index + 1
@@ -119,11 +121,13 @@ def win_check(board):
     # Check Left to Right Diagonal Win
     if varExit and board[0] == board[4] and board[0] == board[8]:
         winnerwinner = board[index]
+        print("Right Diagonal Win")
         varExit = False
 
     # Check Right to Left Diagonal Win
     if varExit and board[2] == board[4] and board[2] == board[6]:
         winnerwinner = board[index]
+        print("Left Diagonal Win")
         varExit = False
 
     # Return the mark that one or returns a C for Cats Game
@@ -282,6 +286,7 @@ while True:
     board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
     player_choose_side()
     game_on = True
+    checkWin = "C"
 
 
     while game_on:
@@ -307,9 +312,15 @@ while True:
         checkWin = win_check(board)
 
         if checkWin != "C" or full_board_check(board):
+            print("checkwin {} | Fullboard {}".format(checkWin, full_board_check(board)))
             game_on = False
 
 
-
+    if checkWin == player1:
+        print("Player {} WINS".format(player1))
+    elif checkWin == player2:
+        print("Player {} WINS".format(player2))
+    else:
+        print("its a Cats Game")
 
     break
