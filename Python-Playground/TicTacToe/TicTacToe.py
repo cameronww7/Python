@@ -293,10 +293,23 @@ while True:
         place_marker(board, player1, player1Spot)
         display_board(board)
 
+        checkWin = win_check(board)
+
+        if checkWin != "C" or full_board_check(board):
+            game_on = False
+
         # Player 2 Starts
         print("Player {} Turn".format(player2))
         player2Spot = player_choice(board)
         place_marker(board, player2, player2Spot)
         display_board(board)
+
+        checkWin = win_check(board)
+
+        if checkWin != "C" or full_board_check(board):
+            game_on = False
+
+
+
 
     break
