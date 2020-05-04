@@ -274,13 +274,10 @@ def run_unit_tests():
     pass  # end of unit Tests
 
 
+# Step 10: Here comes the hard part! Use while loops and the functions you've made to run the game!
 print('Welcome to Tic Tac Toe!')
 
 run_unit_tests()
-
-# Step 10: Here comes the hard part! Use while loops and the functions you've made to run the game!
-
-
 
 while True:
     display_directions()
@@ -289,7 +286,6 @@ while True:
     player_choose_side()
     game_on = True
     checkWin = "C"
-
 
     while game_on:
         display_board(board)
@@ -300,8 +296,9 @@ while True:
         place_marker(board, player1, player1Spot)
         display_board(board)
 
+        # Check if Player 1 Won
+        # If player 1 Won will stop Player 2 from Playing
         checkWin = win_check(board)
-
         if checkWin != "C" or full_board_check(board):
             game_on = False
         else:
@@ -311,12 +308,11 @@ while True:
             place_marker(board, player2, player2Spot)
             display_board(board)
 
-        checkWin = win_check(board)
-
-        if checkWin != "C" or full_board_check(board):
-            print("checkwin {} | Fullboard {}".format(checkWin, full_board_check(board)))
-            game_on = False
-
+            # Check if Player 2 Won
+            checkWin = win_check(board)
+            if checkWin != "C" or full_board_check(board):
+                print("checkwin {} | Fullboard {}".format(checkWin, full_board_check(board)))
+                game_on = False
 
     if checkWin == player1:
         print("Player {} WINS".format(player1))
