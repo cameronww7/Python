@@ -195,6 +195,20 @@ def replay():
     else:
         return False
 
+def display_directions():
+    print("\nHello and Welcome to my game of Tic Tac Toe"
+          "\nFirst lets get the rules out of the way!"
+          "\nDisplayed below is the board, with spots"
+          "\nthat are numbers 1 - 9. "
+          "\nWhen it is your turn you will enter in "
+          "\na number between 1 - 9 to select your slot."
+          "\nOnce your turn is over your oppotent will"
+          "\nplace his turn, and so on till the game ends."
+          "\nat the end you will be prompted to play again")
+    spotBoard = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+    display_board(spotBoard)
+
+
 def run_unit_tests():
     # Unit Test display_board(board)
     # ----------------------
@@ -247,25 +261,28 @@ def run_unit_tests():
     # ----------------------
     #print(replay())
 
+    # Unit Test display_directions
+    # ----------------------
+    #display_directions()
+
     pass  # end of unit Tests
 
 
 print('Welcome to Tic Tac Toe!')
 
-#run_unit_tests()
+run_unit_tests()
 
 # Step 10: Here comes the hard part! Use while loops and the functions you've made to run the game!
 
 
 
 while True:
-    spotBoard = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+    display_directions()
+
     board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
     player_choose_side()
-
     game_on = True
 
-    display_board(spotBoard)
 
     while game_on:
         display_board(board)
