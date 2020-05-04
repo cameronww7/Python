@@ -286,10 +286,17 @@ while True:
 
     while game_on:
         display_board(board)
-        print("Player 1 Turn")
+
+        # Player 1 Starts
+        print("Player {} Turn".format(player1))
         player1Spot = player_choice(board)
         place_marker(board, player1, player1Spot)
         display_board(board)
-        break
+
+        # Player 2 Starts
+        print("Player {} Turn".format(player2))
+        player2Spot = player_choice(board)
+        place_marker(board, player2, player2Spot)
+        display_board(board)
 
     break
