@@ -41,6 +41,7 @@ research, and remember:
 player1 = ""
 player2 = ""
 
+
 def display_board(board):
     # Step 1: Write a function that can print out a board. Set up your board as a list,
     # where each index 1-9 corresponds with a number on a number pad, so you get a 3 by 3
@@ -79,7 +80,6 @@ def player_choose_side():
     print("Player 2 is {}".format(player2))
 
 
-
 def place_marker(board, marker, position):
     # Step 3: Write a function that takes in the board list object, a marker ('X' or 'O'),
     # and a desired position (number 1-9) and assigns it to the board.
@@ -101,13 +101,13 @@ def win_check(board):
     # Check Horizontal Win & Vertical Win
     while varExit:
         # Check Horizontal Win
-        if board[index] == board[index+1] and board[index] == board[index+2]:
+        if board[index] == board[index+1] and board[index] == board[index+2] and board[index] != " ":
             winnerwinner = board[index]
             print("index:{} | Horizontal Win".format(index))
             varExit = False
 
         # Check Vertical Win
-        if varExit and board[index] == board[index+3] and board[index] == board[index+3]:
+        if varExit and board[index] == board[index+3] and board[index] == board[index+3] and board[index] != " ":
             winnerwinner = board[index]
             print("index:{} | Vertical Win".format(index))
             varExit = False
@@ -119,19 +119,20 @@ def win_check(board):
             break
 
     # Check Left to Right Diagonal Win
-    if varExit and board[0] == board[4] and board[0] == board[8]:
+    if varExit and board[0] == board[4] and board[0] == board[8] and board[0] != " ":
         winnerwinner = board[index]
         print("Right Diagonal Win")
         varExit = False
 
     # Check Right to Left Diagonal Win
-    if varExit and board[2] == board[4] and board[2] == board[6]:
+    if varExit and board[2] == board[4] and board[2] == board[6] and board[2] != " ":
         winnerwinner = board[index]
         print("Left Diagonal Win")
         varExit = False
 
     # Return the mark that one or returns a C for Cats Game
     return winnerwinner
+
 
 def choose_first():
     # Step 5: Write a function that uses the random module to randomly decide which player
@@ -143,6 +144,7 @@ def choose_first():
         return "X"
     else:
         return "O"
+
 
 def space_check(board, position):
     # Step 6: Write a function that returns a boolean indicating whether a space on the
@@ -302,12 +304,12 @@ while True:
 
         if checkWin != "C" or full_board_check(board):
             game_on = False
-
-        # Player 2 Starts
-        print("Player {} Turn".format(player2))
-        player2Spot = player_choice(board)
-        place_marker(board, player2, player2Spot)
-        display_board(board)
+        else:
+            # Player 2 Starts
+            print("Player {} Turn".format(player2))
+            player2Spot = player_choice(board)
+            place_marker(board, player2, player2Spot)
+            display_board(board)
 
         checkWin = win_check(board)
 
