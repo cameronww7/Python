@@ -101,13 +101,15 @@ def win_check(board):
     # Check Horizontal Win & Vertical Win
     while varExit:
         # Check Horizontal Win
-        if board[index] == board[index+1] and board[index] == board[index+2] and board[index] != " ":
+        if board[index] == board[index+1] and board[index] == board[index+2] \
+                and board[index] != " " and board[index+1] != " " and board[index+2] != " ":
             winnerwinner = board[index]
             print("index:{} | Horizontal Win".format(index))
             varExit = False
 
         # Check Vertical Win
-        if varExit and board[index] == board[index+3] and board[index] == board[index+3] and board[index] != " ":
+        if varExit and board[index] == board[index+3] and board[index] == board[index+6] \
+                and board[index] != " " and board[index+3] != " " and board[index+6] != " ":
             winnerwinner = board[index]
             print("index:{} | Vertical Win".format(index))
             varExit = False
@@ -119,13 +121,15 @@ def win_check(board):
             break
 
     # Check Left to Right Diagonal Win
-    if varExit and board[0] == board[4] and board[0] == board[8] and board[0] != " ":
+    if varExit and board[0] == board[4] and board[0] == board[8] and board[0] != " " \
+            and board[0] != " " and board[4] != " " and board[8] != " ":
         winnerwinner = board[index]
         print("Right Diagonal Win")
         varExit = False
 
     # Check Right to Left Diagonal Win
-    if varExit and board[2] == board[4] and board[2] == board[6] and board[2] != " ":
+    if varExit and board[2] == board[4] and board[2] == board[6] \
+            and board[2] != " " and board[4] != " " and board[6] != " ":
         winnerwinner = board[index]
         print("Left Diagonal Win")
         varExit = False
@@ -288,6 +292,7 @@ while True:
     checkWin = "C"
 
     while game_on:
+        print("\nCurrent Board Status")
         display_board(board)
 
         # Player 1 Starts
