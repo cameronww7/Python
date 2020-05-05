@@ -76,7 +76,7 @@ def player_choose_side():
             except:
                 print("Error - Invalid Character - Only Numbers are allowed")
 
-        response = response.upper()
+    response = response.upper()
 
     player1 = response
 
@@ -109,25 +109,34 @@ def win_check(board):
 
     # Check Horizontal Win & Vertical Win
     while varExit:
+        # Break out to stop Out of bound error
+        if index > 6:
+            break
+
         # Check Horizontal Win
-        if board[index] == board[index + 1] and board[index] == board[index + 2] \
-                and board[index] != " " and board[index + 1] != " " and board[index + 2] != " ":
+        if board[index] == board[index + 1] and board[index] == board[index + 2] and board[index] != " " and board[index + 1] != " " and board[index + 2] != " ":
             winnerwinner = board[index]
             print("index:{} | Horizontal Win".format(index))
             varExit = False
 
+        index = index + 3
+
+    index = 0
+
+    # Check Horizontal Win & Vertical Win
+    while varExit:
+        # Break out to stop Out of bound error
+        if index > 2:
+            break
+
         # Check Vertical Win
-        if varExit and board[index] == board[index + 3] and board[index] == board[index + 6] \
-                and board[index] != " " and board[index + 3] != " " and board[index + 6] != " ":
+        if varExit and board[index] == board[index + 3] and board[index] == board[index + 6] and board[index] != " " and board[index + 3] != " " and board[index + 6] != " ":
             winnerwinner = board[index]
             print("index:{} | Vertical Win".format(index))
             varExit = False
-        else:
-            index = index + 1
 
-        # Break out to stop Out of bound error
-        if index == 2:
-            break
+        index = index + 1
+
 
     # Check Left to Right Diagonal Win
     if varExit and board[0] == board[4] and board[0] == board[8] and board[0] != " " \
@@ -352,7 +361,7 @@ while True:
             # Check if Player 2 Won
             checkWin = win_check(board)
             if checkWin != "C" or full_board_check(board):
-                print("checkwin {} | Fullboard {}".format(checkWin, full_board_check(board)))
+                #print("checkwin {} | Fullboard {}".format(checkWin, full_board_check(board)))
                 game_on = False
 
     if checkWin == player1:
