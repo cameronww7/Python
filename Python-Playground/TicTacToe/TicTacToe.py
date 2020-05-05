@@ -37,7 +37,6 @@ to tackle this project. Remember, it's totally open book, so take your time, do 
 research, and remember:
 """
 
-
 player1 = ""
 player2 = ""
 
@@ -61,12 +60,22 @@ def player_choose_side():
     global player1
     global player2
 
-    response = input("First player Enter if you want to be X or O : ")
-    response = response.upper()
+    while True:
+        try:
+            response = input("First player Enter if you want to be X or O : ")
+            break
+        except:
+            print("Error - Invalid Character - Only Numbers are allowed")
 
-    while response != "X" and response != "O":
+    while response != "X" and response != "O" and response != "x" and response != "o":
         print("< ERROR, Please Enter in either a X or O >")
-        response = input("First player Enter if you want to be X or O : ")
+        while True:
+            try:
+                response = input("First player Enter if you want to be X or O : ")
+                break
+            except:
+                print("Error - Invalid Character - Only Numbers are allowed")
+
         response = response.upper()
 
     player1 = response
@@ -83,7 +92,7 @@ def player_choose_side():
 def place_marker(board, marker, position):
     # Step 3: Write a function that takes in the board list object, a marker ('X' or 'O'),
     # and a desired position (number 1-9) and assigns it to the board.
-    board[position-1] = marker
+    board[position - 1] = marker
 
     return board
 
@@ -101,15 +110,15 @@ def win_check(board):
     # Check Horizontal Win & Vertical Win
     while varExit:
         # Check Horizontal Win
-        if board[index] == board[index+1] and board[index] == board[index+2] \
-                and board[index] != " " and board[index+1] != " " and board[index+2] != " ":
+        if board[index] == board[index + 1] and board[index] == board[index + 2] \
+                and board[index] != " " and board[index + 1] != " " and board[index + 2] != " ":
             winnerwinner = board[index]
             print("index:{} | Horizontal Win".format(index))
             varExit = False
 
         # Check Vertical Win
-        if varExit and board[index] == board[index+3] and board[index] == board[index+6] \
-                and board[index] != " " and board[index+3] != " " and board[index+6] != " ":
+        if varExit and board[index] == board[index + 3] and board[index] == board[index + 6] \
+                and board[index] != " " and board[index + 3] != " " and board[index + 6] != " ":
             winnerwinner = board[index]
             print("index:{} | Vertical Win".format(index))
             varExit = False
@@ -153,7 +162,7 @@ def choose_first():
 def space_check(board, position):
     # Step 6: Write a function that returns a boolean indicating whether a space on the
     # board is freely available.
-    if board[int(position)-1] == " ":
+    if board[int(position) - 1] == " ":
         return True
     else:
         return False
@@ -173,27 +182,53 @@ def player_choice(board):
     # Step 8: Write a function that asks for a player's next position (as a number 1-9) and then
     # uses the function from step 6 to check if it's a free position. If it is, then return the
     # position for later use.
-    response = input("Player Enter the spot you want (1-9): ")
+    while True:
+        try:
+            response = int(input("Player Enter the spot you want (1-9): "))
+            break
+        except:
+            print("Error - Invalid Character - Only Numbers are allowed")
 
     while 9 < int(response) or int(response) < 1:
         print("< ERROR, Please Enter a Spot 1 - 9 >")
-        response = input("Player Enter the spot you want (1-9): ")
+        while True:
+            try:
+                response = int(input("Player Enter the spot you want (1-9): "))
+                break
+            except:
+                print("Error - Invalid Character - Only Numbers are allowed")
 
     while 9 < int(response) or int(response) < 1 or not space_check(board, int(response)):
         while 9 < int(response) or int(response) < 1:
             print("< ERROR, Please Enter a Spot 1 - 9 >")
-            response = input("Player Enter the spot you want (1-9): ")
+            while True:
+                try:
+                    response = int(input("Player Enter the spot you want (1-9): "))
+                    break
+                except:
+                    print("Error - Invalid Character - Only Numbers are allowed")
 
         print("< ERROR, Please enter in a Spot that is Empty >")
-        response = input("Player Enter the spot you want (1-9): ")
+        while True:
+            try:
+                response = int(input("Player Enter the spot you want (1-9): "))
+                break
+            except:
+                print("Error - Invalid Character - Only Numbers are allowed")
 
     return int(response)
+
 
 def replay():
     # Step 9: Write a function that asks the player if they want to play again and returns a
     # boolean True if they do want to play again.
-    response = input("Please enter a Y to Play Again and N to Stop: ")
-    response = response.upper()
+    while True:
+        try:
+            response = input("Please enter a Y to Play Again and N to Stop: ")
+            response = response.upper()
+            break
+        except:
+            print("Error - Invalid Character - Only Letters are allowed")
 
     while response != "Y" and response != "N":
         print("< ERROR, Please Enter a Y or  N >")
@@ -204,6 +239,7 @@ def replay():
         return True
     else:
         return False
+
 
 def display_directions():
     print("\nHello and Welcome to my game of Tic Tac Toe"
@@ -248,32 +284,32 @@ def run_unit_tests():
 
     # Unit Test choose_first()
     # ----------------------
-    #print(choose_first())
+    # print(choose_first())
 
     # Unit Test space_check(board, position)
     # ----------------------
-    #test_board = [' ', 'X', 'X', 'O', 'O', 'X', 'O', 'X', 'O', 'O']
-    #print(space_check(test_board, 0))
-    #print(space_check(test_board, 1))
+    # test_board = [' ', 'X', 'X', 'O', 'O', 'X', 'O', 'X', 'O', 'O']
+    # print(space_check(test_board, 0))
+    # print(space_check(test_board, 1))
 
     # Unit Test full_board_check(board)
     # ----------------------
-    #test_board = ['X', 'X', 'X', 'O', 'O', 'X', 'O', 'X', 'O', 'O']
-    #print(full_board_check(test_board))
+    # test_board = ['X', 'X', 'X', 'O', 'O', 'X', 'O', 'X', 'O', 'O']
+    # print(full_board_check(test_board))
 
     # Unit Test player_choice(board)
     # ----------------------
-    #test_board = [' ', 'X', 'X', 'O', 'O', 'X', 'O', 'X', 'O', 'O']
-    #display_board(test_board)
-    #print(player_choice(test_board))
+    # test_board = [' ', 'X', 'X', 'O', 'O', 'X', 'O', 'X', 'O', 'O']
+    # display_board(test_board)
+    # print(player_choice(test_board))
 
     # Unit Test replay()
     # ----------------------
-    #print(replay())
+    # print(replay())
 
     # Unit Test display_directions
     # ----------------------
-    #display_directions()
+    # display_directions()
 
     pass  # end of unit Tests
 
