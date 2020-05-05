@@ -326,4 +326,6 @@ while True:
     else:
         print("its a Cats Game")
 
-    break
+    game_on = replay()
+    if not game_on:
+        break
