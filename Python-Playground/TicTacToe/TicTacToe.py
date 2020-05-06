@@ -336,6 +336,25 @@ while True:
     game_on = True
     checkWin = "C"
 
+    # Randomly chooses who goes first
+    if choose_first() == "X" and player1 == "X":
+        print("\nPlayer {} Starts".format(player1))
+        player1 = "X"
+        player2 = "O"
+    elif choose_first() == "O" and player1 == "O":
+        print("\nPlayer {} Starts".format(player2))
+        player1 = "O"
+        player2 = "X"
+    elif choose_first() == "X" and player2 == "X":
+        print("\nPlayer {} Starts".format(player2))
+        player1 = "X"
+        player2 = "O"
+    elif choose_first() == "O" and player2 == "O":
+        print("\nPlayer {} Starts".format(player2))
+        player1 = "O"
+        player2 = "X"
+
+
     while game_on:
         print("\nCurrent Board Status")
         display_board(board)
