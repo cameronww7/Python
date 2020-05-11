@@ -34,9 +34,9 @@ class Animal:
 
 
 class Dog(Animal):
-    def __init__(self, myName):
+    def __init__(self, xName):
         Animal.__init__(self)
-        self.name = myName
+        self.name = xName
         print("Dog created")
 
     def whoAmI(self):
@@ -50,8 +50,8 @@ class Dog(Animal):
 
 
 class Cat:
-    def __init__(self, myName):
-        self.name = myName
+    def __init__(self, xName):
+        self.name = xName
 
     def speak(self):
         return self.name+' says Meow!'
@@ -62,7 +62,7 @@ myanimal = Animal()
 myanimal.whoAmI()
 
 print("\nCreating Dog Class")
-mydog = Dog()
+mydog = Dog('Sam')
 mydog.whoAmI()
 mydog.eat()
 mydog.speak()
@@ -74,3 +74,35 @@ print(niko.speak())
 print("\nCreating Cat Class")
 felix = Cat('Felix')
 print(felix.speak())
+
+print("\nLoop")
+for pet_class in [niko, felix]:
+    print(type(pet_class))
+    print(pet_class.speak())
+
+
+print("\nFunction speak")
+
+
+def pet_speak(pet):
+    print(pet.speak())
+
+
+pet_speak(felix)
+
+
+# Abstract Class
+print("\nAbstract Class")
+class Animal():
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        raise NotImplementedError("Subclass must implement this Abstract Method")
+
+
+myanimal = Animal("fred")
+
+#myanimal.speak() #Throws an error
+
+
