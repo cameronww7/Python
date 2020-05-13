@@ -66,16 +66,17 @@ class Cylinder:
     def __init__(self, xHeight = 1, xRadius = 1):
         self.height = xHeight
         self.radius = xRadius
+        self.pi = 3.142
 
     def volume(self):
         # Get Volume of a Cylinder
         # https://www.mathopenref.com/cylindervolume.html
-        pass
+        return self.pi * (self.radius**2) * self.height
 
     def surface_area(self):
         # Get the Surface Area of a Cylinder
         # https://www.w3resource.com/python-exercises/math/python-math-exercise-5.php
-        pass
+        return (2 * self.pi * (self.radius**2)) + (2 * self.pi * self.radius * self.height)
 
 
 # EXAMPLE OUTPUT
@@ -84,7 +85,7 @@ print("\nCreating Cylinder Object")
 c = Cylinder(2, 3)
 
 print("\nGetting Volume of Cylinder Object")
-c.volume()
+print(c.volume())
 
 print("\nGetting Surface Area of Cylinder Object")
-c.surface_area()
+print(c.surface_area())
