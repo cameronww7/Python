@@ -1,5 +1,6 @@
 
 from __future__ import print_function
+import math
 
 """
  Prompt 64-OOP-Homework
@@ -32,12 +33,12 @@ class Line:
     def distance(self):
         # Get Distance Formula
         # https://www.chilimath.com/lessons/intermediate-algebra/distance-formula/
-        pass
+        return ((self.corr2[0] - self.corr1[0])**2 + (self.corr2[1] - self.corr1[1])**2)**.5
 
     def slope(self):
         # Need Slope Formula
         # https://calcworkshop.com/graphing-linear-equations/slope-formula/?PageSpeed=noscript
-        pass
+        return (self.corr2[1] - self.corr1[1]) / (self.corr2[0] - self.corr1[0])
 
 
 # EXAMPLE OUTPUT
@@ -49,10 +50,10 @@ print("\nCreating Line Object")
 li = Line(coordinate1, coordinate2)
 
 print("\nGetting Distance of Line Object")
-li.distance()
+print(li.distance())
 
 print("\nGetting Slope of Line Object")
-li.slope()
+print(li.slope())
 
 """
 Problem 2
