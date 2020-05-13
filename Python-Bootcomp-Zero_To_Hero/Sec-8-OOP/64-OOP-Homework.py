@@ -9,8 +9,7 @@ import math
 print("64-OOP-Homework")
 
 """
-
-
+Solve the problems!
 """
 
 print("\n64-OOP-Homework\n")
