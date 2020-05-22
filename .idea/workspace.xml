@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="013d0351-7762-4be4-8aa2-12a2d055db68" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Sec-9-Modules-and-Packages/70-__name__and__main__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Sec-9-Modules-and-Packages/two.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Sec-9-Modules-and-Packages/70-__name__and__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Sec-9-Modules-and-Packages/70-NameAndMain.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +51,7 @@
       <recent name="C:\Users\Camer\Documents\Github\Python-Workspace\Python-Bootcomp-Zero_To_Hero\Sec-9-Modules-and-Packages\MyMainPackage" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.69-Module-And-Packages">
+  <component name="RunManager" selected="Python.two">
     <configuration name="69-Module-And-Packages" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python-Workspace" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -72,7 +73,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="__init__ (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="NameAndMain" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python-Workspace" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -84,28 +85,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Sec-9-Modules-and-Packages/__init__.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="__init__ (2)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Python-Workspace" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/__init__.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Camer\Documents\Github\Python-Workspace\Python-Bootcomp-Zero_To_Hero\Sec-9-Modules-and-Packages\NameAndMain.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -156,13 +136,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="two" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Python-Workspace" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Sec-9-Modules-and-Packages" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Sec-9-Modules-and-Packages/two.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.two" />
+        <item itemvalue="Python.70NameAndMain" />
         <item itemvalue="Python.69-Module-And-Packages" />
         <item itemvalue="Python.someSubScript" />
         <item itemvalue="Python.__init__ (3)" />
-        <item itemvalue="Python.__init__ (2)" />
-        <item itemvalue="Python.__init__ (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -221,26 +222,26 @@
       <screen x="0" y="40" width="2560" height="1400" />
     </state>
     <state x="961" y="469" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1585799550953" />
-    <state width="2539" height="393" key="GridCell.Tab.0.bottom" timestamp="1589679872249">
-      <screen x="0" y="31" width="2560" height="1409" />
+    <state width="2539" height="391" key="GridCell.Tab.0.bottom" timestamp="1590117351356">
+      <screen x="0" y="40" width="2560" height="1400" />
     </state>
     <state width="2539" height="393" key="GridCell.Tab.0.bottom/0.31.2560.1409/-2560.358.2560.1410@0.31.2560.1409" timestamp="1589679872249" />
-    <state width="2539" height="391" key="GridCell.Tab.0.bottom/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1589600295056" />
-    <state width="2539" height="393" key="GridCell.Tab.0.center" timestamp="1589679872249">
-      <screen x="0" y="31" width="2560" height="1409" />
+    <state width="2539" height="391" key="GridCell.Tab.0.bottom/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1590117351356" />
+    <state width="2539" height="391" key="GridCell.Tab.0.center" timestamp="1590117351356">
+      <screen x="0" y="40" width="2560" height="1400" />
     </state>
     <state width="2539" height="393" key="GridCell.Tab.0.center/0.31.2560.1409/-2560.358.2560.1410@0.31.2560.1409" timestamp="1589679872249" />
-    <state width="2539" height="391" key="GridCell.Tab.0.center/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1589600295056" />
-    <state width="2539" height="393" key="GridCell.Tab.0.left" timestamp="1589679872249">
-      <screen x="0" y="31" width="2560" height="1409" />
+    <state width="2539" height="391" key="GridCell.Tab.0.center/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1590117351356" />
+    <state width="2539" height="391" key="GridCell.Tab.0.left" timestamp="1590117351356">
+      <screen x="0" y="40" width="2560" height="1400" />
     </state>
     <state width="2539" height="393" key="GridCell.Tab.0.left/0.31.2560.1409/-2560.358.2560.1410@0.31.2560.1409" timestamp="1589679872249" />
-    <state width="2539" height="391" key="GridCell.Tab.0.left/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1589600295055" />
-    <state width="2539" height="393" key="GridCell.Tab.0.right" timestamp="1589679872249">
-      <screen x="0" y="31" width="2560" height="1409" />
+    <state width="2539" height="391" key="GridCell.Tab.0.left/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1590117351356" />
+    <state width="2539" height="391" key="GridCell.Tab.0.right" timestamp="1590117351356">
+      <screen x="0" y="40" width="2560" height="1400" />
     </state>
     <state width="2539" height="393" key="GridCell.Tab.0.right/0.31.2560.1409/-2560.358.2560.1410@0.31.2560.1409" timestamp="1589679872249" />
-    <state width="2539" height="391" key="GridCell.Tab.0.right/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1589600295056" />
+    <state width="2539" height="391" key="GridCell.Tab.0.right/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1590117351356" />
     <state width="2539" height="483" key="GridCell.Tab.1.bottom" timestamp="1585886012021">
       <screen x="0" y="40" width="2560" height="1400" />
     </state>

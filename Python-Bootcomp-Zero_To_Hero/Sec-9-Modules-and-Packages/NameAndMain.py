@@ -1,10 +1,10 @@
 from __future__ import print_function
 
 """
- Prompt 70-__name__and__main__
+ Prompt 70-NameAndMain
 """
 
-print("70-__name__and__main__")
+print("70-NameAndMain")
 
 """
 Sometimes when you are importing from a module, you would like to know whether
@@ -86,5 +86,15 @@ Thus, when module one gets loaded, its __name__ equals "one" instead of __main__
 
 """
 
-print("\n70-__name__and__main__\n")
+print("\n70-NameAndMain\n")
 print("- - - - - - - - - - ")
+
+def func():
+    print("func() ran in one.py")
+
+print("top-level print inside of one.py")
+
+if __name__ == "__main__":
+    print("one.py is being run directly")
+else:
+    print("one.py is being imported into another module")
