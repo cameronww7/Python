@@ -52,3 +52,49 @@ this let's check out an example: We will look at some code that opens and writes
 print("\n71-Errors-and-Exception-Handling\n")
 print("- - - - - - - - - - ")
 
+
+def askint():
+    while True:
+
+        try:
+            # First Attempt - will be successful if an Int comes in
+            val = int(input("Please enter an integer: "))
+
+        except:
+            # If an error pops it will display an Error and re-prompted the user for an Int
+            print("Looks like you did not enter an integer!")
+            continue
+
+        else:
+            # Breaks the infinite while loop if a int is entered
+            print("Yep that's an integer!")
+            print(val)
+            break
+
+        finally:
+            # Always executes even if there is an error
+            print("Finally, I executed!")
+
+
+askint()
+
+
+def tryToOpenFile():
+    try:
+        f = open('testfile', 'r')
+        f.write('Test write this')
+
+    except IOError:
+        # This will only check for an IOError exception and then execute this print statement
+        print("Error: Could not find file or read data")
+
+    except:
+        # This will check for any exception and then execute this print statement
+        print("Error: Could not find file or read data")
+
+    else:
+        print("Content written successfully")
+        f.close()
+
+
+tryToOpenFile()
