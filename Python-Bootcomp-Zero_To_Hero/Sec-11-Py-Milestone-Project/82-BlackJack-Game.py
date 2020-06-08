@@ -74,24 +74,26 @@ values = {'Two':2, 'Three':3, 'Four':4, 'Five':5, 'Six':6, 'Seven':7, 'Eight':8,
 print("\n82-BlackJack-Game\n")
 print("- - - - - - - - - - ")
 
-suits = pass
-ranks = pass
-values = pass
-
-playing = True
-
 
 class Card:
-
-    def __init__(self):
-        pass
+    """
+    This class will function as a card.
+    Meaning it will have a Rank and Suite.
+    Will be apart of an array of some sort.
+    Will output for example "Queen of Hearts" if printed.
+    """
+    def __init__(self,xSuite, xRank):
+        self.suit = xSuite
+        self.rank = xRank
 
     def __str__(self):
-        pass
+        return "%s of %s" % (self.rank, self.suit)
 
 
 class Deck:
+    """
 
+    """
     def __init__(self):
         self.deck = []  # start with an empty list
         for suit in suits:
@@ -109,6 +111,9 @@ class Deck:
 
 
 class Hand:
+    """
+
+    """
     def __init__(self):
         self.cards = []  # start with an empty list as we did in the Deck class
         self.value = 0  # start with zero value
@@ -122,7 +127,9 @@ class Hand:
 
 
 class Chips:
+    """
 
+    """
     def __init__(self):
         self.total = 100  # This can be set to a default value or supplied by a user input
         self.bet = 0
@@ -132,3 +139,14 @@ class Chips:
 
     def lose_bet(self):
         pass
+
+
+suits = ('Hearts', 'Diamonds', 'Spades', 'Clubs')
+ranks = ('Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Jack', 'Queen', 'King', 'Ace')
+values = {'Two': 2, 'Three': 3, 'Four': 4, 'Five': 5, 'Six': 6, 'Seven': 7, 'Eight': 8, 'Nine': 9, 'Ten': 10,
+          'Jack': 10, 'Queen': 10, 'King': 10, 'Ace': 11}
+
+playing = True
+
+
+
