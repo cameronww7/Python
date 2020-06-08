@@ -82,7 +82,7 @@ class Card:
     Will be apart of an array of some sort.
     Will output for example "Queen of Hearts" if printed.
     """
-    def __init__(self,xSuite, xRank):
+    def __init__(self, xSuite, xRank):
         self.suit = xSuite
         self.rank = xRank
 
@@ -90,18 +90,27 @@ class Card:
         return "%s of %s" % (self.rank, self.suit)
 
 
-class Deck:
+class Deck(Card):
     """
-
+    This Class will create an Entire Desk of Cards (Card Class).
+    This wil be used to play the game.
+    Should keep track of what is dealt to prevent duplicates.
     """
-    def __init__(self):
+    def __init__(self, xSuite, xRank, xValue):
+        suit = xSuite
+        rank = xRank
         self.deck = []  # start with an empty list
         for suit in suits:
             for rank in ranks:
-                pass
+                card = Card(suit, rank)
+                self.deck.append(card)
 
     def __str__(self):
-        pass
+        counter = 1
+        for index in self.deck:
+            print("%s: %s" % (counter, index))
+            counter += 1
+        return ""
 
     def shuffle(self):
         random.shuffle(self.deck)
@@ -150,3 +159,5 @@ playing = True
 
 
 
+newDeck = Deck(suits, ranks, values)
+print(newDeck)
