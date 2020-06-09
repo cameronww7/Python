@@ -160,4 +160,4 @@ playing = True
 
 
 newDeck = Deck(suits, ranks, values)
-print(newDeck)
+#print(newDeck)
