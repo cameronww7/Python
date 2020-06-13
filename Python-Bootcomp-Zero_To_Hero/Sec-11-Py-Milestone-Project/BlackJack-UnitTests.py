@@ -26,6 +26,10 @@ class TestBlackJackGame(unittest.TestCase, Deck):
             result = cap.cap_text(text)
             self.assertEqual(result, 'Python')
     """
+    def test_one(self):
+        result = 'MaKe Sure Unit Tests are WORKING'
+        self.assertEqual(result, 'MaKe Sure Unit Tests are WORKING')
+
     def test_two_word(self):
         suits = ('Hearts', 'Diamonds', 'Spades', 'Clubs')
         ranks = ('Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Jack', 'Queen', 'King', 'Ace')
