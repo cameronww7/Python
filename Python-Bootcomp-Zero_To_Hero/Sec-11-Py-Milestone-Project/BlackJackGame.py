@@ -1,8 +1,6 @@
 from __future__ import print_function
 import random
 
-
-
 """
  Prompt 82-BlackJack-Game
 """
@@ -87,6 +85,9 @@ class Card:
         self.rank = xRank
 
     def __str__(self):
+        return "%s of %s" % (self.rank, self.suit)
+
+    def getCard(self):
         return "%s of %s" % (self.rank, self.suit)
 
 

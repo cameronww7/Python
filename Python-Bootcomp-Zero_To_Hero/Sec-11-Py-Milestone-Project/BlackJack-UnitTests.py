@@ -1,7 +1,7 @@
 from __future__ import print_function
 import unittest
-#from BlackJack_Game import Deck
-from main import BlackJackGame
+from BlackJackGame import Card
+from BlackJackGame import Deck
 
 """
  Prompt 81-Unittests-library
@@ -32,7 +32,12 @@ class TestBlackJackGame(unittest.TestCase, Deck):
         self.assertEqual(result, 'MaKe Sure Unit Tests are WORKING')
 
     def test_two_word(self):
-
+        twoOfHeartsCard = Card('Hearts', 2)
+        result = 'True'
+        if twoOfHeartsCard.getCard() != '2 of Hearts':
+            result = 'False'
+            print("|{}|".format(twoOfHeartsCard))
+        self.assertEqual(result, 'True')
 
     def test_three_word(self):
         suits = ('Hearts', 'Diamonds', 'Spades', 'Clubs')
