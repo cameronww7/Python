@@ -60,6 +60,8 @@ class TestBlackJackGame(unittest.TestCase, Deck):
 
         self.assertEqual(result, "True")
 
+    def test_three_hand(self):
+        pass
 
 if __name__ == '__main__':
     unittest.main()
