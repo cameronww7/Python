@@ -80,16 +80,22 @@ class Card:
     Will be apart of an array of some sort.
     Will output for example "Queen of Hearts" if printed.
     """
-    def __init__(self, xSuite, xRank):
+    def __init__(self, xSuite, xRank, xValue):
         self.suit = xSuite
         self.rank = xRank
+        self.value = xValue
 
     def __str__(self):
         return "%s of %s" % (self.rank, self.suit)
 
-    def getCard(self):
+    def get_Card(self):
         return "%s of %s" % (self.rank, self.suit)
 
+    def get_Card_Value(self):
+        return self.value
+
+    def get_Card_Suite(self):
+        return self.suit
 
 class Deck(Card):
     """
@@ -100,11 +106,14 @@ class Deck(Card):
     def __init__(self, xSuite, xRank, xValue):
         suit = xSuite
         rank = xRank
+        counter = 0
         self.deck = []  # start with an empty list
         for suit in suits:
+            counter = 0
             for rank in ranks:
-                card = Card(suit, rank)
+                card = Card(suit, rank, xValue[counter])
                 self.deck.append(card)
+                counter += 1
 
     def __str__(self):
         counter = 1
@@ -122,18 +131,33 @@ class Deck(Card):
 
 class Hand:
     """
-
+    Hand Class is what each player has in this hand
+    So at least two objects, First a Player Hand and second the Dealer Hand
     """
     def __init__(self):
         self.cards = []  # start with an empty list as we did in the Deck class
         self.value = 0  # start with zero value
         self.aces = 0  # add an attribute to keep track of aces
 
-    def add_card(self, card):
+    def set_Value(self, xCard):
         pass
+
+    def get_cards(self):
+        pass
+
+    def add_card(self, xCard):
+        self.cards.append(xCard)
+        return True
 
     def adjust_for_ace(self):
         pass
+
+    def __str__(self):
+        counter = 1
+        for index in self.cards:
+            print("%s: %s" % (counter, index))
+            counter += 1
+        return ""
 
 
 class Chips:

@@ -16,6 +16,12 @@ print("81-Unittests-library")
 print("\n81-Unittests-library\n")
 print("- - - - - - - - - - ")
 
+# Global Variables
+suits = ('Hearts', 'Diamonds', 'Spades', 'Clubs')
+ranks = ('Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Jack', 'Queen', 'King', 'Ace')
+values = {'Two': 2, 'Three': 3, 'Four': 4, 'Five': 5, 'Six': 6, 'Seven': 7, 'Eight': 8, 'Nine': 9, 'Ten': 10,
+          'Jack': 10, 'Queen': 10, 'King': 10, 'Ace': 11}
+
 
 class TestBlackJackGame(unittest.TestCase, Deck):
     """
@@ -27,6 +33,8 @@ class TestBlackJackGame(unittest.TestCase, Deck):
             result = cap.cap_text(text)
             self.assertEqual(result, 'Python')
     """
+
+
     def test_one(self):
         result = 'MaKe Sure Unit Tests are WORKING'
         self.assertEqual(result, 'MaKe Sure Unit Tests are WORKING')
@@ -40,10 +48,6 @@ class TestBlackJackGame(unittest.TestCase, Deck):
         self.assertEqual(result, 'True')
 
     def test_three_DeckClass(self):
-        suits = ('Hearts', 'Diamonds', 'Spades', 'Clubs')
-        ranks = ('Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Jack', 'Queen', 'King', 'Ace')
-        values = {'Two': 2, 'Three': 3, 'Four': 4, 'Five': 5, 'Six': 6, 'Seven': 7, 'Eight': 8, 'Nine': 9, 'Ten': 10,
-                  'Jack': 10, 'Queen': 10, 'King': 10, 'Ace': 11}
         newDeck = Deck(suits, ranks, values)
         result = "True"
         # print("Sstart")
