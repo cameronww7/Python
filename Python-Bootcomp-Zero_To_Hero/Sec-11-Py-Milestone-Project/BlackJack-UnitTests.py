@@ -31,7 +31,7 @@ class TestBlackJackGame(unittest.TestCase, Deck):
         result = 'MaKe Sure Unit Tests are WORKING'
         self.assertEqual(result, 'MaKe Sure Unit Tests are WORKING')
 
-    def test_two_word(self):
+    def test_two_HandClass(self):
         twoOfHeartsCard = Card('Hearts', 2)
         result = 'True'
         if twoOfHeartsCard.getCard() != '2 of Hearts':
@@ -39,7 +39,7 @@ class TestBlackJackGame(unittest.TestCase, Deck):
             print("|{}|".format(twoOfHeartsCard))
         self.assertEqual(result, 'True')
 
-    def test_three_word(self):
+    def test_three_DeckClass(self):
         suits = ('Hearts', 'Diamonds', 'Spades', 'Clubs')
         ranks = ('Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Jack', 'Queen', 'King', 'Ace')
         values = {'Two': 2, 'Three': 3, 'Four': 4, 'Five': 5, 'Six': 6, 'Seven': 7, 'Eight': 8, 'Nine': 9, 'Ten': 10,
