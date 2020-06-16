@@ -40,9 +40,9 @@ class TestBlackJackGame(unittest.TestCase, Deck):
         self.assertEqual(result, 'MaKe Sure Unit Tests are WORKING')
 
     def test_two_HandClass(self):
-        twoOfHeartsCard = Card('Hearts', 2)
+        twoOfHeartsCard = Card('Hearts', 2, 2)
         result = 'True'
-        if twoOfHeartsCard.getCard() != '2 of Hearts':
+        if twoOfHeartsCard.get_Card() != '2 of Hearts':
             result = 'False'
             print("|{}|".format(twoOfHeartsCard))
         self.assertEqual(result, 'True')

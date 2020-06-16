@@ -107,11 +107,12 @@ class Deck(Card):
         suit = xSuite
         rank = xRank
         counter = 0
+
         self.deck = []  # start with an empty list
+
         for suit in suits:
-            counter = 0
             for rank in ranks:
-                card = Card(suit, rank, xValue[counter])
+                card = Card(suit, rank, xValue.get(rank))
                 self.deck.append(card)
                 counter += 1
 
@@ -181,8 +182,6 @@ values = {'Two': 2, 'Three': 3, 'Four': 4, 'Five': 5, 'Six': 6, 'Seven': 7, 'Eig
           'Jack': 10, 'Queen': 10, 'King': 10, 'Ace': 11}
 
 playing = True
-
-
 
 newDeck = Deck(suits, ranks, values)
 #print(newDeck)
