@@ -143,11 +143,17 @@ class Hand:
         self.value = 0  # start with zero value
         self.aces = 0  # add an attribute to keep track of aces
 
-    def set_Value(self, xCard):
-        pass
+    def set_Value(self):
+        # I need to loop through the dictionary and add up the value of each card
+        # and assign it a total value so
+        # add up, Ace + 10 = Blackjack, 10 + 7 = 17
+        for index in self.cards:
+            self.value += index.get_Card_Value()
+
+        print(self.value)
 
     def get_cards(self):
-        pass
+        return self.cards
 
     def add_card(self, xCard):
         self.cards.append(xCard)

@@ -74,6 +74,8 @@ class TestBlackJackGame(unittest.TestCase, Deck):
         curHand.add_card(newDeck.deal_one_card())
         print(curHand)
 
+        curHand.set_Value()
+
         self.assertEqual(result, "True")
 
 if __name__ == '__main__':
