@@ -35,11 +35,11 @@ class TestBlackJackGame(unittest.TestCase, Deck):
     """
 
 
-    def test_one(self):
+    def test_1_basic(self):
         result = 'MaKe Sure Unit Tests are WORKING'
         self.assertEqual(result, 'MaKe Sure Unit Tests are WORKING')
 
-    def test_two_HandClass(self):
+    def test_2_HandClass(self):
         twoOfHeartsCard = Card('Hearts', 2, 2)
         result = 'True'
         if twoOfHeartsCard.get_Card() != '2 of Hearts':
@@ -47,7 +47,7 @@ class TestBlackJackGame(unittest.TestCase, Deck):
             print("|{}|".format(twoOfHeartsCard))
         self.assertEqual(result, 'True')
 
-    def test_three_DeckClass(self):
+    def test_3_DeckClass(self):
         newDeck = Deck(suits, ranks, values)
         result = "True"
         # print("Sstart")
@@ -64,8 +64,11 @@ class TestBlackJackGame(unittest.TestCase, Deck):
 
         self.assertEqual(result, "True")
 
-    def test_three_hand(self):
-        pass
+    def test_4_hand(self):
+        newDeck = Deck(suits, ranks, values)
+        result = "True"
+
+        self.assertEqual(result, "True")
 
 if __name__ == '__main__':
     unittest.main()
