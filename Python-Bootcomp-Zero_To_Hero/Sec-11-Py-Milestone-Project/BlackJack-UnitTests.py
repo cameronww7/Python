@@ -2,6 +2,7 @@ from __future__ import print_function
 import unittest
 from BlackJackGame import Card
 from BlackJackGame import Deck
+from BlackJackGame import Hand
 
 """
  Prompt 81-Unittests-library
@@ -67,6 +68,7 @@ class TestBlackJackGame(unittest.TestCase, Deck):
     def test_4_hand(self):
         newDeck = Deck(suits, ranks, values)
         result = "True"
+        curHand = Hand()
 
         self.assertEqual(result, "True")
 
