@@ -126,6 +126,9 @@ class Deck(Card):
     def shuffle(self):
         random.shuffle(self.deck)
 
+    def deal_one_card(self):
+        return self.deck.pop()
+
     def deal(self):
         pass
 

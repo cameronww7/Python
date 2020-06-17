@@ -69,6 +69,8 @@ class TestBlackJackGame(unittest.TestCase, Deck):
         newDeck = Deck(suits, ranks, values)
         result = "True"
         curHand = Hand()
+        newDeck.shuffle()
+        curHand.add_card(newDeck.shuffle())
 
         self.assertEqual(result, "True")
 
