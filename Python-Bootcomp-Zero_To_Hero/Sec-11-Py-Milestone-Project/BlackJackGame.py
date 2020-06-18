@@ -162,6 +162,11 @@ class Hand:
         self.cards.append(xCard)
         return True
 
+    def add_cards(self, xCards):
+        for card in xCards:
+            self.cards.append(card)
+        return True
+
     def adjust_for_ace(self):
         pass
 

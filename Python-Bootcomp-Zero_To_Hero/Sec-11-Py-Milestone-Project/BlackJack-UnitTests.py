@@ -68,13 +68,20 @@ class TestBlackJackGame(unittest.TestCase, Deck):
     def test_4_hand(self):
         newDeck = Deck(suits, ranks, values)
         result = "True"
-        curHand = Hand()
+        playerHand = Hand()
+        dealerHand = Hand()
         newDeck.shuffle()
-        curHand.add_card(newDeck.deal_one_card())
-        curHand.add_card(newDeck.deal_one_card())
-        print(curHand)
+        #curHand.add_card(newDeck.deal_one_card())
+        #curHand.add_card(newDeck.deal_one_card())
 
-        curHand.set_Value()
+        for index in range(0,2):
+            playerHand.add_card(newDeck.deal_one_card())
+            dealerHand.add_card(newDeck.deal_one_card())
+
+        print(playerHand)
+        print(dealerHand)
+
+        playerHand.set_Value()
 
         self.assertEqual(result, "True")
 
