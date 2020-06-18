@@ -78,10 +78,14 @@ class TestBlackJackGame(unittest.TestCase, Deck):
             playerHand.add_card(newDeck.deal_one_card())
             dealerHand.add_card(newDeck.deal_one_card())
 
-        print(playerHand)
-        print(dealerHand)
-
         playerHand.set_Value()
+        dealerHand.set_Value()
+
+        print(playerHand)
+        print("Player Value = {}\n".format(playerHand.get_value()))
+
+        print(dealerHand)
+        print("Dealer Value = {}\n".format(dealerHand.get_value()))
 
         self.assertEqual(result, "True")
 
