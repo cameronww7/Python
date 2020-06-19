@@ -186,6 +186,13 @@ class Chips:
         self.total = 100  # This can be set to a default value or supplied by a user input
         self.bet = 0
 
+    def place_bet(self, xPlacedBet):
+        if xPlacedBet <= self.total:
+            self.bet = xPlacedBet
+            return True
+        else:
+            return False
+
     def win_bet(self):
         pass
 
