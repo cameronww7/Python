@@ -194,7 +194,8 @@ class Chips:
             return False
 
     def win_bet(self):
-        pass
+        self.total = self.total + self.bet
+        return self.total
 
     def lose_bet(self):
         pass
