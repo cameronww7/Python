@@ -46,7 +46,7 @@ class TestBlackJackGame(unittest.TestCase, Deck):
         result = 'True'
         if twoOfHeartsCard.get_Card() != '2 of Hearts':
             result = 'False'
-            print("|{}|".format(twoOfHeartsCard))
+            #print("|{}|".format(twoOfHeartsCard))
         self.assertEqual(result, 'True')
 
     def test_3_DeckClass(self):
@@ -94,7 +94,7 @@ class TestBlackJackGame(unittest.TestCase, Deck):
         result = "True"
         newChips = Chips()
 
-        newChips.
+        print("Current Balance: {}".format(newChips.balance()))
 
         self.assertEqual(result, "True")
 

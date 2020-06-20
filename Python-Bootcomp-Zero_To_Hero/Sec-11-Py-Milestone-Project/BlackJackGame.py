@@ -150,7 +150,7 @@ class Hand:
         for index in self.cards:
             self.value += index.get_Card_Value()
 
-        print(self.value)
+        #print(self.value)
 
     def get_value(self):
         return self.value
