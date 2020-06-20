@@ -97,10 +97,11 @@ class TestBlackJackGame(unittest.TestCase, Deck):
         print("Current Balance: {}".format(newChips.balance()))
         newChips.place_bet(50)
         print("Place Bet Bal  : {}".format(newChips.balance()))
-        newChips.win_bet()
-        print("Bal after win  : {}".format(newChips.balance()))
-        #newChips.lose_bet()
-        #print("Bal after loss : {}".format(newChips.balance()))
+        #newChips.win_bet()
+        #print("Bal after win  : {}".format(newChips.balance()))
+        newChips.place_bet(150)
+        newChips.lose_bet()
+        print("Bal after loss : {}".format(newChips.balance()))
 
 
 
