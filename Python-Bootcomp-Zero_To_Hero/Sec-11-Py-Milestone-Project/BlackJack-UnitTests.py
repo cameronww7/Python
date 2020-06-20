@@ -3,6 +3,7 @@ import unittest
 from BlackJackGame import Card
 from BlackJackGame import Deck
 from BlackJackGame import Hand
+from BlackJackGame import Chips
 
 """
  Prompt 81-Unittests-library
@@ -88,6 +89,13 @@ class TestBlackJackGame(unittest.TestCase, Deck):
         print("Dealer Value = {}\n".format(dealerHand.get_value()))
 
         self.assertEqual(result, "True")
+
+    def test_5_chip(self):
+        result = "True"
+
+
+        self.assertEqual(result, "True")
+
 
 if __name__ == '__main__':
     unittest.main()
