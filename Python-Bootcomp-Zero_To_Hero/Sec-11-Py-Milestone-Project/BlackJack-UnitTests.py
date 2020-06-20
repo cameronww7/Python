@@ -95,6 +95,10 @@ class TestBlackJackGame(unittest.TestCase, Deck):
         newChips = Chips()
 
         print("Current Balance: {}".format(newChips.balance()))
+        newChips.place_bet(50)
+        print("Place Bet Bal  : {}".format(newChips.balance()))
+        newChips.lose_bet()
+        print("Bal after loss : {}".format(newChips.balance()))
 
         self.assertEqual(result, "True")
 
