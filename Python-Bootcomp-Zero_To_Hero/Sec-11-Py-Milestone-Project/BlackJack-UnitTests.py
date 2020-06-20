@@ -82,17 +82,19 @@ class TestBlackJackGame(unittest.TestCase, Deck):
         playerHand.set_Value()
         dealerHand.set_Value()
 
-        print(playerHand)
-        print("Player Value = {}\n".format(playerHand.get_value()))
+        #print(playerHand)
+        #print("Player Value = {}\n".format(playerHand.get_value()))
 
-        print(dealerHand)
-        print("Dealer Value = {}\n".format(dealerHand.get_value()))
+        #print(dealerHand)
+        #print("Dealer Value = {}\n".format(dealerHand.get_value()))
 
         self.assertEqual(result, "True")
 
     def test_5_chip(self):
         result = "True"
+        newChips = Chips()
 
+        newChips.
 
         self.assertEqual(result, "True")
 
