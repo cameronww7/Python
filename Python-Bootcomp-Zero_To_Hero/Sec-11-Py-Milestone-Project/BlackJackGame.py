@@ -189,7 +189,8 @@ class Hand:
 
 class Chips:
     """
-
+    Chips Class is to hold each players chips
+    Needs to Make bets and hold each player total
     """
     def __init__(self):
         self.total = 100  # This can be set to a default value or supplied by a user input
@@ -214,6 +215,10 @@ class Chips:
     def lose_bet(self):
         self.total = self.total - self.bet
         return self.total
+
+    def __str__(self):
+        #print("Stack Total : {}".format(self.total))
+        return "Stack Total : {}".format(self.total)
 
 suits = ('Hearts', 'Diamonds', 'Spades', 'Clubs')
 ranks = ('Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Jack', 'Queen', 'King', 'Ace')
