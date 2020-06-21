@@ -130,10 +130,6 @@ class Deck(Card):
     def deal_one_card(self):
         return self.deck.pop()
 
-    def deal(self):
-        pass
-
-
 class Hand:
     """
     Hand Class is what each player has in this hand
@@ -167,6 +163,10 @@ class Hand:
     def add_card(self, xCard):
         # adds 1 card
         self.cards.append(xCard)
+
+        if xCard.get_Card_Value() == 11:
+            self.aces += 1
+
         return True
 
     def add_cards(self, xCards):
