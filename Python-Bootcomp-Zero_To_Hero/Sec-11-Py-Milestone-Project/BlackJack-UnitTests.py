@@ -38,14 +38,14 @@ class TestBlackJackGame(unittest.TestCase, Deck):
 
 
     def test_1_basic(self):
-        print("\ntest_1_basic")
+        print("\n### test_1_basic")
         print("- - - - - - - - - - - - - - ")
 
         result = 'MaKe Sure Unit Tests are WORKING'
         self.assertEqual(result, 'MaKe Sure Unit Tests are WORKING')
 
     def test_2_HandClass(self):
-        print("\ntest_2_HandClass")
+        print("\n### test_2_HandClass")
         print("- - - - - - - - - - - - - - ")
 
         twoOfHeartsCard = Card('Hearts', 2, 2)
@@ -56,12 +56,12 @@ class TestBlackJackGame(unittest.TestCase, Deck):
         self.assertEqual(result, 'True')
 
     def test_3_DeckClass(self):
-        print("\ntest_3_DeckClass")
+        print("\n### test_3_DeckClass")
         print("- - - - - - - - - - - - - - ")
 
         newDeck = Deck(suits, ranks, values)
         result = "True"
-        # print("Sstart")
+        # print("start")
         for index1 in newDeck.deck:
             # print("in here")
             count = 0
@@ -76,7 +76,7 @@ class TestBlackJackGame(unittest.TestCase, Deck):
         self.assertEqual(result, "True")
 
     def test_4_hand(self):
-        print("\ntest_4_hand")
+        print("\n### test_4_hand")
         print("- - - - - - - - - - - - - - ")
 
         newDeck = Deck(suits, ranks, values)
@@ -84,6 +84,7 @@ class TestBlackJackGame(unittest.TestCase, Deck):
         playerHand = Hand()
         dealerHand = Hand()
         newDeck.shuffle()
+        curHand = Hand()
         curHand.add_card(newDeck.deal_one_card())
         curHand.add_card(newDeck.deal_one_card())
 
@@ -103,7 +104,7 @@ class TestBlackJackGame(unittest.TestCase, Deck):
         self.assertEqual(result, "True")
 
     def test_5_chip(self):
-        print("\ntest_5_chip")
+        print("\n### test_5_chip")
         print("- - - - - - - - - - - - - - ")
 
         result = "True"
