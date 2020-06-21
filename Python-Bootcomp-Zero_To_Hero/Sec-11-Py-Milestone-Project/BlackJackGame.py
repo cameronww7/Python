@@ -97,6 +97,7 @@ class Card:
     def get_Card_Suite(self):
         return self.suit
 
+
 class Deck(Card):
     """
     This Class will create an Entire Desk of Cards (Card Class).
@@ -141,6 +142,7 @@ class Hand:
     def __init__(self):
         self.cards = []  # start with an empty list as we did in the Deck class
         self.value = 0  # start with zero value
+        self.value2 = 0  # start with zero value
         self.aces = 0  # add an attribute to keep track of aces
 
     def set_Value(self):
@@ -148,6 +150,10 @@ class Hand:
         # and assign it a total value so
         # add up, Ace + 10 = Blackjack, 10 + 7 = 17
         for index in self.cards:
+            # Tracks the Number of Aces
+            if index.get_Card_Value() == 11:
+                self.aces += 1
+
             self.value += index.get_Card_Value()
 
         #print(self.value)
@@ -159,15 +165,18 @@ class Hand:
         return self.cards
 
     def add_card(self, xCard):
+        # adds 1 card
         self.cards.append(xCard)
         return True
 
     def add_cards(self, xCards):
+        # adds as many cards are sent in, proply useless
         for card in xCards:
             self.cards.append(card)
         return True
 
     def adjust_for_ace(self):
+        # Provides two values to account for an Ace
         pass
 
     def __str__(self):

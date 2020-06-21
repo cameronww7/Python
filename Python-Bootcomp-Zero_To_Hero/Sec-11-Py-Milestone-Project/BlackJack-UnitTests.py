@@ -119,8 +119,6 @@ class TestBlackJackGame(unittest.TestCase, Deck):
         newChips.lose_bet()
         print("Bal after loss : {}".format(newChips.balance()))
 
-
-
         self.assertEqual(result, "True")
 
 
