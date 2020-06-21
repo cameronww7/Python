@@ -191,9 +191,11 @@ class Chips:
 
     def place_bet(self, xPlacedBet):
         if xPlacedBet <= self.total:
+            print("Bet Placed")
             self.bet = xPlacedBet
             return True
         else:
+            print("You do not have that Chip amount")
             return False
 
     def win_bet(self):
