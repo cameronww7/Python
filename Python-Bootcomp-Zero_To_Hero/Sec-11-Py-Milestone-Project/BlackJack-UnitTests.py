@@ -38,18 +38,27 @@ class TestBlackJackGame(unittest.TestCase, Deck):
 
 
     def test_1_basic(self):
+        print("\ntest_1_basic")
+        print("- - - - - - - - - - - - - - ")
+
         result = 'MaKe Sure Unit Tests are WORKING'
         self.assertEqual(result, 'MaKe Sure Unit Tests are WORKING')
 
     def test_2_HandClass(self):
+        print("\ntest_2_HandClass")
+        print("- - - - - - - - - - - - - - ")
+
         twoOfHeartsCard = Card('Hearts', 2, 2)
         result = 'True'
         if twoOfHeartsCard.get_Card() != '2 of Hearts':
             result = 'False'
-            #print("|{}|".format(twoOfHeartsCard))
+            print("|{}|".format(twoOfHeartsCard))
         self.assertEqual(result, 'True')
 
     def test_3_DeckClass(self):
+        print("\ntest_3_DeckClass")
+        print("- - - - - - - - - - - - - - ")
+
         newDeck = Deck(suits, ranks, values)
         result = "True"
         # print("Sstart")
@@ -59,7 +68,7 @@ class TestBlackJackGame(unittest.TestCase, Deck):
             for index2 in newDeck.deck:
                 if index1 == index2:
                     count += 1
-                    # print("True {} == {}".format(index1, index2))
+                    print("True {} == {}".format(index1, index2))
             if count >= 2:
                 result = "False"
                 break
@@ -67,13 +76,16 @@ class TestBlackJackGame(unittest.TestCase, Deck):
         self.assertEqual(result, "True")
 
     def test_4_hand(self):
+        print("\ntest_4_hand")
+        print("- - - - - - - - - - - - - - ")
+
         newDeck = Deck(suits, ranks, values)
         result = "True"
         playerHand = Hand()
         dealerHand = Hand()
         newDeck.shuffle()
-        #curHand.add_card(newDeck.deal_one_card())
-        #curHand.add_card(newDeck.deal_one_card())
+        curHand.add_card(newDeck.deal_one_card())
+        curHand.add_card(newDeck.deal_one_card())
 
         for index in range(0,2):
             playerHand.add_card(newDeck.deal_one_card())
@@ -82,23 +94,26 @@ class TestBlackJackGame(unittest.TestCase, Deck):
         playerHand.set_Value()
         dealerHand.set_Value()
 
-        #print(playerHand)
-        #print("Player Value = {}\n".format(playerHand.get_value()))
+        print(playerHand)
+        print("Player Value = {}\n".format(playerHand.get_value()))
 
-        #print(dealerHand)
-        #print("Dealer Value = {}\n".format(dealerHand.get_value()))
+        print(dealerHand)
+        print("Dealer Value = {}\n".format(dealerHand.get_value()))
 
         self.assertEqual(result, "True")
 
     def test_5_chip(self):
+        print("\ntest_5_chip")
+        print("- - - - - - - - - - - - - - ")
+
         result = "True"
         newChips = Chips()
 
         print("Current Balance: {}".format(newChips.balance()))
         newChips.place_bet(50)
         print("Place Bet Bal  : {}".format(newChips.balance()))
-        #newChips.win_bet()
-        #print("Bal after win  : {}".format(newChips.balance()))
+        newChips.win_bet()
+        print("Bal after win  : {}".format(newChips.balance()))
         newChips.place_bet(150)
         newChips.lose_bet()
         print("Bal after loss : {}".format(newChips.balance()))
