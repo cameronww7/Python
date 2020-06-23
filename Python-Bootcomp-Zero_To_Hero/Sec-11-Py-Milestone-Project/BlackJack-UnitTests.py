@@ -124,7 +124,33 @@ class TestBlackJackGame(unittest.TestCase, Deck):
         print(newChips)
 
     def test_5_Aces(self):
-        pass
+        print("\n### test_5_Aces")
+        print("- - - - - - - - - - - - - - ")
+
+        for index in range(0, 10):
+            newDeck = Deck(suits, ranks, values)
+            result = "True"
+            playerHand = Hand()
+            dealerHand = Hand()
+            newDeck.shuffle()
+            curHand = Hand()
+            curHand.add_card(newDeck.deal_one_card())
+            curHand.add_card(newDeck.deal_one_card())
+
+            for index in range(0, 2):
+                playerHand.add_card(newDeck.deal_one_card())
+                dealerHand.add_card(newDeck.deal_one_card())
+
+            playerHand.set_Value()
+            dealerHand.set_Value()
+
+            print(playerHand)
+            print("Player Value = {}\n".format(playerHand.get_value()))
+
+            print(dealerHand)
+            print("Dealer Value = {}\n".format(dealerHand.get_value()))
+
+        self.assertEqual(result, "True")
 
 
 if __name__ == '__main__':
