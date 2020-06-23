@@ -147,12 +147,16 @@ class Hand:
         # add up, Ace + 10 = Blackjack, 10 + 7 = 17
         for index in self.cards:
             # Tracks the Number of Aces
-            if self.aces >= 1:
-                self.value2 += 1
-                self.aces -= 1
-
             if self.aces != 0:
+                self.value2 += 1
+
+            if self.aces == 1:
                 self.value2 += index.get_Card_Value()
+            else:
+                self.value2 += index.get_Card_Value()
+
+            self.aces -= 1
+
             self.value += index.get_Card_Value()
 
         #print(self.value)
@@ -160,8 +164,17 @@ class Hand:
     def get_value(self):
         return self.value
 
+    def get_value_2(self):
+        return self.value2
+
     def get_cards(self):
         return self.cards
+
+    def aces_exist(self):
+        if self.aces >= 1:
+            return True
+        else:
+            return False
 
     def add_card(self, xCard):
         # adds 1 card

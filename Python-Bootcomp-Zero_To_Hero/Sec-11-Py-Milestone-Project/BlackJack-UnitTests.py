@@ -123,8 +123,8 @@ class TestBlackJackGame(unittest.TestCase, Deck):
 
         print(newChips)
 
-    def test_5_Aces(self):
-        print("\n### test_5_Aces")
+    def test_6_Aces(self):
+        print("\n### test_6_Aces")
         print("- - - - - - - - - - - - - - ")
 
         for index in range(0, 10):
@@ -144,11 +144,15 @@ class TestBlackJackGame(unittest.TestCase, Deck):
             playerHand.set_Value()
             dealerHand.set_Value()
 
-            print(playerHand)
-            print("Player Value = {}\n".format(playerHand.get_value()))
+            print("{}Player Value = {}".format(playerHand, playerHand.get_value()))
+            #if playerHand.aces_exist():
+                #print("Dealer Value = {}\n".format(playerHand.get_value_2()))
+            print("Player Value = {}\n".format(playerHand.get_value_2()))
 
-            print(dealerHand)
-            print("Dealer Value = {}\n".format(dealerHand.get_value()))
+            print("{}Dealer Value = {}".format(dealerHand, dealerHand.get_value()))
+            #if dealerHand.aces_exist():
+                #print("Dealer Value = {}\n".format(dealerHand.get_value_2()))
+            print("Dealer Value = {}\n".format(dealerHand.get_value_2()))
 
         self.assertEqual(result, "True")
 
