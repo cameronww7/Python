@@ -147,15 +147,15 @@ class Hand:
         # add up, Ace + 10 = Blackjack, 10 + 7 = 17
         for index in self.cards:
             # Tracks the Number of Aces
-            if self.aces != 0:
+
+            if index.get_Card_Value() == 11:
                 self.value2 += 1
-
-            if self.aces == 1:
+                self.aces -= 1
+            elif self.value2 != 0:
                 self.value2 += index.get_Card_Value()
-            else:
+                self.aces -= 1
+            elif self.aces >= 1:
                 self.value2 += index.get_Card_Value()
-
-            self.aces -= 1
 
             self.value += index.get_Card_Value()
 
