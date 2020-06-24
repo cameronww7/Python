@@ -195,6 +195,12 @@ class Hand:
         # Provides two values to account for an Ace
         pass
 
+    def clear_hand(self):
+        self.cards = []  # start with an empty list as we did in the Deck class
+        self.value = 0  # start with zero value
+        self.value2 = 0  # start with zero value
+        self.aces = 0  # add an attribute to keep track of aces
+
     def __str__(self):
         counter = 1
         for index in self.cards:
