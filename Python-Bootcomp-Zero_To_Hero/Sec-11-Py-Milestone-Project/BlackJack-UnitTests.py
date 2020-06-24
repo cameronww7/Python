@@ -179,6 +179,13 @@ class TestBlackJackGame(unittest.TestCase, Deck):
         self.assertEqual(result, "True")
 
 
+# FIX UNIT TESTS TO ACTUALLY FAIL
+# FIX UNIT TESTS TO ACTUALLY FAIL
+# FIX UNIT TESTS TO ACTUALLY FAIL
+# FIX UNIT TESTS TO ACTUALLY FAIL
+# FIX UNIT TESTS TO ACTUALLY FAIL
+# FIX UNIT TESTS TO ACTUALLY FAIL
+
 if __name__ == '__main__':
     unittest.main()
 
