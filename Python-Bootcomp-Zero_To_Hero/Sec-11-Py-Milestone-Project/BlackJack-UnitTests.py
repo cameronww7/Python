@@ -156,6 +156,28 @@ class TestBlackJackGame(unittest.TestCase, Deck):
 
         self.assertEqual(result, "True")
 
+    def test_7_Aces(self):
+        print("\n### test_7_Aces")
+        print("- - - - - - - - - - - - - - ")
+
+        result = "True"
+
+        newDeck = Deck(suits, ranks, values)
+        newDeck.shuffle()
+
+        curHand = Hand()
+        curHand.add_card(newDeck.deal_one_card())
+        curHand.add_card(newDeck.deal_one_card())
+
+        curHand.set_Value()
+        print("{}curHand Value = {}".format(curHand, curHand.get_value()))
+
+        print("\nClearing Hand")
+        curHand.clear_hand()
+        print("{}curHand Value = {}".format(curHand, curHand.get_value()))
+
+        self.assertEqual(result, "True")
+
 
 if __name__ == '__main__':
     unittest.main()
