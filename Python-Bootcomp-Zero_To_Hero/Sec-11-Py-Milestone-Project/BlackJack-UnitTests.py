@@ -175,9 +175,27 @@ class TestBlackJackGame(unittest.TestCase, Deck):
         if curHand.get_value_2() != 11:
             result = "False"
 
+    def test_8_clear_hand(self):
+        print("\n### test_8_clear_hand")
+        print("- - - - - - - - - - - - - - ")
+        result = "True"
+
+        aceCard = Card('Diamonds', 'Ace', 11)
+        tenCard = Card('Diamonds', 'Ten', 10)
+
+        curHand = Hand()
+        curHand.add_card(aceCard)
+        curHand.add_card(tenCard)
+
+        curHand.set_Value()
+        print("{}curHand Value = {}, {}".format(curHand, curHand.get_value(),curHand.get_value_2()))
+
         print("\nClearing Hand")
         curHand.clear_hand()
         print("{}curHand Value = {}".format(curHand, curHand.get_value()))
+
+        if curHand.get_value_2() != 0 and curHand.get_value() != 0:
+            result = "False"
 
         self.assertEqual(result, "True")
 
