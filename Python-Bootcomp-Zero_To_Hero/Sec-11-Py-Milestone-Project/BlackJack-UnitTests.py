@@ -162,15 +162,18 @@ class TestBlackJackGame(unittest.TestCase, Deck):
 
         result = "True"
 
-        newDeck = Deck(suits, ranks, values)
-        newDeck.shuffle()
+        aceCard = Card('Diamonds', 'Ace', 11)
+        tenCard = Card('Diamonds', 'Ten', 10)
 
         curHand = Hand()
-        curHand.add_card(newDeck.deal_one_card())
-        curHand.add_card(newDeck.deal_one_card())
+        curHand.add_card(aceCard)
+        curHand.add_card(tenCard)
 
         curHand.set_Value()
-        print("{}curHand Value = {}".format(curHand, curHand.get_value()))
+        print("{}curHand Value = {}, {}".format(curHand, curHand.get_value(),curHand.get_value_2()))
+
+        if curHand.get_value_2() != 11:
+            result = "False"
 
         print("\nClearing Hand")
         curHand.clear_hand()
