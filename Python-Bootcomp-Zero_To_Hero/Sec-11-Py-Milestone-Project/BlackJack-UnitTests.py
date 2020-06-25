@@ -127,39 +127,6 @@ class TestBlackJackGame(unittest.TestCase, Deck):
         print("\n### test_6_Aces")
         print("- - - - - - - - - - - - - - ")
 
-        for index in range(0, 10):
-            newDeck = Deck(suits, ranks, values)
-            result = "True"
-            playerHand = Hand()
-            dealerHand = Hand()
-            newDeck.shuffle()
-            curHand = Hand()
-            curHand.add_card(newDeck.deal_one_card())
-            curHand.add_card(newDeck.deal_one_card())
-
-            for index in range(0, 2):
-                playerHand.add_card(newDeck.deal_one_card())
-                dealerHand.add_card(newDeck.deal_one_card())
-
-            playerHand.set_Value()
-            dealerHand.set_Value()
-
-            print("{}Player Value = {}".format(playerHand, playerHand.get_value()))
-            #if playerHand.aces_exist():
-                #print("Dealer Value = {}\n".format(playerHand.get_value_2()))
-            print("Player Value = {}\n".format(playerHand.get_value_2()))
-
-            print("{}Dealer Value = {}".format(dealerHand, dealerHand.get_value()))
-            #if dealerHand.aces_exist():
-                #print("Dealer Value = {}\n".format(dealerHand.get_value_2()))
-            print("Dealer Value = {}\n".format(dealerHand.get_value_2()))
-
-        self.assertEqual(result, "True")
-
-    def test_7_Aces(self):
-        print("\n### test_7_Aces")
-        print("- - - - - - - - - - - - - - ")
-
         result = "True"
 
         aceCard = Card('Diamonds', 'Ace', 11)
@@ -175,8 +142,8 @@ class TestBlackJackGame(unittest.TestCase, Deck):
         if curHand.get_value_2() != 11:
             result = "False"
 
-    def test_8_clear_hand(self):
-        print("\n### test_8_clear_hand")
+    def test_7_clear_hand(self):
+        print("\n### test_7_clear_hand")
         print("- - - - - - - - - - - - - - ")
         result = "True"
 
