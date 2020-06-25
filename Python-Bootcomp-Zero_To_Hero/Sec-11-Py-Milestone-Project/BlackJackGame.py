@@ -218,6 +218,9 @@ class Chips:
         self.total = 100  # This can be set to a default value or supplied by a user input
         self.bet = 0
 
+    def get_bet(self):
+        return self.bet
+
     def balance(self):
         return self.total
 
@@ -225,17 +228,19 @@ class Chips:
         if xPlacedBet <= self.total:
             print("Bet Placed")
             self.bet = xPlacedBet
+            self.total -= xPlacedBet
             return True
         else:
             print("You do not have that Chip amount")
             return False
 
     def win_bet(self):
-        self.total = self.total + self.bet
+        self.total = self.total + self.bet * 2
+        self.bet = 0
         return self.total
 
     def lose_bet(self):
-        self.total = self.total - self.bet
+        self.bet = 0
         return self.total
 
     def __str__(self):

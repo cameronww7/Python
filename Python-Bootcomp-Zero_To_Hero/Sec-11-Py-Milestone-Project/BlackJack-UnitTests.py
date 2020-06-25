@@ -110,14 +110,29 @@ class TestBlackJackGame(unittest.TestCase, Deck):
         result = "True"
         newChips = Chips()
 
-        print("Current Balance: {}".format(newChips.balance()))
-        newChips.place_bet(50)
-        print("Place Bet Bal  : {}".format(newChips.balance()))
-        newChips.win_bet()
-        print("Bal after win  : {}".format(newChips.balance()))
-        newChips.place_bet(150)
-        newChips.lose_bet()
-        print("Bal after loss : {}".format(newChips.balance()))
+        print("Current Balance: {} , Bet Total : {}".format(newChips.balance(), newChips.get_bet()))
+
+        # Place Bet - Total should be 50g with 50 in Bet
+        if not newChips.place_bet(50):
+            result = "False"
+
+        print("Place Bet Bal  : {} , Bet Total : {}".format(newChips.balance(), newChips.get_bet()))
+
+        # Win Bet - total should be 150
+        if newChips.win_bet() != 150:
+            result = "False"
+
+        print("Bal after win  : {} , Bet Total : {}".format(newChips.balance(), newChips.get_bet()))
+
+        # Place a new bet of 150
+        if not newChips.place_bet(150):
+            result = "False"
+
+        print("Place Bet Bal  : {} , Bet Total : {}".format(newChips.balance(), newChips.get_bet()))
+        if newChips.lose_bet() != 0:
+            result = "False"
+
+        print("Bal after loss : {} , Bet Total : {}".format(newChips.balance(), newChips.get_bet()))
 
         self.assertEqual(result, "True")
 
