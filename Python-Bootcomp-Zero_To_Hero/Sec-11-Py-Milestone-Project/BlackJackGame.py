@@ -107,7 +107,7 @@ class Deck(Card):
     def __init__(self, xSuite, xRank, xValue):
         suit = xSuite
         rank = xRank
-        counter = 0
+        self.counter = 0
 
         self.deck = []  # start with an empty list
 
@@ -115,7 +115,16 @@ class Deck(Card):
             for rank in ranks:
                 card = Card(suit, rank, xValue.get(rank))
                 self.deck.append(card)
-                counter += 1
+                self.counter += 1
+
+    def get_counter(self):
+        return self.counter
+
+    def shuffle(self):
+        random.shuffle(self.deck)
+
+    def deal_one_card(self):
+        return self.deck.pop()
 
     def __str__(self):
         counter = 1
@@ -123,12 +132,6 @@ class Deck(Card):
             print("%s: %s" % (counter, index))
             counter += 1
         return ""
-
-    def shuffle(self):
-        random.shuffle(self.deck)
-
-    def deal_one_card(self):
-        return self.deck.pop()
 
 class Hand:
     """

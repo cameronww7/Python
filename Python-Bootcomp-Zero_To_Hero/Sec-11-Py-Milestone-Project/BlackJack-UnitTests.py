@@ -44,7 +44,7 @@ class TestBlackJackGame(unittest.TestCase, Deck):
         result = 'MaKe Sure Unit Tests are WORKING'
         self.assertEqual(result, 'MaKe Sure Unit Tests are WORKING')
 
-    def test_2_HandClass(self):
+    def test_2_Hand_Class(self):
         print("\n### test_2_HandClass")
         print("- - - - - - - - - - - - - - ")
 
@@ -55,7 +55,7 @@ class TestBlackJackGame(unittest.TestCase, Deck):
             print("|{}|".format(twoOfHeartsCard))
         self.assertEqual(result, 'True')
 
-    def test_3_DeckClass(self):
+    def test_3_Deck_Class(self):
         print("\n### test_3_DeckClass")
         print("- - - - - - - - - - - - - - ")
 
@@ -75,7 +75,7 @@ class TestBlackJackGame(unittest.TestCase, Deck):
 
         self.assertEqual(result, "True")
 
-    def test_4_hand(self):
+    def test_4_hand_Class(self):
         print("\n### test_4_hand")
         print("- - - - - - - - - - - - - - ")
 
@@ -97,7 +97,7 @@ class TestBlackJackGame(unittest.TestCase, Deck):
 
         self.assertEqual(result, "True")
 
-    def test_5_chip(self):
+    def test_5_chip_Class(self):
         print("\n### test_5_chip")
         print("- - - - - - - - - - - - - - ")
 
