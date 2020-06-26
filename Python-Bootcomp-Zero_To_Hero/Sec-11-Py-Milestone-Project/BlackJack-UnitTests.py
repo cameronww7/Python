@@ -59,8 +59,10 @@ class TestBlackJackGame(unittest.TestCase, Deck):
         print("\n### test_3_DeckClass")
         print("- - - - - - - - - - - - - - ")
 
-        newDeck = Deck(suits, ranks, values)
         result = "True"
+
+        newDeck = Deck(suits, ranks, values)
+
         # print("start")
         for index1 in newDeck.deck:
             # print("in here")
@@ -68,10 +70,21 @@ class TestBlackJackGame(unittest.TestCase, Deck):
             for index2 in newDeck.deck:
                 if index1 == index2:
                     count += 1
-                    print("True {} == {}".format(index1, index2))
+                    #print("True {} == {}".format(index1, index2))
             if count >= 2:
                 result = "False"
                 break
+
+        print("EXPECTING -> 52 cards == {} carrds".format(newDeck.get_counter()))
+        if newDeck.get_counter() != 52:
+            result = "False"
+
+        oneCardDeck = Deck(suits, ranks, values)
+
+        aceOfClubs = str(oneCardDeck.deal_one_card())
+        print("EXPECTING -> |Ace of Clubs| == |{}|".format(aceOfClubs))
+        if aceOfClubs != "Ace of Clubs":
+            result = "False"
 
         self.assertEqual(result, "True")
 
