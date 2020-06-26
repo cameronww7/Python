@@ -81,16 +81,18 @@ class TestBlackJackGame(unittest.TestCase, Deck):
 
         result = "True"
 
-        aceCard = Card('Diamonds', 'Nine', 9)
+        nineCard = Card('Diamonds', 'Nine', 9)
         tenCard = Card('Diamonds', 'Ten', 10)
 
         curHand = Hand()
+        curHand.add_card(nineCard)
+        curHand.add_card(tenCard)
 
         curHand.set_Value()
 
         print("{}curHand Value = {}, {}\n".format(curHand, curHand.get_value(), curHand.get_value_2()))
 
-        if curHand.get_value == 19 or curHand.get_value_2() == 0:
+        if curHand.get_value() != 19 or curHand.get_value_2() != 0:
             result = "False"
 
         self.assertEqual(result, "True")
