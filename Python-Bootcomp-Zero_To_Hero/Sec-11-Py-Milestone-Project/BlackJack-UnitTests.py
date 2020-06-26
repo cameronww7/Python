@@ -79,27 +79,19 @@ class TestBlackJackGame(unittest.TestCase, Deck):
         print("\n### test_4_hand")
         print("- - - - - - - - - - - - - - ")
 
-        newDeck = Deck(suits, ranks, values)
         result = "True"
-        playerHand = Hand()
-        dealerHand = Hand()
-        newDeck.shuffle()
+
+        aceCard = Card('Diamonds', 'Nine', 9)
+        tenCard = Card('Diamonds', 'Ten', 10)
+
         curHand = Hand()
-        curHand.add_card(newDeck.deal_one_card())
-        curHand.add_card(newDeck.deal_one_card())
 
-        for index in range(0,2):
-            playerHand.add_card(newDeck.deal_one_card())
-            dealerHand.add_card(newDeck.deal_one_card())
+        curHand.set_Value()
 
-        playerHand.set_Value()
-        dealerHand.set_Value()
+        print("{}curHand Value = {}, {}\n".format(curHand, curHand.get_value(), curHand.get_value_2()))
 
-        print(playerHand)
-        print("Player Value = {}\n".format(playerHand.get_value()))
-
-        print(dealerHand)
-        print("Dealer Value = {}\n".format(dealerHand.get_value()))
+        if curHand.get_value == 19 or curHand.get_value_2() == 0:
+            result = "False"
 
         self.assertEqual(result, "True")
 
