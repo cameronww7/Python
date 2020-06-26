@@ -104,7 +104,7 @@ class TestBlackJackGame(unittest.TestCase, Deck):
         curHand.set_Value()
 
         print("{}curHand Value = {}, {}\n".format(curHand, curHand.get_value(), curHand.get_value_2()))
-
+        print("EXPECTING -> |19| == |{}| and |0| == |{}|".format(curHand.get_value(),curHand.get_value_2()))
         if curHand.get_value() != 19 or curHand.get_value_2() != 0:
             result = "False"
 
