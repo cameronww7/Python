@@ -259,3 +259,30 @@ playing = True
 
 newDeck = Deck(suits, ranks, values)
 #print(newDeck)
+
+
+player_1 = "Player 1"
+dealer   = "Dealers"
+
+print("Lets Play Black Jack")
+
+
+while True:
+    print("Starting Blackjack")
+
+    # Setup Player Hand & Chips
+    player_1_hand = Hand()
+    player_1_chips = Chips()
+
+    # Setup Dealer Hand & Chips
+    dealer_hand = Hand()
+    dealer_chips = Chips()
+
+    # Ask player if they want to play Blackjack
+
+    userInput = input("Would you like to play blackjack (Enter y for yes, n for No) : ")
+
+
+
+    break
+
