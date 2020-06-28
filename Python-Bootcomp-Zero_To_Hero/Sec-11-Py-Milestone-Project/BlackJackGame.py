@@ -281,8 +281,19 @@ while True:
     # Ask player if they want to play Blackjack
 
     userInput = input("Would you like to play blackjack (Enter y for yes, n for No) : ")
+    userInput = userInput.lower()
 
+    if userInput == "n":
+        break
 
+    print("lets Play blackjack!")
+    print("Dealing Hands")
 
-    break
+    for index in range(0, 2):
+        player_1_hand.add_card(newDeck.deal_one_card())
+        dealer_hand.add_card(newDeck.deal_one_card())
+
+    print(player_1_hand)
+    print(dealer_hand)
+
 
