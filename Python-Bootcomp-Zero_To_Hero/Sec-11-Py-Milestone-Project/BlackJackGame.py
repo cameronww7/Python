@@ -198,6 +198,9 @@ class Hand:
         # Provides two values to account for an Ace
         pass
 
+    def show_first_card(self):
+        return "{}".format(self.cards[0])
+
     def clear_hand(self):
         self.cards = []  # start with an empty list as we did in the Deck class
         self.value = 0  # start with zero value
@@ -292,6 +295,10 @@ while True:
     for index in range(0, 2):
         player_1_hand.add_card(newDeck.deal_one_card())
         dealer_hand.add_card(newDeck.deal_one_card())
+
+
+    print(player_1_hand.show_first_card())
+    print(dealer_hand.show_first_card())
 
     print(player_1_hand)
     print(dealer_hand)
