@@ -214,6 +214,9 @@ class Hand:
     def show_first_card_value(self):
         return "{}".format(self.cards[0])
 
+    def get_first_card(self):
+        return self.cards[0]
+
     def clear_hand(self):
         self.cards = []  # start with an empty list as we did in the Deck class
         self.value = 0  # start with zero value
