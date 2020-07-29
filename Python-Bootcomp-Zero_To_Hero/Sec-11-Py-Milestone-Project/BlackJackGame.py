@@ -107,6 +107,7 @@ class Deck(Card):
     def __init__(self, xSuite, xRank, xValue):
         suit = xSuite
         rank = xRank
+        value = xValue
         self.counter = 0
 
         self.deck = []  # start with an empty list
@@ -116,6 +117,15 @@ class Deck(Card):
                 card = Card(suit, rank, xValue.get(rank))
                 self.deck.append(card)
                 self.counter += 1
+
+    def get_suite(self):
+        return self.suit
+
+    def get_rank(self):
+        return self.rank
+
+    def get_value(self):
+        return self.value
 
     def get_counter(self):
         return self.counter
@@ -199,6 +209,9 @@ class Hand:
         pass
 
     def show_first_card(self):
+        return "{}".format(self.cards[0])
+
+    def show_first_card_value(self):
         return "{}".format(self.cards[0])
 
     def clear_hand(self):
