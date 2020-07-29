@@ -88,6 +88,15 @@ class Card:
     def __str__(self):
         return "%s of %s" % (self.rank, self.suit)
 
+    def get_suite(self):
+        return self.suit
+
+    def get_rank(self):
+        return self.rank
+
+    def get_value(self):
+        return self.value
+
     def get_Card(self):
         return "%s of %s" % (self.rank, self.suit)
 
@@ -117,15 +126,6 @@ class Deck(Card):
                 card = Card(suit, rank, xValue.get(rank))
                 self.deck.append(card)
                 self.counter += 1
-
-    def get_suite(self):
-        return self.suit
-
-    def get_rank(self):
-        return self.rank
-
-    def get_value(self):
-        return self.value
 
     def get_counter(self):
         return self.counter
@@ -215,7 +215,7 @@ class Hand:
         return "{}".format(self.cards[0])
 
     def get_first_card(self):
-        return self.cards[0]
+        return self.cards[0].get_value()
 
     def clear_hand(self):
         self.cards = []  # start with an empty list as we did in the Deck class
@@ -315,11 +315,11 @@ while True:
     print("\n-- Printing First Card --")
     print("\nPlayer is showing")
     print(player_hand.value + 10)
-    print(player_hand.show_first_card())
+    print(player_hand.get_first_card())
 
     print("\nDealer is showing")
     print(dealer_hand.value + 10)
-    print(dealer_hand.show_first_card())
+    print(dealer_hand.get_first_card())
 
     print("\n-- Printing Hands --")
     print(player_hand)
