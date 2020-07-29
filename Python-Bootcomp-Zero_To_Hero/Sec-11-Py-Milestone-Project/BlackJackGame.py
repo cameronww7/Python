@@ -274,8 +274,8 @@ while True:
     print("Starting Blackjack")
 
     # Setup Player Hand & Chips
-    player_1_hand = Hand()
-    player_1_chips = Chips()
+    player_hand = Hand()
+    player_chips = Chips()
 
     # Setup Dealer Hand & Chips
     dealer_hand = Hand()
@@ -293,14 +293,20 @@ while True:
     print("Dealing Hands")
 
     for index in range(0, 2):
-        player_1_hand.add_card(newDeck.deal_one_card())
+        player_hand.add_card(newDeck.deal_one_card())
         dealer_hand.add_card(newDeck.deal_one_card())
 
+    print("\n-- Printing First Card --")
+    print("\nPlayer is showing")
+    print(player_hand.value + 10)
+    print(player_hand.show_first_card())
 
-    print(player_1_hand.show_first_card())
+    print("\nDealer is showing")
+    print(dealer_hand.value + 10)
     print(dealer_hand.show_first_card())
 
-    print(player_1_hand)
+    print("\n-- Printing Hands --")
+    print(player_hand)
     print(dealer_hand)
 
 
