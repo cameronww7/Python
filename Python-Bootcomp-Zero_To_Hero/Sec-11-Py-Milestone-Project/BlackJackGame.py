@@ -215,7 +215,7 @@ class Hand:
         return "{}".format(self.cards[0])
 
     def get_first_card(self):
-        return self.cards[0].get_value()
+        return self.cards[0]
 
     def clear_hand(self):
         self.cards = []  # start with an empty list as we did in the Deck class
@@ -314,15 +314,14 @@ while True:
 
     print("\n-- Printing First Card --")
     print("\nPlayer is showing")
-    print(player_hand.value + 10)
-    print(player_hand.get_first_card())
+    print("{}, face up face is : {}".format(player_hand.get_first_card().get_value()+10, player_hand.get_first_card()))
+
 
     print("\nDealer is showing")
-    print(dealer_hand.value + 10)
-    print(dealer_hand.get_first_card())
+    print("{}, face up face is : {}".format(dealer_hand.get_first_card().get_value()+10, dealer_hand.get_first_card()))
 
     print("\n-- Printing Hands --")
-    print(player_hand)
-    print(dealer_hand)
+    #print(player_hand)
+    #print(dealer_hand)
 
 
