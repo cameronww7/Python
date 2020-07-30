@@ -320,8 +320,42 @@ while True:
     print("\nDealer is showing")
     print("{}, face up face is : {}".format(dealer_hand.get_first_card().get_value()+10, dealer_hand.get_first_card()))
 
-    print("\n-- Printing Hands --")
+    #print("\n-- DEBUG - Printing Hands --")
     #print(player_hand)
     #print(dealer_hand)
 
+    # Prompt Player to Bet, Fold, Stay
+    while True:
 
+        try:
+            # First Attempt - will be successful if an Int comes in
+            val = input("Please Enter if you want to Stay, Fold, Bet"
+                        "\nEnter S to Stay"
+                        "\nEnter F to Fold"
+                        "\nEnter B to Bet"
+                        "\nEnter your Choice: ")
+
+            val = val.upper()
+
+            if val == "S" or val == "F" or val == "B":
+                valid = True
+            else:
+                valid = False
+
+        except:
+            # If an error pops it will display an Error and re-prompted the user for an Int
+            print("Looks like you didnt enter a correct character")
+            continue
+
+        else:
+            if valid == True:
+                # do some stuff
+                break
+            else:
+                print("\nError!"
+                      "\nLooks like you didnt enter a correct character"
+                      "\n Please Try again!\n")
+
+        finally:
+            # Always executes even if there is an error
+            print("Finally, I executed!")
