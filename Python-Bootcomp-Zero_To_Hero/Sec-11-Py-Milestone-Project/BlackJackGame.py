@@ -348,8 +348,36 @@ while True:
             continue
 
         else:
-            if valid == True:
-                # do some stuff
+            if valid:
+                if val == "S":
+                    print("Player Stays")
+                    break
+                elif val == "F":
+                    #player loses bet
+                    print("Player Folds")
+                elif val == "B":
+                    #prompt user to bet
+                    print("Player Bets")
+                    while True:
+
+                        try:
+                            # First Attempt - will be successful if an Int comes in
+                            val = int(input("Please enter Your Bet: "))
+
+                        except:
+                            # If an error pops it will display an Error and re-prompted the user for an Int
+                            print("Looks like you did not enter an integer!")
+                            continue
+
+                        else:
+                            # Breaks the infinite while loop if a int is entered
+                            print("Yep that's an integer!")
+                            print(val)
+                            break
+
+                        finally:
+                            # Always executes even if there is an error
+                            print("Finally, I executed!")
                 break
             else:
                 print("\nError!"
