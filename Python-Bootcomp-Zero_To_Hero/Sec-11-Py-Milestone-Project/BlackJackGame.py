@@ -395,6 +395,25 @@ while True:
                       "\nLooks like you didnt enter a correct character"
                       "\n Please Try again!\n")
 
-        finally:
-            # Always executes even if there is an error
-            print("Finally, I executed!")
+    while True:
+        try:
+            # First Attempt - will be successful if an Int comes in
+            val = input("Please Enter if you want to Stay, Fold, Bet"
+                        "\nEnter S to Stay"
+                        "\nEnter F to Fold"
+                        "\nEnter B to Bet"
+                        "\nEnter your Choice: ")
+
+            val = val.upper()
+
+            if val == "S" or val == "F" or val == "B":
+                valid = True
+            else:
+                valid = False
+
+        except:
+            # If an error pops it will display an Error and re-prompted the user for an Int
+            print("Looks like you didnt enter a correct character")
+            continue
+
+        else:
