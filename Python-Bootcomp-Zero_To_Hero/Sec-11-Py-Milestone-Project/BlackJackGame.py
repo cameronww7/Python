@@ -359,10 +359,9 @@ while True:
                     #prompt user to bet
                     print("Player Bets")
                     while True:
-
                         try:
                             # First Attempt - will be successful if an Int comes in
-                            val = int(input("Please enter Your Bet: "))
+                            playersBet = int(input("Please enter Your Bet: "))
 
                         except:
                             # If an error pops it will display an Error and re-prompted the user for an Int
@@ -371,14 +370,26 @@ while True:
 
                         else:
                             # Breaks the infinite while loop if a int is entered
-                            print("Yep that's an integer!")
-                            print(val)
+                            print("Player Bet {}".format(playersBet))
                             break
+                    if not player_chips.place_bet(playersBet):
+                        while True:
+                            try:
+                                # First Attempt - will be successful if an Int comes in
+                                playersBet = int(input("Please enter Your Bet: "))
 
-                        finally:
-                            # Always executes even if there is an error
-                            print("Finally, I executed!")
+                            except:
+                                # If an error pops it will display an Error and re-prompted the user for an Int
+                                print("Looks like you did not enter an integer!")
+                                continue
+
+                            else:
+                                # Breaks the infinite while loop if a int is entered
+                                print("Player Bet {}".format(playersBet))
+                                break
+
                 break
+
             else:
                 print("\nError!"
                       "\nLooks like you didnt enter a correct character"
