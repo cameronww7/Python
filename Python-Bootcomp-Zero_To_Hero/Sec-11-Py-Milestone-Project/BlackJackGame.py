@@ -281,6 +281,7 @@ values = {'Two': 2, 'Three': 3, 'Four': 4, 'Five': 5, 'Six': 6, 'Seven': 7, 'Eig
 playing = True
 
 newDeck = Deck(suits, ranks, values)
+newDeck.shuffle()
 #print(newDeck)
 
 
@@ -316,6 +317,9 @@ while True:
         player_hand.add_card(newDeck.deal_one_card())
         dealer_hand.add_card(newDeck.deal_one_card())
 
+    player_hand.set_Value()
+    dealer_hand.set_Value()
+
     print("\n-- Printing First Card --")
     print("\nPlayer is showing")
     print("{}, face up face is : {}".format(player_hand.get_first_card().get_value()+10, player_hand.get_first_card()))
@@ -333,7 +337,7 @@ while True:
 
         try:
             # First Attempt - will be successful if an Int comes in
-            val = input("Please Enter if you want to Stay, Fold, Bet"
+            val = input("\nPlease Enter if you want to Stay, Fold, Bet"
                         "\nEnter S to Stay"
                         "\nEnter F to Fold"
                         "\nEnter B to Bet"
@@ -402,7 +406,9 @@ while True:
 
 
     print("\nShowing Hands")
+    print(player_hand.get_value())
     print(player_hand)
+    print(dealer_hand.get_value())
     print(dealer_hand)
 
     if player_hand.get_value() > dealer_hand.get_value():
