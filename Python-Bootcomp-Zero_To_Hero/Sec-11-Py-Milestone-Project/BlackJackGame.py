@@ -265,6 +265,10 @@ class Chips:
         self.bet = 0
         return self.total
 
+    def clear_bet(self):
+        self.total += self.bet
+        return True
+
     def __str__(self):
         #print("Stack Total : {}".format(self.total))
         return "Stack Total : {}".format(self.total)
@@ -372,6 +376,7 @@ while True:
                             # Breaks the infinite while loop if a int is entered
                             print("Player Bet {}".format(playersBet))
                             break
+
                     if not player_chips.place_bet(playersBet):
                         while True:
                             try:
@@ -395,25 +400,14 @@ while True:
                       "\nLooks like you didnt enter a correct character"
                       "\n Please Try again!\n")
 
-    while True:
-        try:
-            # First Attempt - will be successful if an Int comes in
-            val = input("Please Enter if you want to Stay, Fold, Bet"
-                        "\nEnter S to Stay"
-                        "\nEnter F to Fold"
-                        "\nEnter B to Bet"
-                        "\nEnter your Choice: ")
 
-            val = val.upper()
+    print("\nShowing Hands")
+    print(player_hand)
+    print(dealer_hand)
 
-            if val == "S" or val == "F" or val == "B":
-                valid = True
-            else:
-                valid = False
-
-        except:
-            # If an error pops it will display an Error and re-prompted the user for an Int
-            print("Looks like you didnt enter a correct character")
-            continue
-
-        else:
+    if player_hand.value() > dealer_hand.value():
+        print("Player Wins!")
+        player_chips.win_bet()
+    elif player_hand.value() == dealer_hand.value():
+        print("Draw")
+        player_chips.
