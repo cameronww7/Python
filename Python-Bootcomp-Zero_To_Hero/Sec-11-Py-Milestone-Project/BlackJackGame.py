@@ -405,14 +405,15 @@ while True:
     print(player_hand)
     print(dealer_hand)
 
-    if player_hand.value() > dealer_hand.value():
+    if player_hand.get_value() > dealer_hand.get_value():
         print("Player Wins!")
         player_chips.win_bet()
-    elif player_hand.value() == dealer_hand.value():
+    elif player_hand.get_value() == dealer_hand.get_value():
         print("Draw")
         player_chips.clear_bet()
-    elif player_hand.value() < dealer_hand.value():
+    elif player_hand.get_value() < dealer_hand.get_value():
         print("Player Loses")
         player_chips.lose_bet()
 
+    print("Player Balance {}".format(player_chips.balance()))
 
