@@ -410,4 +410,9 @@ while True:
         player_chips.win_bet()
     elif player_hand.value() == dealer_hand.value():
         print("Draw")
-        player_chips.
+        player_chips.clear_bet()
+    elif player_hand.value() < dealer_hand.value():
+        print("Player Loses")
+        player_chips.lose_bet()
+
+
