@@ -158,6 +158,9 @@ class Hand:
         # I need to loop through the dictionary and add up the value of each card
         # and assign it a total value so
         # add up, Ace + 10 = Blackjack, 10 + 7 = 17
+        self.value = 0
+        self.value2 = 0
+
         for index in self.cards:
             # Tracks the Number of Aces
 
@@ -359,10 +362,12 @@ while True:
             if valid:
                 if val == "S":
                     print("Player Stays")
+                    print(player_chips.clear_bet())
                     break
                 elif val == "F":
                     #player loses bet
                     print("Player Folds")
+                    print(player_chips.lose_bet())
                 elif val == "B":
                     #prompt user to bet
                     print("Player Bets")
@@ -411,15 +416,27 @@ while True:
     print(dealer_hand.get_value())
     print(dealer_hand)
 
-    if player_hand.get_value() > dealer_hand.get_value():
+    if dealer_hand.get_value() < 13:
+        dealer_hand.add_card(newDeck.deal_one_card())
+        dealer_hand.set_Value()
+
+        print(dealer_hand.get_value())
+        print(dealer_hand)
+
+    if dealer_hand.get_value() > 21:
         print("Player Wins!")
         player_chips.win_bet()
-    elif player_hand.get_value() == dealer_hand.get_value():
-        print("Draw")
-        player_chips.clear_bet()
-    elif player_hand.get_value() < dealer_hand.get_value():
-        print("Player Loses")
-        player_chips.lose_bet()
+    else:
+        if val != "F":
+            if player_hand.get_value() > dealer_hand.get_value():
+                print("Player Wins!")
+                player_chips.win_bet()
+            elif player_hand.get_value() == dealer_hand.get_value():
+                print("Draw")
+                player_chips.clear_bet()
+            elif player_hand.get_value() < dealer_hand.get_value():
+                print("Player Loses")
+                player_chips.lose_bet()
 
     print("Player Balance {}".format(player_chips.balance()))
 
