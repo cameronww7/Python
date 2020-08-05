@@ -402,6 +402,8 @@ while True:
                                 print("Player Bet {}".format(playersBet))
                                 break
 
+                    print("Player Balance {} after Betting".format(player_chips.balance()))
+
                 break
 
             else:
@@ -411,9 +413,9 @@ while True:
 
 
     print("\nShowing Hands")
-    print(player_hand.get_value())
+    print("Players Total Hand Value is {}".format(player_hand.get_value()))
     print(player_hand)
-    print(dealer_hand.get_value())
+    print("Dealers Total Hand Value is {}".format(dealer_hand.get_value()))
     print(dealer_hand)
 
     if dealer_hand.get_value() < 13:
