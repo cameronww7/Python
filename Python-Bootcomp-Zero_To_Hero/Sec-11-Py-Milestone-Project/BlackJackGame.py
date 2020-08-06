@@ -337,22 +337,22 @@ while True:
 
     # Prompt Player to Bet, Fold, Hit
     while True:
-        # First Attempt - will be successful if an Int comes in
-        val = input("\nPlease Enter if you want to Bet"
-                    "\nEnter B to Bet"
-                    "\nEnter N to Not Bet"
-                    "\nEnter your Choice: ")
+        while True:
+            try:
+                # First Attempt - will be successful if an Int comes in
+                playersBet = int(input("Please enter Your Bet: "))
 
-        val = val.upper()
+            except:
+                # If an error pops it will display an Error and re-prompted the user for an Int
+                print("Looks like you did not enter an integer!")
+                continue
 
-        if val == "B":
-            valid = True
-        else:
-            valid = False
+            else:
+                # Breaks the infinite while loop if a int is entered
+                print("Player Bet {}".format(playersBet))
+                break
 
-        if val == "B":
-            # prompt user to bet
-            print("Player Bets")
+        if not player_chips.place_bet(playersBet):
             while True:
                 try:
                     # First Attempt - will be successful if an Int comes in
@@ -367,22 +367,6 @@ while True:
                     # Breaks the infinite while loop if a int is entered
                     print("Player Bet {}".format(playersBet))
                     break
-
-            if not player_chips.place_bet(playersBet):
-                while True:
-                    try:
-                        # First Attempt - will be successful if an Int comes in
-                        playersBet = int(input("Please enter Your Bet: "))
-
-                    except:
-                        # If an error pops it will display an Error and re-prompted the user for an Int
-                        print("Looks like you did not enter an integer!")
-                        continue
-
-                    else:
-                        # Breaks the infinite while loop if a int is entered
-                        print("Player Bet {}".format(playersBet))
-                        break
 
             print("Player Balance {} after Betting".format(player_chips.balance()))
 
@@ -466,5 +450,5 @@ while True:
                     print("Player Loses")
                     player_chips.lose_bet()
 
-    print("Player Balance {}".format(player_chips.balance()))
+    print("Player Balance {}\n\n".format(player_chips.balance()))
 
