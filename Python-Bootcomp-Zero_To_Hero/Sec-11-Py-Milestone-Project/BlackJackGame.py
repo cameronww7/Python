@@ -323,10 +323,6 @@ while True:
     player_hand.set_Value()
     dealer_hand.set_Value()
 
-    print("\n-- Printing First Card --")
-    print("\nPlayer is showing")
-    print("{}, face up face is : {}".format(player_hand.get_first_card().get_value()+10, player_hand.get_first_card()))
-
 
     print("\nDealer is showing")
     print("{}, face up face is : {}".format(dealer_hand.get_first_card().get_value()+10, dealer_hand.get_first_card()))
@@ -335,20 +331,78 @@ while True:
     #print(player_hand)
     #print(dealer_hand)
 
-    # Prompt Player to Bet, Fold, Stay
+    print("\nShowing Player Hand")
+    print("Players Total Hand Value is {}".format(player_hand.get_value()))
+    print(player_hand)
+
+    # Prompt Player to Bet, Fold, Hit
     while True:
+        # First Attempt - will be successful if an Int comes in
+        val = input("\nPlease Enter if you want to Bet"
+                    "\nEnter B to Bet"
+                    "\nEnter N to Not Bet"
+                    "\nEnter your Choice: ")
+
+        val = val.upper()
+
+        if val == "B":
+            valid = True
+        else:
+            valid = False
+
+        if val == "B":
+            # prompt user to bet
+            print("Player Bets")
+            while True:
+                try:
+                    # First Attempt - will be successful if an Int comes in
+                    playersBet = int(input("Please enter Your Bet: "))
+
+                except:
+                    # If an error pops it will display an Error and re-prompted the user for an Int
+                    print("Looks like you did not enter an integer!")
+                    continue
+
+                else:
+                    # Breaks the infinite while loop if a int is entered
+                    print("Player Bet {}".format(playersBet))
+                    break
+
+            if not player_chips.place_bet(playersBet):
+                while True:
+                    try:
+                        # First Attempt - will be successful if an Int comes in
+                        playersBet = int(input("Please enter Your Bet: "))
+
+                    except:
+                        # If an error pops it will display an Error and re-prompted the user for an Int
+                        print("Looks like you did not enter an integer!")
+                        continue
+
+                    else:
+                        # Breaks the infinite while loop if a int is entered
+                        print("Player Bet {}".format(playersBet))
+                        break
+
+            print("Player Balance {} after Betting".format(player_chips.balance()))
+
+        print("\nDealer is showing")
+        print("{}, face up face is : {}".format(dealer_hand.get_first_card().get_value() + 10,
+                                                dealer_hand.get_first_card()))
+        print("\nShowing Player Hand")
+        print("Players Total Hand Value is {}".format(player_hand.get_value()))
+        print(player_hand)
 
         try:
             # First Attempt - will be successful if an Int comes in
-            val = input("\nPlease Enter if you want to Stay, Fold, Bet"
+            val = input("\nPlease Enter if you want to Stay, Hit"
                         "\nEnter S to Stay"
-                        "\nEnter F to Fold"
-                        "\nEnter B to Bet"
+                        "\nEnter H to Hit"
                         "\nEnter your Choice: ")
 
             val = val.upper()
 
-            if val == "S" or val == "F" or val == "B":
+            if val == "S" or val == "H":
                 valid = True
             else:
                 valid = False
@@ -364,52 +418,18 @@ while True:
                     print("Player Stays")
                     print(player_chips.clear_bet())
                     break
-                elif val == "F":
-                    #player loses bet
-                    print("Player Folds")
-                    print(player_chips.lose_bet())
-                elif val == "B":
-                    #prompt user to bet
-                    print("Player Bets")
-                    while True:
-                        try:
-                            # First Attempt - will be successful if an Int comes in
-                            playersBet = int(input("Please enter Your Bet: "))
 
-                        except:
-                            # If an error pops it will display an Error and re-prompted the user for an Int
-                            print("Looks like you did not enter an integer!")
-                            continue
-
-                        else:
-                            # Breaks the infinite while loop if a int is entered
-                            print("Player Bet {}".format(playersBet))
-                            break
-
-                    if not player_chips.place_bet(playersBet):
-                        while True:
-                            try:
-                                # First Attempt - will be successful if an Int comes in
-                                playersBet = int(input("Please enter Your Bet: "))
-
-                            except:
-                                # If an error pops it will display an Error and re-prompted the user for an Int
-                                print("Looks like you did not enter an integer!")
-                                continue
-
-                            else:
-                                # Breaks the infinite while loop if a int is entered
-                                print("Player Bet {}".format(playersBet))
-                                break
-
-                    print("Player Balance {} after Betting".format(player_chips.balance()))
-
-                break
-
+                elif val == "H":
+                    print("Player Hits")
+                    player_hand.add_card(newDeck.deal_one_card())
+                    player_hand.set_Value()
+                    print("Players Total Hand Value is {}".format(player_hand.get_value()))
+                    print(player_hand)
             else:
                 print("\nError!"
                       "\nLooks like you didnt enter a correct character"
                       "\n Please Try again!\n")
+            break
 
 
     print("\nShowing Hands")
@@ -418,27 +438,33 @@ while True:
     print("Dealers Total Hand Value is {}".format(dealer_hand.get_value()))
     print(dealer_hand)
 
-    if dealer_hand.get_value() < 13:
-        dealer_hand.add_card(newDeck.deal_one_card())
-        dealer_hand.set_Value()
-
-        print(dealer_hand.get_value())
-        print(dealer_hand)
-
-    if dealer_hand.get_value() > 21:
-        print("Player Wins!")
-        player_chips.win_bet()
+    if player_hand.get_value() > 21:
+        print("Player Loses")
+        player_chips.lose_bet()
     else:
-        if val != "F":
-            if player_hand.get_value() > dealer_hand.get_value():
-                print("Player Wins!")
-                player_chips.win_bet()
-            elif player_hand.get_value() == dealer_hand.get_value():
-                print("Draw")
-                player_chips.clear_bet()
-            elif player_hand.get_value() < dealer_hand.get_value():
-                print("Player Loses")
-                player_chips.lose_bet()
+
+        while dealer_hand.get_value() < 15:
+            print("Dealer has to Hit")
+            dealer_hand.add_card(newDeck.deal_one_card())
+            dealer_hand.set_Value()
+
+            print("Dealers Total Hand Value is {}".format(dealer_hand.get_value()))
+            print(dealer_hand)
+
+        if dealer_hand.get_value() > 21:
+            print("Player Wins!")
+            player_chips.win_bet()
+        else:
+            if val != "F":
+                if player_hand.get_value() > dealer_hand.get_value():
+                    print("Player Wins!")
+                    player_chips.win_bet()
+                elif player_hand.get_value() == dealer_hand.get_value():
+                    print("Draw")
+                    player_chips.clear_bet()
+                elif player_hand.get_value() < dealer_hand.get_value():
+                    print("Player Loses")
+                    player_chips.lose_bet()
 
     print("Player Balance {}".format(player_chips.balance()))
 
