@@ -377,43 +377,52 @@ while True:
         print("Players Total Hand Value is {}".format(player_hand.get_value()))
         print(player_hand)
 
-        try:
-            # First Attempt - will be successful if an Int comes in
-            val = input("\nPlease Enter if you want to Stay, Hit"
-                        "\nEnter S to Stay"
-                        "\nEnter H to Hit"
-                        "\nEnter your Choice: ")
+        val = ""
 
-            val = val.upper()
+        while player_hand.get_value() < 22 or val == "H":
+            try:
+                # First Attempt - will be successful if an Int comes in
+                val = input("\nPlease Enter if you want to Stay, Hit"
+                            "\nEnter S to Stay"
+                            "\nEnter H to Hit"
+                            "\nEnter your Choice: ")
 
-            if val == "S" or val == "H":
-                valid = True
+                val = val.upper()
+
+                if val == "S" or val == "H":
+                    valid = True
+                else:
+                    valid = False
+
+            except:
+                # If an error pops it will display an Error and re-prompted the user for an Int
+                print("Looks like you didnt enter a correct character")
+                continue
+
             else:
-                valid = False
+                if valid:
+                    if val == "S":
+                        print("Player Stays")
+                        print(player_chips.clear_bet())
+                        break
 
-        except:
-            # If an error pops it will display an Error and re-prompted the user for an Int
-            print("Looks like you didnt enter a correct character")
-            continue
+                    elif val == "H":
+                        print("Player Hits")
+                        player_hand.add_card(newDeck.deal_one_card())
+                        player_hand.set_Value()
+                        print("Players Total Hand Value is {}".format(player_hand.get_value()))
+                        print(player_hand)
+                else:
+                    print("\nError!"
+                          "\nLooks like you didnt enter a correct character"
+                          "\n Please Try again!\n")
+                break
 
-        else:
-            if valid:
-                if val == "S":
-                    print("Player Stays")
-                    print(player_chips.clear_bet())
-                    break
-
-                elif val == "H":
-                    print("Player Hits")
-                    player_hand.add_card(newDeck.deal_one_card())
-                    player_hand.set_Value()
-                    print("Players Total Hand Value is {}".format(player_hand.get_value()))
-                    print(player_hand)
-            else:
-                print("\nError!"
-                      "\nLooks like you didnt enter a correct character"
-                      "\n Please Try again!\n")
+            if player_hand.get_value() < 22:
+                break
+        if val == "S":
             break
+
 
 
     print("\nShowing Hands")
