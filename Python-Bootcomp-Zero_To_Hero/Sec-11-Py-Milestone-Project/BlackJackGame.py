@@ -276,6 +276,26 @@ class Chips:
         #print("Stack Total : {}".format(self.total))
         return "Stack Total : {}".format(self.total)
 
+
+def Show_Player_Hand():
+    return True
+
+def Show_Dealer_Hand():
+    return True
+
+def Prompt_User_For_Bet():
+    return True
+
+def Prompt_User_To_Contiune():
+    return True
+
+def Prompt_User_To_Hit_Or_Stay():
+    return True
+
+def Check_Win_Or_Lose():
+    return True
+
+
 suits = ('Hearts', 'Diamonds', 'Spades', 'Clubs')
 ranks = ('Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Jack', 'Queen', 'King', 'Ace')
 values = {'Two': 2, 'Three': 3, 'Four': 4, 'Five': 5, 'Six': 6, 'Seven': 7, 'Eight': 8, 'Nine': 9, 'Ten': 10,
