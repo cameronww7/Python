@@ -283,6 +283,9 @@ def Show_Player_Hand():
 def Show_Dealer_Hand():
     return True
 
+def Show_Both_Hands():
+    return True
+
 def Prompt_User_For_Bet():
     return True
 
@@ -295,6 +298,11 @@ def Prompt_User_To_Hit_Or_Stay():
 def Check_Win_Or_Lose():
     return True
 
+def Check_If_Player_Bust():
+    return True
+
+def Check_If_Dealer_Bust():
+    return True
 
 suits = ('Hearts', 'Diamonds', 'Spades', 'Clubs')
 ranks = ('Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Jack', 'Queen', 'King', 'Ace')
