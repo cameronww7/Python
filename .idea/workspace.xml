@@ -258,17 +258,6 @@
     </state>
     <state x="943" y="355" width="672" height="678" key="search.everywhere.popup/0.40.2560.1400/-2560.368.2560.1400@0.40.2560.1400" timestamp="1588646936446" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Python-Bootcomp-Zero_To_Hero/Sec-11-Py-Milestone-Project/BlackJack-UnitTests.py</url>
-          <line>168</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="masterDetails">
     <states>
       <state key="ScopeChooserConfigurable.UI">
