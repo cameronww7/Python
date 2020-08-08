@@ -277,29 +277,29 @@ class Chips:
         return "Stack Total : {}".format(self.total)
 
 
-def Show_Player_Hand():
+def Show_Player_Hand(player_hand):
     print("\nShowing Player Hand")
     print("Players Total Hand Value is {}".format(player_hand.get_value()))
     print(player_hand)
     return True
 
-def Show_Dealer_Hand_OneUp():
+def Show_Dealer_Hand_OneUp(dealer_hand):
     print("\nDealer is showing")
     print("{}, face up face is : {}".format(dealer_hand.get_first_card().get_value()+10, dealer_hand.get_first_card()))
     return True
 
-def Show_Dealer_Hand():
+def Show_Dealer_Hand(dealer_hand):
     print("\nShowing Dealer Hand")
     print("Dealers Total Hand Value is {}".format(dealer_hand.get_value()))
     print(dealer_hand)
     return True
 
-def Show_Both_Hands():
-    Show_Dealer_Hand()
-    Show_Player_Hand()
+def Show_Both_Hands(player_hand,dealer_hand):
+    Show_Dealer_Hand(dealer_hand)
+    Show_Player_Hand(player_hand)
     return True
 
-def Prompt_User_For_Bet():
+def Prompt_User_For_Bet(player_chips):
     while True:
         try:
             # First Attempt - will be successful if an Int comes in
@@ -342,12 +342,12 @@ def Prompt_User_To_Contiune():
         break
     return True
 
-def Setup_Hands():
+def Setup_Hands(player_hand, dealer_hand):
     for index in range(0, 2):
         player_hand.add_card(newDeck.deal_one_card())
         dealer_hand.add_card(newDeck.deal_one_card())
 
-def Prompt_User_To_Hit_Or_Stay():
+def Prompt_User_To_Hit_Or_Stay(player_hand, player_chips):
     val = ""
 
     while player_hand.get_value() < 22 or val == "H":
@@ -393,7 +393,7 @@ def Prompt_User_To_Hit_Or_Stay():
             break
     return True
 
-def Check_Win_Or_Lose():
+def Check_Win_Or_Lose(player_hand, dealer_hand, player_chips):
     if player_hand.get_value() > dealer_hand.get_value():
         print("Player Wins!")
         player_chips.win_bet()
@@ -405,12 +405,12 @@ def Check_Win_Or_Lose():
         player_chips.lose_bet()
     return True
 
-def Check_If_Player_Bust():
+def Check_If_Player_Bust(player_hand):
     if player_hand.get_value() > 21:
         print("Dealer Wins!")
     return True
 
-def Check_If_Dealer_Bust():
+def Check_If_Dealer_Bust(dealer_hand):
     if dealer_hand.get_value() > 21:
         print("Player Wins!")
     return True
