@@ -361,7 +361,7 @@ def Setup_Hands(xPlayer_hand, xDealer_hand, xNewDeck):
 def Prompt_User_To_Hit_Or_Stay(xPlayer_hand, xPlayer_chips, xNewDeck):
     userInput = "H"
 
-    while xPlayer_hand.get_value() < 22 or userInput == "H":
+    while xPlayer_hand.get_value() < 22 and userInput == "H":
         try:
             # First Attempt - will be successful if an Int comes in
             userInput = input("\nPlease Enter if you want to Stay, Hit"
@@ -378,33 +378,40 @@ def Prompt_User_To_Hit_Or_Stay(xPlayer_hand, xPlayer_chips, xNewDeck):
 
         except:
             # If an error pops it will display an Error and re-prompted the user for an Int
-            print("Looks like you didnt enter a correct character")
+            print("Looks like you didn't enter a correct character")
             continue
 
+        if valid:
+            if userInput == "S" and xPlayer_hand.get_value() < 22:
+                print("Player Stays")
+                print(xPlayer_chips.clear_bet())
+
+            elif userInput == "H" and xPlayer_hand.get_value() < 22:
+                print("\nPlayer Hits")
+                xPlayer_hand.add_card(xNewDeck.deal_one_card())
+                Show_Player_Hand(xPlayer_hand)
         else:
-            if valid:
-                if userInput == "S" and xPlayer_hand.get_value() < 22:
-                    print("Player Stays")
-                    print(xPlayer_chips.clear_bet())
+            print("\nError!"
+                  "\nLooks like you didnt enter a correct character"
+                  "\nPlease Try again!\n")
 
+    if xPlayer_hand.get_value() < 22:
+        return False
 
-                elif userInput == "H" and xPlayer_hand.get_value() < 22:
-                    print("\nPlayer Hits")
-                    xPlayer_hand.add_card(xNewDeck.deal_one_card())
-                    xPlayer_hand.set_Value()
-                    print("Players Total Hand Value is {}".format(xPlayer_hand.get_value()))
-                    print(xPlayer_hand)
-            else:
-                print("\nError!"
-                      "\nLooks like you didnt enter a correct character"
-                      "\n Please Try again!\n")
-
-        if xPlayer_hand.get_value() < 22:
-            return False
     return True
 
+def Check_If_Bust(xPlayer_hand):
+    if xPlayer_hand.get_value() > 21:
+        return True
+    else:
+        return False
+
 def Check_Win_Or_Lose(xPlayer_hand, xDealer_hand, xPlayer_chips):
-    if xPlayer_hand.get_value() > xDealer_hand.get_value():
+    if Check_If_Bust(xPlayer_hand):
+        print("Player Loses")
+        xPlayer_chips.lose_bet()
+        return False
+    elif xPlayer_hand.get_value() > xDealer_hand.get_value():
         print("Player Wins!")
         xPlayer_chips.win_bet()
         return True
@@ -412,24 +419,17 @@ def Check_Win_Or_Lose(xPlayer_hand, xDealer_hand, xPlayer_chips):
         print("Draw")
         xPlayer_chips.clear_bet()
         return True
-    elif xPlayer_hand.get_value() < xDealer_hand.get_value():
+    elif Check_If_Bust(xDealer_hand) or xPlayer_hand.get_value() < xDealer_hand.get_value():
         print("Player Loses")
         xPlayer_chips.lose_bet()
         return False
 
-def Check_If_Player_Bust(xPlayer_hand):
-    if xPlayer_hand.get_value() > 21:
-        print("Dealer Wins!")
-        return True
-    else:
-        return False
 
-def Check_If_Dealer_Bust(xDealer_hand):
-    if xDealer_hand.get_value() > 21:
-        print("Player Wins!")
-        return True
-    else:
-        return False
+
+def Play_Dealers_Hand(xDealer_hand, xNewDeck):
+    while xDealer_hand.get_value() < 16:
+        xDealer_hand.add_card(xNewDeck.deal_one_card())
+        xDealer_hand.set_Value()
 
 suits = ('Hearts', 'Diamonds', 'Spades', 'Clubs')
 ranks = ('Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Jack', 'Queen', 'King', 'Ace')
@@ -469,10 +469,11 @@ while Prompt_User_To_Contiune():
 
     Prompt_User_To_Hit_Or_Stay(player_hand, player_chips, newDeck)
 
-    if Check_If_Player_Bust(player_hand):
-        print("Player Busts")
-    elif Check_If_Dealer_Bust(dealer_hand):
-        print("Dealer Busts")
-    else:
-        Show_Both_Hands(player_hand, dealer_hand)
-        Check_Win_Or_Lose(player_hand, dealer_hand, player_chips)
+    Play_Dealers_Hand(dealer_hand, newDeck)
+
+    Show_Both_Hands(player_hand, dealer_hand)
+    Check_Win_Or_Lose(player_hand, dealer_hand, player_chips)
+
+    print("\nYour Current Balance is {}\n".format(player_chips.balance()))
+
+
