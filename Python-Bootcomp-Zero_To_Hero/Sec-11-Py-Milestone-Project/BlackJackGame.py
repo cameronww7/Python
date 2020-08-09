@@ -345,13 +345,17 @@ def Prompt_User_For_Bet(xPlayer_chips):
     return True
 
 def Prompt_User_To_Contiune():
-    userInput = input("Would you like to play blackjack (Enter y for yes, n for No) : ")
-    userInput = userInput.lower()
+    exitVar = True
+    while exitVar:
+        userInput = input("Would you like to play blackjack (Enter y for yes, n for No) : ")
+        userInput = userInput.lower()
 
-    if userInput == "n":
-        return False
-    else:
-        return True
+        if userInput == "n":
+            return False
+        elif userInput == "y":
+            return True
+        else:
+            print("\nLooks like you entered in the wrong input, please try again!\n")
 
 def Setup_Hands(xPlayer_hand, xDealer_hand, xNewDeck):
     for index in range(0, 2):
