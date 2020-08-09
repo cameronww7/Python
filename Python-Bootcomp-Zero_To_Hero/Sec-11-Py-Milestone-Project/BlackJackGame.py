@@ -339,8 +339,9 @@ def Prompt_User_To_Contiune():
     userInput = userInput.lower()
 
     if userInput == "n":
-        break
-    return True
+        return False
+    else:
+        return True
 
 def Setup_Hands(xPlayer_hand, xDealer_hand, xNewDeck):
     for index in range(0, 2):
