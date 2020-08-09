@@ -73,6 +73,9 @@ print("\n82-BlackJack-Game\n")
 print("- - - - - - - - - - ")
 
 
+"""
+ Black Jack Game Classes
+"""
 class Card:
     """
     This class will function as a card.
@@ -277,6 +280,10 @@ class Chips:
         return "Stack Total : {}".format(self.total)
 
 
+"""
+ Black Jack Game Functions
+"""
+
 def Show_Player_Hand(xPlayer_hand):
     print("\nShowing Player Hand")
     print("Players Total Hand Value is {}".format(xPlayer_hand.get_value()))
@@ -303,7 +310,7 @@ def Prompt_User_For_Bet(xPlayer_chips):
     while True:
         try:
             # First Attempt - will be successful if an Int comes in
-            playersBet = int(input("Please enter Your Bet: "))
+            players_Bet = int(input("Please enter Your Bet: "))
 
         except:
             # If an error pops it will display an Error and re-prompted the user for an Int
@@ -312,14 +319,14 @@ def Prompt_User_For_Bet(xPlayer_chips):
 
         else:
             # Breaks the infinite while loop if a int is entered
-            print("Player Bet {}".format(playersBet))
+            print("Player Bet {}".format(players_Bet))
             break
 
-    if not xPlayer_chips.place_bet(playersBet):
+    if not xPlayer_chips.place_bet(players_Bet):
         while True:
             try:
                 # First Attempt - will be successful if an Int comes in
-                playersBet = int(input("Please enter Your Bet: "))
+                players_Bet = int(input("Please enter Your Bet: "))
 
             except:
                 # If an error pops it will display an Error and re-prompted the user for an Int
@@ -328,7 +335,7 @@ def Prompt_User_For_Bet(xPlayer_chips):
 
             else:
                 # Breaks the infinite while loop if a int is entered
-                print("Player Bet {}".format(playersBet))
+                print("Player Bet {}".format(players_Bet))
                 break
 
         print("Player Balance {} after Betting".format(xPlayer_chips.balance()))
@@ -354,14 +361,14 @@ def Prompt_User_To_Hit_Or_Stay(xPlayer_hand, xPlayer_chips, xNewDeck):
     while xPlayer_hand.get_value() < 22 or val == "H":
         try:
             # First Attempt - will be successful if an Int comes in
-            val = input("\nPlease Enter if you want to Stay, Hit"
+            userInput = input("\nPlease Enter if you want to Stay, Hit"
                         "\nEnter S to Stay"
                         "\nEnter H to Hit"
                         "\nEnter your Choice: ")
 
-            val = val.upper()
+            userInput = val.upper()
 
-            if val == "S" or val == "H":
+            if userInput == "S" or userInput == "H":
                 valid = True
             else:
                 valid = False
@@ -373,12 +380,12 @@ def Prompt_User_To_Hit_Or_Stay(xPlayer_hand, xPlayer_chips, xNewDeck):
 
         else:
             if valid:
-                if val == "S":
+                if userInput == "S":
                     print("Player Stays")
                     print(xPlayer_chips.clear_bet())
                     break
 
-                elif val == "H":
+                elif userInput == "H":
                     print("Player Hits")
                     xPlayer_hand.add_card(xNewDeck.deal_one_card())
                     xPlayer_hand.set_Value()
@@ -398,23 +405,29 @@ def Check_Win_Or_Lose(xPlayer_hand, xDealer_hand, xPlayer_chips):
     if xPlayer_hand.get_value() > xDealer_hand.get_value():
         print("Player Wins!")
         xPlayer_chips.win_bet()
+        return True
     elif xPlayer_hand.get_value() == xDealer_hand.get_value():
         print("Draw")
         xPlayer_chips.clear_bet()
+        return True
     elif xPlayer_hand.get_value() < xDealer_hand.get_value():
         print("Player Loses")
         xPlayer_chips.lose_bet()
-    return True
+        return False
 
 def Check_If_Player_Bust(xPlayer_hand):
     if xPlayer_hand.get_value() > 21:
         print("Dealer Wins!")
-    return True
+        return True
+    else:
+        return False
 
 def Check_If_Dealer_Bust(xDealer_hand):
     if xDealer_hand.get_value() > 21:
         print("Player Wins!")
-    return True
+        return True
+    else:
+        return False
 
 suits = ('Hearts', 'Diamonds', 'Spades', 'Clubs')
 ranks = ('Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Jack', 'Queen', 'King', 'Ace')
