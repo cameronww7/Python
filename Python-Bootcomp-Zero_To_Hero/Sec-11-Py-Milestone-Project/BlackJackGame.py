@@ -286,12 +286,14 @@ class Chips:
 
 def Show_Player_Hand(xPlayer_hand):
     print("\nShowing Player Hand")
+    xPlayer_hand.set_Value()
     print("Players Total Hand Value is {}".format(xPlayer_hand.get_value()))
     print(xPlayer_hand)
     return True
 
 def Show_Dealer_Hand_OneUp(xDealer_hand):
     print("\nDealer is showing")
+    xDealer_hand.set_Value()
     print("{}, face up face is : {}".format(xDealer_hand.get_first_card().get_value()+10, xDealer_hand.get_first_card()))
     return True
 
@@ -307,6 +309,7 @@ def Show_Both_Hands(xPlayer_hand, xDealer_hand):
     return True
 
 def Prompt_User_For_Bet(xPlayer_chips):
+    print("\nYour Current Balance is {}".format(xPlayer_chips.balance()))
     while True:
         try:
             # First Attempt - will be successful if an Int comes in
@@ -356,9 +359,9 @@ def Setup_Hands(xPlayer_hand, xDealer_hand, xNewDeck):
         xDealer_hand.add_card(xNewDeck.deal_one_card())
 
 def Prompt_User_To_Hit_Or_Stay(xPlayer_hand, xPlayer_chips, xNewDeck):
-    val = ""
+    userInput = "H"
 
-    while xPlayer_hand.get_value() < 22 or val == "H":
+    while xPlayer_hand.get_value() < 22 or userInput == "H":
         try:
             # First Attempt - will be successful if an Int comes in
             userInput = input("\nPlease Enter if you want to Stay, Hit"
@@ -366,7 +369,7 @@ def Prompt_User_To_Hit_Or_Stay(xPlayer_hand, xPlayer_chips, xNewDeck):
                         "\nEnter H to Hit"
                         "\nEnter your Choice: ")
 
-            userInput = val.upper()
+            userInput = userInput.upper()
 
             if userInput == "S" or userInput == "H":
                 valid = True
@@ -380,13 +383,13 @@ def Prompt_User_To_Hit_Or_Stay(xPlayer_hand, xPlayer_chips, xNewDeck):
 
         else:
             if valid:
-                if userInput == "S":
+                if userInput == "S" and xPlayer_hand.get_value() < 22:
                     print("Player Stays")
                     print(xPlayer_chips.clear_bet())
-                    break
 
-                elif userInput == "H":
-                    print("Player Hits")
+
+                elif userInput == "H" and xPlayer_hand.get_value() < 22:
+                    print("\nPlayer Hits")
                     xPlayer_hand.add_card(xNewDeck.deal_one_card())
                     xPlayer_hand.set_Value()
                     print("Players Total Hand Value is {}".format(xPlayer_hand.get_value()))
@@ -395,10 +398,9 @@ def Prompt_User_To_Hit_Or_Stay(xPlayer_hand, xPlayer_chips, xNewDeck):
                 print("\nError!"
                       "\nLooks like you didnt enter a correct character"
                       "\n Please Try again!\n")
-            break
 
         if xPlayer_hand.get_value() < 22:
-            break
+            return False
     return True
 
 def Check_Win_Or_Lose(xPlayer_hand, xDealer_hand, xPlayer_chips):
@@ -442,13 +444,13 @@ newDeck.shuffle()
 
 
 player_1 = "Player 1"
-dealer   = "Dealers"
+dealer   = "Dealer"
 
 print("Lets Play Black Jack")
 
 
-while True:
-    print("Starting Blackjack")
+while Prompt_User_To_Contiune():
+    print("lets Play blackjack!")
 
     # Setup Player Hand & Chips
     player_hand = Hand()
@@ -456,161 +458,21 @@ while True:
 
     # Setup Dealer Hand & Chips
     dealer_hand = Hand()
-    dealer_chips = Chips()
 
-    # Ask player if they want to play Blackjack
+    Prompt_User_For_Bet(player_chips)
 
-    userInput = input("Would you like to play blackjack (Enter y for yes, n for No) : ")
-    userInput = userInput.lower()
-
-    if userInput == "n":
-        break
-
-    print("lets Play blackjack!")
     print("Dealing Hands")
+    Setup_Hands(player_hand, dealer_hand, newDeck)
 
-    for index in range(0, 2):
-        player_hand.add_card(newDeck.deal_one_card())
-        dealer_hand.add_card(newDeck.deal_one_card())
+    Show_Dealer_Hand_OneUp(dealer_hand)
+    Show_Player_Hand(player_hand)
 
-    player_hand.set_Value()
-    dealer_hand.set_Value()
+    Prompt_User_To_Hit_Or_Stay(player_hand, player_chips, newDeck)
 
-
-    print("\nDealer is showing")
-    print("{}, face up face is : {}".format(dealer_hand.get_first_card().get_value()+10, dealer_hand.get_first_card()))
-
-    #print("\n-- DEBUG - Printing Hands --")
-    #print(player_hand)
-    #print(dealer_hand)
-
-    print("\nShowing Player Hand")
-    print("Players Total Hand Value is {}".format(player_hand.get_value()))
-    print(player_hand)
-
-    # Prompt Player to Bet, Fold, Hit
-    while True:
-        while True:
-            try:
-                # First Attempt - will be successful if an Int comes in
-                playersBet = int(input("Please enter Your Bet: "))
-
-            except:
-                # If an error pops it will display an Error and re-prompted the user for an Int
-                print("Looks like you did not enter an integer!")
-                continue
-
-            else:
-                # Breaks the infinite while loop if a int is entered
-                print("Player Bet {}".format(playersBet))
-                break
-
-        if not player_chips.place_bet(playersBet):
-            while True:
-                try:
-                    # First Attempt - will be successful if an Int comes in
-                    playersBet = int(input("Please enter Your Bet: "))
-
-                except:
-                    # If an error pops it will display an Error and re-prompted the user for an Int
-                    print("Looks like you did not enter an integer!")
-                    continue
-
-                else:
-                    # Breaks the infinite while loop if a int is entered
-                    print("Player Bet {}".format(playersBet))
-                    break
-
-            print("Player Balance {} after Betting".format(player_chips.balance()))
-
-        print("\nDealer is showing")
-        print("{}, face up face is : {}".format(dealer_hand.get_first_card().get_value() + 10,
-                                                dealer_hand.get_first_card()))
-        print("\nShowing Player Hand")
-        print("Players Total Hand Value is {}".format(player_hand.get_value()))
-        print(player_hand)
-
-        val = ""
-
-        while player_hand.get_value() < 22 or val == "H":
-            try:
-                # First Attempt - will be successful if an Int comes in
-                val = input("\nPlease Enter if you want to Stay, Hit"
-                            "\nEnter S to Stay"
-                            "\nEnter H to Hit"
-                            "\nEnter your Choice: ")
-
-                val = val.upper()
-
-                if val == "S" or val == "H":
-                    valid = True
-                else:
-                    valid = False
-
-            except:
-                # If an error pops it will display an Error and re-prompted the user for an Int
-                print("Looks like you didnt enter a correct character")
-                continue
-
-            else:
-                if valid:
-                    if val == "S":
-                        print("Player Stays")
-                        print(player_chips.clear_bet())
-                        break
-
-                    elif val == "H":
-                        print("Player Hits")
-                        player_hand.add_card(newDeck.deal_one_card())
-                        player_hand.set_Value()
-                        print("Players Total Hand Value is {}".format(player_hand.get_value()))
-                        print(player_hand)
-                else:
-                    print("\nError!"
-                          "\nLooks like you didnt enter a correct character"
-                          "\n Please Try again!\n")
-                break
-
-            if player_hand.get_value() < 22:
-                break
-        if val == "S":
-            break
-
-
-
-    print("\nShowing Hands")
-    print("Players Total Hand Value is {}".format(player_hand.get_value()))
-    print(player_hand)
-    print("Dealers Total Hand Value is {}".format(dealer_hand.get_value()))
-    print(dealer_hand)
-
-    if player_hand.get_value() > 21:
-        print("Player Loses")
-        player_chips.lose_bet()
+    if Check_If_Player_Bust(player_hand):
+        print("Player Busts")
+    elif Check_If_Dealer_Bust(dealer_hand):
+        print("Dealer Busts")
     else:
-
-        while dealer_hand.get_value() < 15:
-            print("Dealer has to Hit")
-            dealer_hand.add_card(newDeck.deal_one_card())
-            dealer_hand.set_Value()
-
-            print("Dealers Total Hand Value is {}".format(dealer_hand.get_value()))
-            print(dealer_hand)
-
-        if dealer_hand.get_value() > 21:
-            print("Player Wins!")
-            player_chips.win_bet()
-        else:
-            if val != "F":
-                if player_hand.get_value() > dealer_hand.get_value():
-                    print("Player Wins!")
-                    player_chips.win_bet()
-                elif player_hand.get_value() == dealer_hand.get_value():
-                    print("Draw")
-                    player_chips.clear_bet()
-                elif player_hand.get_value() < dealer_hand.get_value():
-                    print("Player Loses")
-                    player_chips.lose_bet()
-
-    print("Player Balance {}\n\n".format(player_chips.balance()))
-
+        Show_Both_Hands(player_hand, dealer_hand)
+        Check_Win_Or_Lose(player_hand, dealer_hand, player_chips)
