@@ -33,7 +33,7 @@ greet = func()
 print(greet)
 
 
-def hello(nam="Sam"):
+def hello(name="Sam"):
     print('The Hello() function has ran')
 
     def greet():
@@ -42,11 +42,44 @@ def hello(nam="Sam"):
     def welcome():
         return "\t This is welcome() inside Hello"
 
-    print(greet())
-    print(welcome())
-    print("This is the end of the Hello Function")
+    print("I am going to return a function")
+
+    if name == "Sam":
+        return greet()
+    else:
+        return welcome()
 
 
-hello()
+someFunc = hello()
+
+print(someFunc)
 
 
+def new_decorator(func):
+
+    def wrap_func():
+        print("Code would be here, before executing the func")
+
+        func()
+
+        print("Code here will execute after the func()")
+
+    return wrap_func
+
+def func_needs_decorator():
+    print("This function is in need of a Decorator")
+
+
+func_needs_decorator()
+
+# Reassign func_needs_decorator
+func_needs_decorator = new_decorator(func_needs_decorator)
+
+
+func_needs_decorator()
+
+@new_decorator
+def func_needs_decorator():
+    print("This function is in need of a Decorator")
+
+func_needs_decorator()
