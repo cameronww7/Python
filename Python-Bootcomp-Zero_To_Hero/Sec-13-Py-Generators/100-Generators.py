@@ -43,3 +43,58 @@ let's go ahead and see how we can create some.
 
 print("\n100-Generators")
 print("- - - - - - - - - - ")
+
+# Generator function for the cube of numbers (power of 3)
+def gencubes(n):
+    for num in range(n):
+        yield num**3
+
+print("\ngencubes")
+print("- - - - - - - - - - ")
+for x in gencubes(10):
+    print(x)
+
+
+def genfibon(n):
+    """
+    Generate a fibonnaci sequence up to n
+    """
+    a = 1
+    b = 1
+    for i in range(n):
+        yield a
+        a, b = b, a+b
+
+
+print("\ngenfibon")
+print("- - - - - - - - - - ")
+for num in genfibon(10):
+    print(num)
+
+
+def fibon(n):
+    a = 1
+    b = 1
+    output = []
+
+    for i in range(n):
+        output.append(a)
+        a, b = b, a + b
+
+    return output
+
+
+print("\nsimple_gen")
+print("- - - - - - - - - - ")
+def simple_gen():
+    for x in range(3):
+        yield x
+
+# Assign simple_gen
+g = simple_gen()
+
+
+print(next(g))
+print(next(g))
+print(next(g))
+
