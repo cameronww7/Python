@@ -98,3 +98,27 @@ print(next(g))
 print(next(g))
 print(next(g))
 
+
+
+print("\niterator")
+print("- - - - - - - - - - ")
+s = 'hello'
+
+#Iterate over string
+for let in s:
+    print(let)
+
+
+#next(s)
+
+s_iter = iter(s)
+
+
+print("\niterator 2")
+print("- - - - - - - - - - ")
+print(next(s_iter))
+print(next(s_iter))
+print(next(s_iter))
+print(next(s_iter))
+print(next(s_iter))
+print(next(s_iter))
