@@ -27,41 +27,43 @@ def Problem_One():
 
 Problem_One()
 
-"""
-Problem 2
-Create a generator that yields "n" random numbers between a low and high number 
-(that are inputs).
-Note: Use the random library. For example:
-"""
 
-#random.randint(1,10)
+def Problem_Two():
+    """
+    Problem 2
+    Create a generator that yields "n" random numbers between a low and high number
+    (that are inputs).
+    Note: Use the random library. For example:
+    """
 
-
-#def rand_num(low, high, n):
-
-    #pass
-
-#for num in rand_num(1, 10, 12):
-    #print(num)
+    random.randint(1,10)
 
 
-"""
-Problem 3
-Use the iter() function to convert the string below into an iterator:
-"""
-s = 'hello'
+    def rand_num(low, high, n):
+        pass
 
-#code here
+    for num in rand_num(1, 10, 12):
+        print(num)
 
 
-"""
-Extra Credit!
-Can you explain what gencomp is in the code below? (Note: We never covered 
-this in lecture! You will have to do some Googling/Stack Overflowing!)
-"""
-#my_list = [1, 2, 3, 4, 5]
+def Problem_Three():
+    """
+    Problem 3
+    Use the iter() function to convert the string below into an iterator:
+    """
+    s = 'hello'
 
-#gencomp = (item for item in my_list if item > 3)
+    #code here
 
-#for item in gencomp:
-    #print(item)
+def Problem_EC():
+    """
+    Extra Credit!
+    Can you explain what gencomp is in the code below? (Note: We never covered
+    this in lecture! You will have to do some Googling/Stack Overflowing!)
+    """
+    my_list = [1, 2, 3, 4, 5]
+
+    gencomp = (item for item in my_list if item > 3)
+
+    for item in gencomp:
+        print(item)
