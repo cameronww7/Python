@@ -13,20 +13,19 @@ print("101-Generators-HW")
 
 print("\n101-Generators-HW")
 
+def Problem_One():
+    """
+    Problem 1
+    Create a generator that generates the squares of numbers up to some number N.
+    """
+    def gensquares(N):
+        for x in range(N):
+            yield x**2
 
-"""
-Problem 1
-Create a generator that generates the squares of numbers up to some number N.
-"""
+    for x in gensquares(10):
+        print(x)
 
-
-def gensquares(N):
-
-    pass
-
-for x in gensquares(10):
-    print(x)
-
+Problem_One()
 
 """
 Problem 2
@@ -35,15 +34,15 @@ Create a generator that yields "n" random numbers between a low and high number
 Note: Use the random library. For example:
 """
 
-random.randint(1,10)
+#random.randint(1,10)
 
 
-def rand_num(low, high, n):
+#def rand_num(low, high, n):
 
-    pass
+    #pass
 
-for num in rand_num(1, 10, 12):
-    print(num)
+#for num in rand_num(1, 10, 12):
+    #print(num)
 
 
 """
@@ -60,9 +59,9 @@ Extra Credit!
 Can you explain what gencomp is in the code below? (Note: We never covered 
 this in lecture! You will have to do some Googling/Stack Overflowing!)
 """
-my_list = [1, 2, 3, 4, 5]
+#my_list = [1, 2, 3, 4, 5]
 
-gencomp = (item for item in my_list if item > 3)
+#gencomp = (item for item in my_list if item > 3)
 
-for item in gencomp:
-    print(item)
+#for item in gencomp:
+    #print(item)
