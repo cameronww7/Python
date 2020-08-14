@@ -85,3 +85,5 @@ def Problem_EC():
 
     for item in gencomp:
         print(item)
+
+Problem_EC()
