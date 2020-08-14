@@ -18,6 +18,9 @@ def Problem_One():
     Problem 1
     Create a generator that generates the squares of numbers up to some number N.
     """
+    print("\nProblem_One")
+    print("- - - - - - - - - - ")
+
     def gensquares(N):
         for x in range(N):
             yield x**2
@@ -35,6 +38,8 @@ def Problem_Two():
     (that are inputs).
     Note: Use the random library. For example:
     """
+    print("\nProblem_Two")
+    print("- - - - - - - - - - ")
 
     def rand_num(low, high, n):
         for x in range(n):
@@ -51,9 +56,20 @@ def Problem_Three():
     Problem 3
     Use the iter() function to convert the string below into an iterator:
     """
+    print("\nProblem_Three")
+    print("- - - - - - - - - - ")
+
     s = 'hello'
 
-    #code here
+    s_iter = iter(s)
+
+    print(next(s_iter))
+    print(next(s_iter))
+    print(next(s_iter))
+    print(next(s_iter))
+    print(next(s_iter))
+
+Problem_Three()
 
 def Problem_EC():
     """
@@ -61,6 +77,8 @@ def Problem_EC():
     Can you explain what gencomp is in the code below? (Note: We never covered
     this in lecture! You will have to do some Googling/Stack Overflowing!)
     """
+    print("\nProblem_EC")
+    print("- - - - - - - - - - ")
     my_list = [1, 2, 3, 4, 5]
 
     gencomp = (item for item in my_list if item > 3)
