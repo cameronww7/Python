@@ -25,7 +25,7 @@ def Problem_One():
     for x in gensquares(10):
         print(x)
 
-Problem_One()
+#Problem_One()
 
 
 def Problem_Two():
@@ -36,15 +36,15 @@ def Problem_Two():
     Note: Use the random library. For example:
     """
 
-    random.randint(1,10)
-
-
     def rand_num(low, high, n):
-        pass
+        for x in range(n):
+            yield random.randint(low, high)
 
     for num in rand_num(1, 10, 12):
         print(num)
 
+
+Problem_Two()
 
 def Problem_Three():
     """
