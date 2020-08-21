@@ -73,5 +73,31 @@ you will be trying different variations of functions and want to
 compare their performance on random values, but want to do it 
 fairly (so you need the same set of random numbers each time).
 """
+print("\nrandom.randint(0,1000)")
+print("- - - - - - - - - - ")
 
 print(random.randint(0,1000))
+
+print("\nprint(random.randint(0,100))")
+print("- - - - - - - - - - ")
+random.seed(101)
+print(random.randint(0,100))
+print(random.randint(0,100))
+print(random.randint(0,100))
+print(random.randint(0,100))
+print(random.randint(0,100))
+
+print("\nRandom with Sequences")
+print("- - - - - - - - - - ")
+
+mylist = list(range(0,20))
+
+print(mylist)
+
+print(random.choice(mylist))
+
+print("\nShuffle a List")
+print("- - - - - - - - - - ")
+# Don't assign this to anything!
+print(random.shuffle(mylist))
+print(mylist)
