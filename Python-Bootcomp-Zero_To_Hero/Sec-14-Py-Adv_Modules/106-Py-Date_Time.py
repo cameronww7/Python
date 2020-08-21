@@ -2,10 +2,10 @@ from __future__ import print_function
 import datetime
 
 """
- Prompt 105-Py-Open_and_read_Files_and_folders
+ Prompt 106-Py-Date_Time
 """
 
-print("105-Py-Open_and_read_Files_and_folders")
+print("106-Py-Date_Time")
 
 """
 datetime module
