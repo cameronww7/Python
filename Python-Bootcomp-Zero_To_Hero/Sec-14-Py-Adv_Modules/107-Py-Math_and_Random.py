@@ -1,6 +1,7 @@
 from __future__ import print_function
 import math
 import random
+from math import pi
 
 """
  Prompt 107-Py-Math_and_Random
@@ -39,3 +40,38 @@ print(math.ceil(value))
 
 print(round(value))
 
+print(math.pi)
+
+print(pi)
+
+print(math.e)
+
+print(math.tau)
+
+print(math.inf)
+
+print(math.nan)
+
+"""
+Random Module
+Random Module allows us to create random numbers. We can even set a 
+seed to produce the same random set every time.
+
+The explanation of how a computer attempts to generate random numbers 
+is beyond the scope of this course since it involves higher level 
+mathmatics. But if you are interested in this topic check out:
+
+https://en.wikipedia.org/wiki/Pseudorandom_number_generator
+https://en.wikipedia.org/wiki/Random_seed
+Understanding a seed
+Setting a seed allows us to start from a seeded psuedorandom number 
+generator, which means the same random numbers will show up in a 
+series. Note, you need the seed to be in the same cell if your 
+using jupyter to guarantee the same results each time. Getting a 
+same set of random numbers can be important in situations where 
+you will be trying different variations of functions and want to 
+compare their performance on random values, but want to do it 
+fairly (so you need the same set of random numbers each time).
+"""
+
+print(random.randint(0,1000))
