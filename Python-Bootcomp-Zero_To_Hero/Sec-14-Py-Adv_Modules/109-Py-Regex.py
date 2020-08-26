@@ -63,16 +63,16 @@ print(match.end())
 
 text = "my phone is a new phone"
 
-match = re.search("phone",text)
+match = re.search("phone", text)
 
 print(match.span())
 
 
-matches = re.findall("phone",text)
+matches = re.findall("phone", text)
 
 print(matches)
 
-for match in re.finditer("phone",text):
+for match in re.finditer("phone", text):
     print(match.span())
 
 print(match.group())
@@ -168,7 +168,7 @@ print("- - - - - - - - - - ")
 
 phone_pattern = re.compile(r'(\d{3})-(\d{3})-(\d{4})')
 
-results = re.search(phone_pattern,text)
+results = re.search(phone_pattern, text)
 
 
 # The entire result
@@ -177,4 +177,61 @@ print(results.group())
 print(results.group(1))
 print(results.group(2))
 print(results.group(3))
-print(results.group(4))
+#print(results.group(4))
+
+
+"""
+Additional Regex Syntax
+Or operator |
+Use the pipe operator to have an or statment. 
+"""
+print("\nPiping")
+print("- - - - - - - - - - ")
+print(re.search(r"man|woman", "This man was here."))
+
+print(re.findall(r".at", "The bat went splat"))
+
+print(re.findall(r"...at", "The bat went splat"))
+
+
+"""
+Exclusion
+To exclude characters, we can use the ^ symbol in conjunction with a set of 
+brackets []. Anything inside the brackets is excluded. 
+"""
+print("\nExclusion")
+print("- - - - - - - - - - ")
+phrase = "there are 3 numbers 34 inside 5 this sentence."
+print(re.findall(r'[^\d]', phrase))
+
+print(re.findall(r'[^\d]+', phrase))
+
+
+test_phrase = 'This is a string! But it has punctuation. How can we remove it?'
+
+print(test_phrase)
+
+print(re.findall('[^!.? ]+', test_phrase))
+
+
+clean = ' '.join(re.findall('[^!.? ]+', test_phrase))
+
+
+print(clean)
+
+"""
+Parenthesis for Multiple Options
+If we have multiple options for matching, we can use parenthesis to list out 
+these options.
+"""
+print("\nParenthesis for Multiple Options")
+print("- - - - - - - - - - ")
+# Find words that start with cat and end with one of these options: 'fish','nap', or 'claw'
+text = 'Hello, would you like some catfish?'
+texttwo = "Hello, would you like to take a catnap?"
+textthree = "Hello, have you seen this caterpillar?"
+
+
+print(re.search(r'cat(fish|nap|claw)', text))
+print(re.search(r'cat(fish|nap|claw)', texttwo))
+print(re.search(r'cat(fish|nap|claw)', textthree))
