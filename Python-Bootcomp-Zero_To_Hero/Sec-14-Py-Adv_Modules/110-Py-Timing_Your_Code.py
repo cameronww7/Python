@@ -1,5 +1,6 @@
 from __future__ import print_function
 import time
+import timeit
 
 """
  Prompt 109-Py-Regex
@@ -52,3 +53,38 @@ result = func_two(1000000)
 end_time = time.time() - start_time
 
 print(end_time)
+
+
+"""
+What if we have two blocks of code that are quite fast, 
+the difference from the time.time() method may not be 
+enough to tell which is fater. In this case, we can 
+use the timeit module.
+
+The timeit module takes in two strings, 
+
+a statement (stmt) and a setup. It then runs the setup code and 
+
+runs the stmt code some n number of times and reports back average 
+length of time it took.
+"""
+
+# We have to pass it as a string
+stmt = 'func_one(100)'
+
+setup = '''
+def func_one(n):
+    return [str(num) for num in range(n)]
+'''
+
+print(timeit.timeit(stmt, setup, number=100000))
+
+
+stmt2 = 'func_two(100)'
+
+setup2 = '''
+def func_two(n):
+    return list(map(str,range(n)))
+'''
+
+print(timeit.timeit(stmt2,setup2,number=100000))
