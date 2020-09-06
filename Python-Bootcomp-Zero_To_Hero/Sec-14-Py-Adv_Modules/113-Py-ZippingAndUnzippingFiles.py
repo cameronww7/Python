@@ -1,6 +1,7 @@
 from __future__ import print_function
 import zipfile
-
+import shutil
+import os
 """
  Prompt 113-Py-ZippingAndUnzippingFiles
 """
@@ -53,3 +54,24 @@ individual files.
 zip_obj = zipfile.ZipFile('comp_file.zip', 'r')
 print(zip_obj.extractall("extracted_content"))
 
+
+"""
+Using shutil library
+Often you don't want to extract or archive individual files from a 
+.zip, but instead archive everything at once. The shutil library 
+that is built in to python has easy to use commands for this:
+"""
+print(os.getcwd())
+"""
+directory_to_zip = ""
+
+# Creating a zip archive
+output_filename = 'example'
+# Just fill in the output_filename and the directory to zip
+# Note this won't run as is because the variable are undefined
+shutil.make_archive(output_filename, 'zip', directory_to_zip)
+
+# Extracting a zip archive
+# Notice how the parameter/argument order is slightly different here
+shutil.unpack_archive(output_filename, directory_to_zip, 'zip')
+"""
