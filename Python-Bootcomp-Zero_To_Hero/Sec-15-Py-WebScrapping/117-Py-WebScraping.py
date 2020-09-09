@@ -1,4 +1,7 @@
 from __future__ import print_function
+import requests
+import lxml
+import bs4
 
 """
  Prompt 117-Py-WebScraping
