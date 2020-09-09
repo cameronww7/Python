@@ -37,3 +37,11 @@ print("- - - - - - - - - - ")
 # Displays the website that was scrapped
 print(res.text)
 
+print("\nuse bs4 to beautify output")
+print("- - - - - - - - - - ")
+# Goal is to use make the scrap useful (in pycharm it looks fine) but
+# if not in Pycharm is a glob
+soup = bs4.BeautifulSoup(res.text, "lxml")
+
+print(soup)
+
