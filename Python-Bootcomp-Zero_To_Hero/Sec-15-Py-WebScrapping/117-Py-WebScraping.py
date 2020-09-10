@@ -87,3 +87,15 @@ image_info = soup.select('.thumbimage')
 print("\nimage_info")
 print("- - - - - - - - - - ")
 print(image_info)
+
+
+print(len(image_info))
+
+
+computer = image_info[0]
+
+
+print(type(computer))
+
+
+print(computer['src'])
