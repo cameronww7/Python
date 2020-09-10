@@ -120,3 +120,15 @@ print("- - - - - - - - - - ")
 f = open('my_new_file_name.jpg', 'wb')
 f.write(image_link.content)
 f.close()
+
+print("\nSCrappping http://books.toscrape.com/catalogue/page-{}.html")
+print("- - - - - - - - - - ")
+base_url = 'http://books.toscrape.com/catalogue/page-{}.html'
+
+
+res = requests.get(base_url.format('1'))
+
+
+soup = bs4.BeautifulSoup(res.text, "lxml")
+
+print(soup.select(".product_pod"))
