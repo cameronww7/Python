@@ -88,14 +88,22 @@ print("\nimage_info")
 print("- - - - - - - - - - ")
 print(image_info)
 
-
+print("\nHow many Images")
+print("- - - - - - - - - - ")
 print(len(image_info))
-
 
 computer = image_info[0]
 
-
+print("\nImage Type")
+print("- - - - - - - - - - ")
 print(type(computer))
 
-
+print("\nimage url path")
+print("- - - - - - - - - - ")
 print(computer['src'])
+
+image2 = image_info[1]
+
+print("\nimage 2 url path")
+print("- - - - - - - - - - ")
+print(image2['src'])
