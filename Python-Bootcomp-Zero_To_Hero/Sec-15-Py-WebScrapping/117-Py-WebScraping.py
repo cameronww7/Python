@@ -80,7 +80,7 @@ for item in soup.select(".toctext"):
 
 
 res = requests.get("https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer)")
-soup = bs4.BeautifulSoup(res.text,'lxml')
+soup = bs4.BeautifulSoup(res.text, 'lxml')
 image_info = soup.select('.thumbimage')
 
 # Grabs two Images
@@ -114,3 +114,9 @@ image_link = requests.get("https:{}".format(computer['src']))
 print("\nDumps RAW image binary")
 print("- - - - - - - - - - ")
 print(image_link.content)
+
+print("\nTaking RAW Binary to copy the image")
+print("- - - - - - - - - - ")
+f = open('my_new_file_name.jpg', 'wb')
+f.write(image_link.content)
+f.close()
