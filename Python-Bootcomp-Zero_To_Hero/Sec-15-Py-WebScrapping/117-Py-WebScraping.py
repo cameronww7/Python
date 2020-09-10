@@ -45,3 +45,15 @@ soup = bs4.BeautifulSoup(res.text, "lxml")
 
 print(soup)
 
+print("\nsoup.select('title')")
+print("- - - - - - - - - - ")
+print(soup.select('title'))
+
+title_tag = soup.select('title')
+
+print("\ntitle_tag[0]")
+print("- - - - - - - - - - ")
+print(title_tag[0])
+
+
+
