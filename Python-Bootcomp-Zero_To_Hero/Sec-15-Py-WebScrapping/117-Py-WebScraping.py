@@ -56,4 +56,20 @@ print("- - - - - - - - - - ")
 print(title_tag[0])
 
 
+# First get the request
+res = requests.get('https://en.wikipedia.org/wiki/Grace_Hopper')
 
+print(res)
+
+# Create a soup from request
+soup = bs4.BeautifulSoup(res.text, "lxml")
+
+#print(soup)
+
+
+# note depending on your IP Address,
+# this class may be called something different
+print(soup.select(".toctext"))
+
+for item in soup.select(".toctext"):
+    print(item.text)
