@@ -107,3 +107,10 @@ image2 = image_info[1]
 print("\nimage 2 url path")
 print("- - - - - - - - - - ")
 print(image2['src'])
+
+
+image_link = requests.get("https:{}".format(computer['src']))
+
+print("\nDumps RAW image binary")
+print("- - - - - - - - - - ")
+print(image_link.content)
