@@ -69,7 +69,21 @@ soup = bs4.BeautifulSoup(res.text, "lxml")
 
 # note depending on your IP Address,
 # this class may be called something different
+print("\nsoup.select(\".toctext\"")
+print("- - - - - - - - - - ")
 print(soup.select(".toctext"))
 
+print("\nprint(item.text)")
+print("- - - - - - - - - - ")
 for item in soup.select(".toctext"):
     print(item.text)
+
+
+res = requests.get("https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer)")
+soup = bs4.BeautifulSoup(res.text,'lxml')
+image_info = soup.select('.thumbimage')
+
+# Grabs two Images
+print("\nimage_info")
+print("- - - - - - - - - - ")
+print(image_info)
