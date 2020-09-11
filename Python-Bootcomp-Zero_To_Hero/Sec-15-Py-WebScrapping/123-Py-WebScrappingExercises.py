@@ -78,3 +78,14 @@ print("\n\nquotes.pop()")
 print("- - - - - - - - - - ")
 print(quotes)
 
+
+print("\n\noneLiners with HTML")
+print("- - - - - - - - - - ")
+
+oneLiners = set()
+for name in soupwebScrape.select(".tag-item"):
+    oneLiners.add(name.text)
+
+
+for index in oneLiners:
+    print(index)
